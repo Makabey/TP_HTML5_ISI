@@ -7,7 +7,7 @@
 7. [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) <-- pour répondre aux demandes du TP!
 8. [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
 9. [HTML, CSS] Sous "Mon Profil"; permettre de consulter ses factures passées
-10 [HTML, CSS] Sous "Mon Profil"; permettre de changer son mot de passe?
+10. [HTML, CSS] Sous "Mon Profil"; permettre de changer son mot de passe?
 11. [HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue
  
 à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même? Wilky vas me le dire?
