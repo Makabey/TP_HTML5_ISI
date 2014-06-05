@@ -274,7 +274,6 @@ span.spanFix_li_hover{
 
 #userWrap a:hover{
 	color: #DDD;
-	/*font-weight:bold;*/
 	text-decoration: none;
 }
 
@@ -283,7 +282,7 @@ span.spanFix_li_hover{
 }
 /* Content ----------->
 */
-#content{
+content{
 	width: 1024px;
 	margin:auto;
 	min-height: 400px;
@@ -298,7 +297,6 @@ span.spanFix_li_hover{
 
 #loginDiv{
 	width:830px;
-	/*border:1px solid black;*/
 	margin:0 auto;
 	text-align:center;
 }
@@ -306,11 +304,6 @@ span.spanFix_li_hover{
 #loginDiv form{
 	vertical-align:top;
 }
-
-/*#formLogin{
-	position:absolute;
-	right:0;
-}*/
 
 /* formatage du formulaire ---> */
 .formulaire{
@@ -475,44 +468,6 @@ span.spanValid{
 /** INDEX **/
 /** quoi de neuf? **/
 
-#quoideneufWrap{
-	box-shadow:0 -5px 20px rgba(0,0,0,0.3);
-	float:left;
-}
-
-#quoideneuf{
-	margin-top: 30px;
-	width:250px;
-	min-height:200px;
-	max-height:660px;
-	overflow-y:scroll;
-	padding: 5px 15px 0 15px;
-	overflow-style:move;
-	overflow-x: hidden;
-	/*border:1px solid #67A034;*/
-	border:1px solid #5C3E18;
-	-moz-border-radius-bottomleft: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	-moz-border-radius-bottomright: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	background-color: rgba(0,0,0,0.03);
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box; /* chrome */
-	-moz-box-sizing: border-box; /* mozilla */
-	position: relative;
-
-}
-
-#quoideneufHead{
-	width:250px;
-	height: 30px;
-	padding: 2px 0 0 10px;
-	margin: 0!important;
-	position: absolute;
-}
-
 .itemQD9_div{
 	border-bottom:1px solid #D0D0D0;
 	padding:5px;
@@ -547,7 +502,6 @@ span.spanValid{
 }
 
 .itemQD9_desc{
-	/*color: green;*/
 	color: #5C3E18;
 }
 
@@ -615,185 +569,17 @@ span.spanValid{
 	padding: 7px 20px;
 	outline: 0;
 	font-size: 14px;
-	/*background: -moz-linear-gradient(top, rgba(157,213,58,0.2) 0%, rgba(161,213,79,0.2) 50%, rgba(128,194,23,0.2) 51%, rgba(124,188,10,0.2) 100%); /* FF3.6+ * /
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(157,213,58,0.2)), color-stop(50%,rgba(161,213,79,0.2)), color-stop(51%,rgba(128,194,23,0.2)), color-stop(100%,rgba(124,188,10,0.2))); /* Chrome,Safari4+ * /
-	background: -webkit-linear-gradient(top, rgba(157,213,58,0.2) 0%,rgba(161,213,79,0.2) 50%,rgba(128,194,23,0.2) 51%,rgba(124,188,10,0.2) 100%); /* Chrome10+,Safari5.1+ * /
-	background: -o-linear-gradient(top, rgba(157,213,58,0.2) 0%,rgba(161,213,79,0.2) 50%,rgba(128,194,23,0.2) 51%,rgba(124,188,10,0.2) 100%); /* Opera 11.10+ * /
-	background: -ms-linear-gradient(top, rgba(157,213,58,0.2) 0%,rgba(161,213,79,0.2) 50%,rgba(128,194,23,0.2) 51%,rgba(124,188,10,0.2) 100%); /* IE10+ * /
-	background: linear-gradient(to bottom, rgba(157,213,58,0.2) 0%,rgba(161,213,79,0.2) 50%,rgba(128,194,23,0.2) 51%,rgba(124,188,10,0.2) 100%); /* W3C * /
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#339dd53a', endColorstr='#337cbc0a',GradientType=0 ); /* IE6-9 */
 	padding:4px 10px;
 	margin-top:6px;
 	margin-bottom:6px;
-	/*background: url('images/icon-pause.png');*/
 	position:relative;
 	top:-50px;
 	width:94px;
 }
 
-/** collections **/
-/*
-#index_collections{
-	width:720px;
-	text-align:center;
-	padding-right:0;
-	margin-left: 270px;
-}
-
-#index_collections div{
-	display: inline-block;
-	margin: 0!important;
-	padding-top: 10px;
-	width:240px;
-	height: 247px;
-	text-align:center;
-}
-
-#index_collections div:hover{
-	/ *background-color:#D5FFB5;* /
-	background-color: #D6B68B;
-}
-
-#index_collections div.borderRight{
-	border-right: 1px solid #67A034;
-}
-
-#index_collections img{
-	width:180px;
-	margin:0 auto;
-}
-
-#index_collections span{
-	font-weight:bold;
-	font-size:1.2em;
-}
-*/
-
-/** GALERIE **/
-/*#galerieJQ{
-	width:710px;
-	margin:0 auto;
-}
-
-#galerieJQ_img{
-	border:1px solid #5C3E18;
-	height:505px;
-	overflow:hidden;
-	position:relative;
-}
-
-#galerieJQ_img img{
-	width:710px;
-	height:500px;
-	margin:0 auto;
-	display:block;
-}
-
-#galerieJQ_img>ul{
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	width:15000px;
-}
-
-#galerieJQ_img li{
-	float:left;
-	display:inline-block;
-	max-width:710px;
-	width:710px;
-	height:500px;
-	margin:0 auto;
-}
-
-#galerieJQ_desc{
-	width:710px;
-	height:80px;
-	text-align:center;
-	padding:5px 20px;
-}
-
-#galerieJQ_desc>div{
-	margin-bottom:5px;
-}
-
-#galerieJQ_desc>div>span{
-	color:white;
-	font-weight:bold;
-	font-size:1.2em;
-}
-
-#galerieJQ_desc button{
-	width:130px!important;
-	margin:0 2px;
-}
-
-.galerieJQ_Fleches_floatRight{
-	right:-1px;
-}
-
-.galerieJQ_Fleches_parent{
-	height:503px;
-	width:60px;
-	opacity:0.2;
-	position:absolute;
-	background-color:#5C3E18;
-	z-index:5;
-	padding:0;
-}
-
-.galerieJQ_Fleches_cercle{
-	position:relative;
-	margin:240px auto;
-	text-align:center;
-	background-color:white;
-	border:1px solid white;
-	border-radius:20px;
-	height:40px;
-	width:40px;
-	padding:0;
-}
-
-.galerieJQ_Fleches_cercle>span{
-	color:#5C3E18;
-	font-size:4em;
-	font-weight:bold;
-	position:relative;
-	top:-32px;
-	font-family:"Comic Sans MS", sans-serif;
-}
-
-.galerieJQ_leftArrow{
-	right:2px;
-}
-
-.galerieJQ_rightArrow{
-	left:1px;
-}
-
-.galerie_collections{
-	margin-top:20px;
-	border:1px solid #5C3E18;
-}
-
-.galerie_collectionsHeader{
-	height:30px;
-}
-
-.galerie_collections h4{
-	text-align:center;
-	padding:3px 0;
-	margin:0;
-	color:white;
-}
-
-.galerie_collections img{
-	width:170px;
-}
-*/
 
 /** PRODUITS **/
 #produits{
-	/*margin-top:15px;*/
 	color:gray;
 	width:100%;
 	margin:0;
@@ -805,12 +591,6 @@ span.spanValid{
 	padding:1px;
 }
 
-/*#produits_categories ul{
-	width:1000px;
-	list-style-type:none;
-	margin:10px auto;
-	padding:0;
-}*/
 #produits_categories ul{
 	width:auto;
 	list-style-type:none;
@@ -824,21 +604,6 @@ span.spanValid{
 	padding:0;
 }
 
-/*#produits_categories a.rounded{
-	padding: 4px 20px;
-	outline: 0;
-	font-size: 16px;
-	border:1px solid transparent;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	font-weight:bold;
-	/ *color: white;* /
-	color: gray;
-	width: 230px;
-	height: 30px;
-	display: block;
-}*/
 #produits_categories a.rounded,
 #produits_categories span.rounded{
 	padding: 3px 20px;
@@ -856,41 +621,27 @@ span.spanValid{
 	display: block;
 }
 
-/*#produits_categories a.rounded:hover, #produits_categories a.selected{
-	/ *border: 1px solid #D0D0D0;* /
-	border: 1px solid gray;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	border: 1px solid #D6B68B;
-	background-color: #fff;
-	color: #D6B68B;
-}*/
 #produits_categories a.rounded:hover,
 #produits_categories a.selected,
 #produits_categories span.selected{
-	/*border: 1px solid #D0D0D0;*/
-	/*border: 1px solid gray;*/
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	/*border: 1px solid #D6B68B;*/
 	border: 1px solid black;
 	background-color: #fff;
-	/*color: #D6B68B;*/
 	color:black;
 }
 
 #produits_categories a.rounded:active{
 	border: 1px solid #D6B68B;
-	background: rgb(211,211,211); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(211,211,211,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(211,211,211,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	background: rgb(211,211,211);
+	background: -moz-linear-gradient(top, rgba(211,211,211,1) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(211,211,211,1)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#ffffff',GradientType=0 );
 }
 
 #produits_infos{
@@ -912,11 +663,8 @@ span.spanValid{
 	width:695px;
 	height:210px;
 	display:inline-block;
-	/*margin:0 0 10px 10px;*/
 	margin-left:10px;
-	/*overflow-y:scroll;*/
 	padding:0;
-	/*border:1px solid black;*/
 }
 
 #produits_infos_dl dl{
@@ -941,18 +689,7 @@ span.spanValid{
 	margin-bottom:10px;
 	height:150px; /*12em;*/
 	width:99%;
-	/*border:1px solid black;*/
 }
-
-/*#produits_infos_desc{
-	overflow-y:scroll;
-	height:150px; / *12em;* /
-	width:99%;
-	border:1px solid black;
-	resize:none;
-	border:none;
-	display:inline-block;
-}*/
 
 #produits_infos_btns{
 	text-align:right;
@@ -966,7 +703,6 @@ span.spanValid{
 	color:black;
 	padding-right:20px;
 	margin-top:10px;
-	/*border:1px solid red;*/
 }
 
 #produits_infos_ajouterpanier input[type=text]{
@@ -989,7 +725,6 @@ span.spanValid{
 }
 
 .inventory_box{
-	/*border:1px solid black;*/
 	margin:10px 0;
 	border-bottom:3px solid gray;
 }
@@ -1010,7 +745,6 @@ span.spanValid{
 }
 
 .produits_ColorChoiceBox.selected{
-	/*border:4px solid black;*/
 	outline:3px solid #999;
 }
 
@@ -1049,9 +783,7 @@ span.spanValid{
 /** PANIER **/
 #listePanier, #factureEntete, #factureClient{
 	margin:0 auto;
-	/*margin: 30px 62px;*/
 	width: 900px;
-	/*border:1px solid;*/
 	border-collapse:collapse;
 }
 
@@ -1069,7 +801,6 @@ span.spanValid{
 
 #listePanier td, #factureClient td{
 	height: 20px;
-	/*border-right: 1px solid;*/
 }
 
 #listePanier tr.odd, #factureClient tr.odd{
@@ -1144,14 +875,9 @@ span.spanValid{
 	text-align:right;
 }
 
-/*#listePanier tr td:nth-last-child(1){
-	text-align: right;
-}*/
-
 /** FOOTER **/
 #footer{
 	height: 200px;
-	/*border-top: 1px solid #67a034;*/
 	border-top: 1px solid #5C3E18;
 }
 
@@ -1338,10 +1064,6 @@ span.spanValid{
 #gestion_fiche_description{
 	resize:none;
 }
-
-/* .gestion_fiche_choix ul{
-	width:100%;
-}*/
 
  .gestion_fiche_choix li{
  	width:175px;
