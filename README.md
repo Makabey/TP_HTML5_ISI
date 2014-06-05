@@ -16,11 +16,11 @@
 7. [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
 
 
-#Ce dont on devrais pouvoir se passer :
+##Ce dont on devrais pouvoir se passer :
 25. Fichier .htaccess
 26. Ajouter plus de jouets
 
-#Reserve
+##Reserve
 8. [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
 9. [HTML, CSS] Sous "Mon Profil"; permettre de consulter ses factures passées
 10. [HTML, CSS] Sous "Mon Profil"; permettre de changer son mot de passe?
@@ -28,11 +28,10 @@
 12. [VIDEO] conversion en tout les formats supportés
 13. [HTML] composer le texte de la page (demande du TP, point 1)
 14. [HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé
- 
+
 à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même? Wilky vas me le dire?
- 
- 
-== "Stretch goals" ==
+
+##"Stretch goals"
 13. [3D, HTML, video] Représentation 3D d'un des jouets (l'un des monstres devrait être simple) qui tourne en turntable, et donc compter comme un media video
 14. [HTML] Utiliser le "local storage" pour garder une copie du panier ?
 15. [CSS, JS] Changer le code pour appliquer un filtre (CSS::class ou JS::style?) sur les images du catalogue pour simuler les couleurs?
