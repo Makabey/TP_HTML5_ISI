@@ -101,7 +101,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 	</head>
 	<body>
 		<div id="container">
-			<div id="header">
+			<header id="header">
 				<div id="center_menu">
 					<a href="index.php"><img src="assets/images/logo.png" alt="Logo de 'La Fabrique'" /></a>
 					<?php
@@ -133,6 +133,6 @@ require_once "assets/inc/csvFunctions.inc.php";
 					require "assets/inc/menu.inc.php";
 					?>
 				</div>
-			</div>
+			</header>
 
-			<div id="content">
+			<content id="content">

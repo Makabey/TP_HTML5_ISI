@@ -21,7 +21,7 @@ if(false === function_exists('genererMenuTopItem')){
 require_once "assets/inc/csvFunctions.inc.php";
 $retour = chargerCategories($arrCategories);
 ?>
-					<div id="<?php echo $MenusID; ?>menu">
+					<nav id="<?php echo $MenusID; ?>menu">
 						<ul id="<?php echo $MenusID; ?>menuNiv1">
 							<?php echo genererMenuTopItem('index'); ?>
 								<a href="index.php"<?php if($sNomDeCettePage == 'index') echo ' class="aActiveFix"'; ?>>Accueil</a>
@@ -50,5 +50,5 @@ $retour = chargerCategories($arrCategories);
 							</li>
 							<?php } ?>
 						</ul>
-					</div>
+					</nav>
 					<div class="clearFloat"></div>

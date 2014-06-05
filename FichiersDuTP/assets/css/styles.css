@@ -45,26 +45,21 @@ h5{
 img{
 	border:none;
 }
-
 .whiteText{
 	color: white!important;
 	margin: 0!important;
 }
-
 body ::-webkit-scrollbar {
 	width: 4px;
 }
-
 body ::-webkit-scrollbar-track-piece {
 	border-bottom-right-radius: 2px;
 	border-bottom-left-radius: 2px;
 }
-
 body ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
 	border-radius: 2px;
 }
-
 body ::-webkit-scrollbar-thumb {
 	border-radius: 0px;
 	border-bottom-left-radius: 2px;
@@ -72,18 +67,6 @@ body ::-webkit-scrollbar-thumb {
 	/*-webkit-box-shadow: inset 0 0 6px #2f5b09; */
 	-webkit-box-shadow: inset 0 0 6px #5C3E18;
 }
-
-/*#bannerNoJS{
-	width:100%;
-	height:40px;
-	background-color:red;
-	text-align:center;
-	font-weight:bold;
-	font-size:2em;
-	color:white;
-	margin-bottom:10px;
-}*/
-
 .cursor_hand{
 	cursor:hand;
 	cursor:pointer;
@@ -101,7 +84,7 @@ body ::-webkit-scrollbar-thumb {
 
 /* Header------------->
 */
-#header{
+#header, header{
 	width: auto;
 	margin:0 auto;
 	height: 120px;
@@ -113,7 +96,7 @@ body ::-webkit-scrollbar-thumb {
 	border-bottom: 3px solid gray;
 }
 
-#header img{
+#header img, header img{
 	margin-top: 10px;
 	width: 140px
 }
@@ -124,7 +107,6 @@ body ::-webkit-scrollbar-thumb {
 	width: 1024px;
 	margin:0 auto;
 }
-
 #header_menu{
 	position:absolute;
 	z-index:20;
@@ -133,17 +115,14 @@ body ::-webkit-scrollbar-thumb {
 	top: 90px;
 	margin-left: 200px;
 }
-
 #header_menu a{
 	text-decoration:none;
 	margin:0 15px 0 10px;
 	color: white;
 }
-
 #header_menu a:hover{
 	color:black;
 }
-
 #header_menu ul{
 	list-style-type:none;
 	margin:0;
@@ -247,7 +226,6 @@ body ::-webkit-scrollbar-thumb {
 }
 
 #header_menu>ul>li>ul>li:hover{
-	/*background-color:#D5FFB5;*/
 	background-color:#D6B68B;
 }
 
@@ -1278,7 +1256,6 @@ span.spanValid{
 }
 
 #langues_regions{
-	/*margin-top: 125px;*/
 	display: inline-block;
 }
 
@@ -1326,7 +1303,6 @@ span.spanValid{
 
 /* GESTION PRODUITS */
 #GestionProduits{
-	/*margin-top:20px;*/
 	margin:0;
 	padding:0 10px;
 }
@@ -1344,7 +1320,6 @@ span.spanValid{
 	list-style-type:none;
 	margin:0;
 	padding:0;
-	/*border:1px solid red;*/
 }
 
 #formGestionProduits li{
@@ -1353,18 +1328,11 @@ span.spanValid{
 
 #gestion_fiche ul>li>ul>li{
 	display:inline-block;
-	/*width:150px;*/
-	/*height:30px;*/
 	padding:5px 0;
-	/*float:left;*/
 }
 
 #gestion_fiche ul>li>ul>li:first-child{
-	/*display:inline-block;*/
 	width:175px;
-	/*height:30px;
-	padding:5px;*/
-	/*float:left;*/
 }
 
 #gestion_fiche_description{
