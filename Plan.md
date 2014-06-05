@@ -1,14 +1,29 @@
-1. Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)
+#Olivier :
 2. [CSS] Passer au travers du CSS pour rassembler les règles qui se chevauchent ou s'annulent (en admettant qu'il y ais X+1 règles pour une seule entitée)
 3. [CSS] Éliminer les règles mortes
 4. [CSS, HTML] Passer le HTML au peigne fin pour voir ce qui pourrait se passer de classe ou ID et éliminer ou réécrire les règles concernées
+5. Incorporer au moins une animation CSS3. (slider? -> demande du TP, point 5)
+
+
+#Eric :
+1. {FAIT} [TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)
 5. [JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS
 6. [HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
-7. [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) <-- pour répondre aux demandes du TP!
+7. [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
+
+
+#Ce dont on devrais pouvoir se passer :
+25. Fichier .htaccess
+26. Ajouter plus de jouets
+
+#Reserve
 8. [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
 9. [HTML, CSS] Sous "Mon Profil"; permettre de consulter ses factures passées
 10. [HTML, CSS] Sous "Mon Profil"; permettre de changer son mot de passe?
 11. [HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue
+12. [VIDEO] conversion en tout les formats supportés
+13. [HTML] composer le texte de la page (demande du TP, point 1)
+14. [HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé
  
 à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même? Wilky vas me le dire?
  
