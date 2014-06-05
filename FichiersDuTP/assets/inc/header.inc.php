@@ -14,19 +14,20 @@ require_once "assets/inc/tools.inc.php";
 require_once "assets/inc/csvFunctions.inc.php";
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="utf-8" />
 		<title><?php echo $sPageTitle; ?></title>
 		<meta name="author" content="Eric Robert et Olivier Berthier" />
-		<meta name="description" content="PHP - TP - Eric et Olivier" />
+		<meta name="description" content="HTML5 - TP - Eric et Olivier" />
+		<meta name="keywords" content="" />
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<!--<script type="text/javascript" src="assets/js/functions.js"></script>-->
 		<script type="text/javascript">
 		"use strict";
 
-		window.addEventListener("load", function(){
+		window.addEventListener("load", function(){ // J'utilise un listener pour éviter de marcher sur les platebandes de jQuery
 			// Support pour les sous-menus
 			$("#header_produits").hover(function () {
 				if ($("#header_menuNiv1_Item1_submenu2").is(":hidden")) {
@@ -101,7 +102,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 	</head>
 	<body>
 		<div id="container">
-			<div id="header">
+			<header role="banner">
 				<div id="center_menu">
 					<a href="index.php"><img src="assets/images/logo.png" alt="Logo de 'La Fabrique'" /></a>
 					<?php
@@ -133,6 +134,6 @@ require_once "assets/inc/csvFunctions.inc.php";
 					require "assets/inc/menu.inc.php";
 					?>
 				</div>
-			</div>
+			</header>
 
 			<div id="content">

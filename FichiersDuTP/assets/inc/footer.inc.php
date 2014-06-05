@@ -1,7 +1,7 @@
 
 			</div><!-- END of div::content -->
 
-			<div id="footer">
+			<footer>
 				<div id="footer_content"><?php
 					#echo "\n";
 					$MenusID="footer_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
@@ -18,7 +18,7 @@
 						</a>
 					</div>
 				</div>
-			</div>
+			</footer>
 		</div>
 	</body>
 </html>

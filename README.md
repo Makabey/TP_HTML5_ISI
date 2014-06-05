@@ -14,7 +14,19 @@
 5. [JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS
 6. [HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
 7. [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
+note a moi-mème : pour les hover en jQ, enlever les ID dans PHP et remplacer les sélecteurs pour header>nav ou proche de ça, voir le point 15 de "reserve"
 
+###changements fait au HTML influencant le CSS:
+1. (div) #header => header
+2. (div) #header_menu => header nav
+3. (div) #footer => footer
+
+###suggestions de changements au CSS:
+1. la classe cursor_hand devrais se lire (j'ai trouvé cette correction durant le cours de SEO)
+.cursor_hand{
+	cursor:pointer;
+	/*cursor:hand;*/ /* IE 5.0, 5.5 */
+}
 
 ##Ce dont on devrais pouvoir se passer :
 25. Fichier .htaccess
@@ -28,8 +40,9 @@
 12. [VIDEO] conversion en tout les formats supportés
 13. [HTML] composer le texte de la page (demande du TP, point 1)
 14. [HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé
+15. [CSS] Remplacer le code jQuery (qui ne fonctionne pas vraiment) pour animer l'apparition des sous-menu par une/des transitions sous une règle "li:hover>ul" ? Les IDs ne servent que pour jQuery donc si on suit "header nav>ul>li:nth-child(2)>ul",  "header nav>ul>li:nth-child(4)>ul" et "header nav>ul>li:nth-child(5)>ul" on devrais pouvoir éliminer les "<?php echo $MenusID; ?>menuNiv1_Item1_submenuX"
 
-à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même? Wilky vas me le dire?
+à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même?
 
 ##"Stretch goals"
 13. [3D, HTML, video] Représentation 3D d'un des jouets (l'un des monstres devrait être simple) qui tourne en turntable, et donc compter comme un media video
