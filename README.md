@@ -3,31 +3,34 @@
 - Tout les fichiers sont dans leur propre sous-répertoire pour pouvoir trouver aisément tout autre fichier (dont README.md) que l'on voudrais include hors du projet, peut-etre un fichier de lien, référence, quelques chose comme ça. 
 
 #Olivier :
-2. [CSS] Passer au travers du CSS pour rassembler les règles qui se chevauchent ou s'annulent (en admettant qu'il y ais X+1 règles pour une seule entitée)
-3. [CSS] Éliminer les règles mortes
-4. [CSS, HTML] Passer le HTML au peigne fin pour voir ce qui pourrait se passer de classe ou ID et éliminer ou réécrire les règles concernées
-5. Incorporer au moins une animation CSS3. (slider? -> demande du TP, point 5)
+- [CSS] Passer au travers du CSS pour rassembler les règles qui se chevauchent ou s'annulent (en admettant qu'il y ais X+1 règles pour une seule entitée)
+- [CSS] Éliminer les règles mortes
+- [CSS, HTML] Passer le HTML au peigne fin pour voir ce qui pourrait se passer de classe ou ID et éliminer ou réécrire les règles concernées
+- Incorporer au moins une animation CSS3. (slider? -> demande du TP, point 5)
 
 
 #Eric :
-1. {FAIT} [TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)
-5. [JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS
-6. {EN COURS}[HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
-7. [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
-8. [CSS, JS] Une fois la règle en place, enlever le code hover en jQ et les ID dans PHP
+- {FAIT} [TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)
+- [JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS
+- {EN COURS}[HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
+- [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
+- [CSS, JS] Une fois la règle en place, enlever le code hover en jQ et les ID dans PHP
+- Dans "facture_client", "gestion_panier" remplacer le code autour de "$odd_even_row "  et dans "gestion_produits_factures" autour de "$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';" pour utiliser la règle CSS "nth-child(event)" ci-dessous
 
 ###changements fait au HTML influencant le CSS:
-1. (div) #header => header
-2. (div) #header_menu => header nav
-3. (div) #footer => footer
-4. (div) #footer_menu => footer nav
+* (div) #header => header
+* (div) #header_menu => header nav
+* (div) #footer => footer
+* (div) #footer_menu => footer nav
 
 ###suggestions de changements au CSS:
-1. la classe cursor_hand devrais se lire (j'ai trouvé cette correction durant le cours de SEO)
+1. {FAIT}  la classe cursor_hand devrais se lire (j'ai trouvé cette correction durant le cours de SEO)
 .cursor_hand{
 	cursor:pointer;
 	/*cursor:hand;*/ /* IE 5.0, 5.5 */
 }
+
+2. Changer la règle "#listePanier tr.even, #factureClient tr.even" pour "#listePanier tr:nth-child(even),  #factureClient tr:nth-child(even)"
 
 ##Ce dont on devrais pouvoir se passer :
 25. Fichier .htaccess

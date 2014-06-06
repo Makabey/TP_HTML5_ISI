@@ -1,7 +1,7 @@
 <?php
 require_once "assets/inc/csvFunctions.inc.php";
 
-$sPageTitle = "La Fabrique de Jouet - Produits &gt; ";
+$sPageTitle = "Produits | ";
 
 # $sDetailsProduits est utilisé dans "header.inc.php" pour le JS
 $retour = chargerProduits($arrProduits);
@@ -48,7 +48,7 @@ if($iProduit_Cat == -1) $iProduit_Cat = 0;
 
 if($iProduit_QTE <1) $iProduit_QTE = 1;
 
-$sPageTitle .= $arrNomsCategories[$iProduit_Cat]['nom'];
+$sPageTitle = $arrNomsCategories[$iProduit_Cat]['nom'] . ' | '. $sPageTitle;
 
 /*
 	Si iProduit_ID n'est pas vide, trouver à quelle catégorie l'objet appartient
@@ -69,8 +69,8 @@ $sDetailsProduits = formaterProduitsPourJS($arrProduits, $iProdCat);
 
 require_once "assets/inc/header.inc.php";
 ?>
-			<div id="produits">
-				<div id="produits_categories" class="brownGradientBackground">
+			<!--<div id="produits">-->
+				<nav id="produits_categories">
 					<ul><?php
 						echo "\n";
 						for($iCmpt=0;$iCmpt<count($arrNomsCategories);$iCmpt++){
@@ -86,12 +86,12 @@ require_once "assets/inc/header.inc.php";
 						}
 					?>
 					</ul>
-				</div>
+				</nav>
 				<div id="produits_infos">
-					<div id="produits_infos_pic">
+					<!--<div id="produits_infos_pic">-->
 						<img id="produits_infos_img" src="assets/images/produits/broken_toy.jpg" alt="Catégorie vide" title="Catégorie vide" />
-					</div>
-					<div id="produits_infos_dl">
+					<!--</div>
+					<div id="produits_infos_dl">-->
 						<dl>
 							<dt>Nom : </dt>
 							<dd id="produits_infos_nom"></dd>
@@ -106,7 +106,7 @@ require_once "assets/inc/header.inc.php";
 							<dt>Description : </dt>
 							<dd id="produits_infos_desc"></dd>
 						</dl>
-					</div>
+					<!--</div>-->
 					<div id="produits_infos_btns">
 						<button type="button" id="prod_btnPrev" class="rounded">&lt; Précédent</button>
 						<button type="button" id="prod_btnNext" class="rounded">Suivant &gt;</button>
@@ -118,7 +118,7 @@ require_once "assets/inc/header.inc.php";
 					</div>
 					<?php } ?>
 				</div>
-			</div>
+			<!--</div>-->
 <?php
 require_once "assets/inc/footer.inc.php";
 ?>

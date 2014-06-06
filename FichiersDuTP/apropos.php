@@ -4,7 +4,7 @@ $sPageTitle = "La Fabrique de Jouet - À propos de nous";
 require_once "assets/inc/header.inc.php";
 ?>
 				<div class="aProposBox">
-					<div class="aProposBox_Header brownGradientBackground">
+					<div class="aProposBox_Header">
 						<span>Nos méthodes de fabrication</span>
 					</div>
 					<div class="aProposBox_Content roundedCorners_bottom">
@@ -15,7 +15,7 @@ require_once "assets/inc/header.inc.php";
 				</div>
 
 				<div class="aProposBox">
-					<div class="aProposBox_Header brownGradientBackground">
+					<div class="aProposBox_Header">
 						<span>Notre service de jouet "sur mesure"</span>
 					</div>
 					<div class="aProposBox_Content roundedCorners_bottom">
@@ -34,7 +34,7 @@ require_once "assets/inc/header.inc.php";
 				</div>
 
 				<div class="aProposBox">
-					<div class="aProposBox_Header brownGradientBackground">
+					<div class="aProposBox_Header">
 						<span>Une petite histoire de notre entreprise</span>
 					</div>
 					<div class="aProposBox_Content roundedCorners_bottom">
