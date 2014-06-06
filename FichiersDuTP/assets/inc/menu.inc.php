@@ -21,13 +21,8 @@ if(false === function_exists('genererMenuTopItem')){
 require_once "assets/inc/csvFunctions.inc.php";
 $retour = chargerCategories($arrCategories);
 ?>
-<<<<<<< HEAD
 					<nav role="navigation" id="<?php echo $MenusID; ?>menu">
 						<ul>
-=======
-					<nav id="<?php echo $MenusID; ?>menu">
-						<ul id="<?php echo $MenusID; ?>menuNiv1">
->>>>>>> f8fca89d2fe2cd3c722e3262254e5531f9a6bb1a
 							<?php echo genererMenuTopItem('index'); ?>
 								<a href="index.php"<?php if($sNomDeCettePage == 'index') echo ' class="aActiveFix"'; ?>>Accueil</a>
 							</li>
