@@ -1,5 +1,5 @@
 <?php
-$sPageTitle = "La Fabrique de Jouet - Acceuil";
+$sPageTitle = "Acceuil";
 
 require_once "assets/inc/header.inc.php";
 ?>

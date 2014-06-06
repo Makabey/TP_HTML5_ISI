@@ -9,7 +9,9 @@ if(strlen(session_id()) == 0){
 
 $sImages_PathProduits = "assets/images/produits/"; # le path doit finir par un '/'
 $sImages_PathSlider = "assets/images/slider/"; # le path doit finir par un '/',
-
+$sNomDeCettePage = substr($_SERVER['SCRIPT_NAME'], (strrpos($_SERVER['SCRIPT_NAME'],'/')+1));
+$sNomDeCettePage = substr($sNomDeCettePage, 0, (strpos($sNomDeCettePage,'.')));
+		
 require_once "assets/inc/tools.inc.php";
 require_once "assets/inc/csvFunctions.inc.php";
 ?>
@@ -17,7 +19,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8" />
-		<title><?php echo $sPageTitle; ?></title>
+		<title><?php echo $sPageTitle; ?> | La Fabrique de Jouet</title>
 		<meta name="author" content="Eric Robert et Olivier Berthier" />
 		<meta name="description" content="HTML5 - TP - Eric et Olivier" />
 		<meta name="keywords" content="" />
@@ -26,14 +28,22 @@ require_once "assets/inc/csvFunctions.inc.php";
 		<!--<script type="text/javascript" src="assets/js/functions.js"></script>-->
 		<script type="text/javascript">
 		"use strict";
-
+		var PageTitle = "La Fabrique de Jouet";
+		
 		window.addEventListener("load", function(){ // J'utilise un listener pour éviter de marcher sur les platebandes de jQuery
 			// Support pour les sous-menus
-			$("#header_produits").hover(function () {
+			/*$("#header_produits").hover(function () {
 				if ($("#header_menuNiv1_Item1_submenu2").is(":hidden")) {
 					$("#header_menuNiv1_Item1_submenu2").slideDown(100);
 				} else {
 					$("#header_menuNiv1_Item1_submenu2").slideUp(100);
+				}
+			});*/
+			$("header>div>nav>ul>li").hover(function () {
+				if ($("header>div>nav>ul>li>ul").is(":hidden")) {
+					$("header>div>nav>ul>li>ul").slideDown(100);
+				} else {
+					$("header>div>nav>ul>li>ul").slideUp(100);
 				}
 			});
 
@@ -49,8 +59,6 @@ require_once "assets/inc/csvFunctions.inc.php";
 		/* Variables nécessaires pour le fichier JS qui suit, si applicable */
 		<?php
 		echo tabs(3),"var sImages_PathProduits = '$sImages_PathProduits';", PHP_EOL;
-		$sNomDeCettePage = substr($_SERVER['SCRIPT_NAME'], (strrpos($_SERVER['SCRIPT_NAME'],'/')+1));
-		$sNomDeCettePage = substr($sNomDeCettePage, 0, (strpos($sNomDeCettePage,'.')));
 
 		switch($sNomDeCettePage){
 			case 'index':

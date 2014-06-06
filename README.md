@@ -12,7 +12,7 @@
 #Eric :
 1. {FAIT} [TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)
 5. [JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS
-6. [HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
+6. {EN COURS}[HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
 7. [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
 note a moi-mème : pour les hover en jQ, enlever les ID dans PHP et remplacer les sélecteurs pour header>nav ou proche de ça, voir le point 15 de "reserve"
 
