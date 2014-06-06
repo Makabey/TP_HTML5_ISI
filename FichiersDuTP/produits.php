@@ -88,10 +88,8 @@ require_once "assets/inc/header.inc.php";
 					</ul>
 				</nav>
 				<div id="produits_infos">
-					<!--<div id="produits_infos_pic">-->
+					<div>
 						<img id="produits_infos_img" src="assets/images/produits/broken_toy.jpg" alt="Catégorie vide" title="Catégorie vide" />
-					<!--</div>
-					<div id="produits_infos_dl">-->
 						<dl>
 							<dt>Nom : </dt>
 							<dd id="produits_infos_nom"></dd>
@@ -106,19 +104,17 @@ require_once "assets/inc/header.inc.php";
 							<dt>Description : </dt>
 							<dd id="produits_infos_desc"></dd>
 						</dl>
-					<!--</div>-->
+					</div>
 					<div id="produits_infos_btns">
 						<button type="button" id="prod_btnPrev" class="rounded">&lt; Précédent</button>
 						<button type="button" id="prod_btnNext" class="rounded">Suivant &gt;</button>
 					</div>
 					<?php if(isset($_SESSION['user'])){ ?>
 					<div id="produits_infos_ajouterpanier">
-						<label>Quantitée : <input type="text" maxlength="4" id="produits_infos_prodqte" value="<?php echo $iProduit_QTE; ?>" /></label>
-						<img class="cursor_hand icons_basket" id="produits_infos_prodid" src="assets/images/shopping-cart-add1.png" alt="Ajouter au panier" title="Ajouter au panier" />
+						<label >Quantitée : <input type="number" maxlength="4" value="<?php echo $iProduit_QTE; ?>" min="1" max="99" required="required" /></label><img class="cursor_hand icons_basket" id="produits_infos_prodid" src="assets/images/shopping-cart-add1.png" alt="Ajouter au panier" title="Ajouter au panier" />
 					</div>
 					<?php } ?>
 				</div>
-			<!--</div>-->
 <?php
 require_once "assets/inc/footer.inc.php";
 ?>

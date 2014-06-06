@@ -1,5 +1,5 @@
 <?php
-$sPageTitle = "La Fabrique de Jouet - Votre panier";
+$sPageTitle = "Votre panier | ";
 require_once "assets/inc/csvFunctions.inc.php";
 
 session_start();
@@ -118,10 +118,11 @@ if(isset($_SESSION['user'])){
 			</tr>
 			<?php
 					// boucle d'affichage du panier
-					$odd_even_row = 'odd';
+					#$odd_even_row = 'odd';
 					foreach($_SESSION['panier'] as $pid => $details){
-						echo '
-							<tr class="',$odd_even_row,'">
+						#echo '<tr class="',$odd_even_row,'">
+						/*echo '
+							<tr class="rangeeItem">
 								<td class="listePanier_ID">',$pid,'</td>
 								<td class="listePanier_PROD">',$produits_charger[$pid]['nom'],'</td>
 								<td class="listePanier_CLR">',couleursTokensVersNoms($details['couleur']),'</td>
@@ -129,8 +130,18 @@ if(isset($_SESSION['user'])){
 								<td class="listePanier_QTE"><input type="text" class="panier_qte_input" name="panierQte_',$pid,'" value="',$details['quantite'],'" maxlength="4" /></td>
 								<td class="listePanier_BTN"><img src="assets/images/cross.png" class="panier_retirer cursor_hand" alt="Retirer cet item" title="Retirer cet item" data-pid="',$pid,'" /></td>
 							</tr>
+						';*/
+						echo '
+							<tr class="rangeeItem">
+								<td>',$pid,'</td>
+								<td>',$produits_charger[$pid]['nom'],'</td>
+								<td>',couleursTokensVersNoms($details['couleur']),'</td>
+								<td>',number_format($produits_charger[$pid]['prix'], 2),'$CDN</td>
+								<td><input type="number" class="panier_qte_input" name="panierQte_',$pid,'" value="',$details['quantite'],'" min="1" max="99" /></td>
+								<td><img src="assets/images/cross.png" class="panier_retirer cursor_hand" alt="Retirer cet item" title="Retirer cet item" data-pid="',$pid,'" /></td>
+							</tr>
 						';
-						$odd_even_row	= ($odd_even_row == 'odd')?'even':'odd';
+						#$odd_even_row	= ($odd_even_row == 'odd')?'even':'odd';
 					}
 			?>
 			<!--<tr><td colspan="7">&nbsp;</td></tr>-->
@@ -144,14 +155,14 @@ if(isset($_SESSION['user'])){
 	</form>
 <?php
 	}else{
-		echo '<h2 id="messagePanier">Désolé, votre panier est vide. <a href="produits.php">Retourner au catalogue...</a></h2>';
+		echo '<h2>Désolé, votre panier est vide. <a href="produits.php">Retourner au catalogue...</a></h2>';
 	}
 
 # FIN DE if(isset($_SESSION['user']))
 }else{
 	require_once "assets/inc/header.inc.php";
 
-	echo '<h2 id="messagePanier">Désolé, les fonctionnalitées de cette page ne sont pas disponible si vous n\'êtes pas authentifié.</h2>';
+	echo '<h2>Désolé, les fonctionnalitées de cette page ne sont pas disponible si vous n\'êtes pas authentifié.</h2>';
 }
 
 require_once "assets/inc/footer.inc.php";

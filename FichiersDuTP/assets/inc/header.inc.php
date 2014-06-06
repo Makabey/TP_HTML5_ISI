@@ -7,6 +7,8 @@ if(strlen(session_id()) == 0){
 	session_start();
 }
 
+#$_SESSION['user']='admin';
+
 $sImages_PathProduits = "assets/images/produits/"; # le path doit finir par un '/'
 $sImages_PathSlider = "assets/images/slider/"; # le path doit finir par un '/',
 $sNomDeCettePage = substr($_SERVER['SCRIPT_NAME'], (strrpos($_SERVER['SCRIPT_NAME'],'/')+1));

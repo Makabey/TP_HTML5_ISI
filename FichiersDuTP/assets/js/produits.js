@@ -40,15 +40,17 @@ $(function(){
 		}
 
 		$("#produits_infos_prodid").click(function(){
-			if($("#produits_infos_prodqte").val().length==0) $("#produits_infos_prodqte").val('1');
-			sLienPanier = "gestion_panier.php?oper=ajout&pid="+arrProduitsDetails[iIndexFiche][cstPID]+"&qte="+$("#produits_infos_prodqte").val()+"&clr="+$("#produits_infos_clrdispo").attr("data-couleur");
+			//if($("#produits_infos_prodqte").val().length==0) $("#produits_infos_prodqte").val('1');
+			//if($("#produits_infos_ajouterpanier>input[type=number]").val().length==0) $("#produits_infos_ajouterpanier>input[type=number]").val('1');
+			//sLienPanier = "gestion_panier.php?oper=ajout&pid="+arrProduitsDetails[iIndexFiche][cstPID]+"&qte="+$("#produits_infos_prodqte").val()+"&clr="+$("#produits_infos_clrdispo").data("couleur");
+			sLienPanier = "gestion_panier.php?oper=ajout&pid="+arrProduitsDetails[iIndexFiche][cstPID]+"&qte="+$("#produits_infos_ajouterpanier>label>input[type=number]").val()+"&clr="+$("#produits_infos_clrdispo").data("couleur");
 			document.location.href=sLienPanier;
 		});
 
 		$("#produits_infos_clrdispo").delegate('.produits_ColorChoiceBox', 'click', function(){
 			// Passer la couleur de l'enfant à son parent, celui-ci la passera au lien (vers la page 'panier') au moment de son activation
-			if($("#produits_infos_clrdispo").attr("data-couleur") != $(this).attr("data-couleur")){
-				$("#produits_infos_clrdispo").attr("data-couleur", $(this).attr("data-couleur"));
+			if($("#produits_infos_clrdispo").data("couleur") != $(this).data("couleur")){
+				$("#produits_infos_clrdispo").data("couleur", $(this).data("couleur"));
 				$("#produits_infos_clrdispo").children().each(function(){
 					$(this).removeClass("selected");
 				});
@@ -130,7 +132,7 @@ function remplirFicheProduit(arrFicheProduit){
 				arrSousCouleurs = arrCouleurs[iIndexClr].split(';');
 				sChaine += '<div class="produits_ColorChoiceBox cursor_hand '+arrSousCouleurs[0];
 				if(!bCouleurAttribuee){
-					$("#"+arrElementsFicheProduit[iIndexElement]).attr("data-couleur", arrSousCouleurs[0]);
+					$("#"+arrElementsFicheProduit[iIndexElement]).data("couleur", arrSousCouleurs[0]);
 					bCouleurAttribuee = true;
 					sChaine += ' selected';
 				}

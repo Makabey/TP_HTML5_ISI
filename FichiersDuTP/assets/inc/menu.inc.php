@@ -37,9 +37,6 @@ $retour = chargerCategories($arrCategories);
 									?>
 								</ul>
 							</li>
-							<?php echo genererMenuTopItem('apropos'); ?>
-								<a href="apropos.php"<?php if($sNomDeCettePage == 'apropos') echo ' class="aActiveFix"'; ?>>À Propos</a>
-							</li>
 							<?php
 								#If(isset($_SESSION['user']) && ($_SESSION['user'] != 'admin')){
 								If(isset($_SESSION['user'])){
@@ -48,6 +45,9 @@ $retour = chargerCategories($arrCategories);
 								<a href="monprofil.php"<?php if($sNomDeCettePage == 'gestion_profil') echo ' class="aActiveFix"'; ?>>Mon Profil</a>
 							</li>
 							<?php } ?>
+							<?php echo genererMenuTopItem('apropos'); ?>
+								<a href="apropos.php"<?php if($sNomDeCettePage == 'apropos') echo ' class="aActiveFix"'; ?>>À Propos</a>
+							</li>
 							<?php If(isset($_SESSION['user']) && ($_SESSION['user'] == 'admin')){ ?>
 							<?php echo genererMenuTopItem('gestion_produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'gestion_produits') echo ' aActiveFix'; ?>">Gestion</span>
 								<ul>

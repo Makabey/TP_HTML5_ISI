@@ -60,7 +60,7 @@ $(function(){
 	
 	$('.panier_retirer').click(function(){
 		$("#oper").val("retirer");
-		$("#pid").val($(this).attr("data-pid"));
+		$("#pid").val($(this).data("pid"));
 		$("#frmPanier").attr("action", "gestion_panier.php");
 		$("#frmPanier").submit();
 	});
