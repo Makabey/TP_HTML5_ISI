@@ -102,11 +102,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 	</head>
 	<body>
 		<div id="container">
-<<<<<<< HEAD
 			<header role="banner">
-=======
-			<header id="header">
->>>>>>> f8fca89d2fe2cd3c722e3262254e5531f9a6bb1a
 				<div id="center_menu">
 					<a href="index.php"><img src="assets/images/logo.png" alt="Logo de 'La Fabrique'" /></a>
 					<?php
@@ -140,4 +136,4 @@ require_once "assets/inc/csvFunctions.inc.php";
 				</div>
 			</header>
 
-			<content id="content">
+			<div id="content">
