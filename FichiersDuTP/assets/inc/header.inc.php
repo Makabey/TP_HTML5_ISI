@@ -28,7 +28,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 		<!--<script type="text/javascript" src="assets/js/functions.js"></script>-->
 		<script type="text/javascript">
 		"use strict";
-		var PageTitle = "La Fabrique de Jouet";
+		var PageTitle = "La Fabrique de Jouet"; // cette variable est pour l'éventuel changement à la page catalogue pour permettre d'avoir un nom de base pour dynamiquement reconstruire le title de la page.
 		
 		window.addEventListener("load", function(){ // J'utilise un listener pour éviter de marcher sur les platebandes de jQuery
 			// Support pour les sous-menus
@@ -47,13 +47,13 @@ require_once "assets/inc/csvFunctions.inc.php";
 				}
 			});
 
-			$("#header_gestion_produits").hover(function () {
+			/*$("#header_gestion_produits").hover(function () {
 				if ($("#header_menuNiv1_Item1_submenu6").is(":hidden")) {
 					$("#header_menuNiv1_Item1_submenu6").slideDown(50);
 				} else {
 					$("#header_menuNiv1_Item1_submenu6").slideUp(50);
 				}
-			});
+			});*/
 		});
 
 		/* Variables nécessaires pour le fichier JS qui suit, si applicable */
