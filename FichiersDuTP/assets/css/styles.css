@@ -68,8 +68,8 @@ body ::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px #5C3E18;
 }
 .cursor_hand{
-	cursor:hand;
 	cursor:pointer;
+	/*cursor:hand;*/ /* IE 5.0, 5.5 */
 }
 
 .roundedCorners_bottom{
@@ -876,39 +876,73 @@ span.spanValid{
 }
 
 /** FOOTER **/
-#footer{
+footer{
 	height: 200px;
 	border-top: 1px solid #5C3E18;
+	position:relative;
 }
 
-#footer_content{
+/*#footer_content{
 	max-width:1024px;
 	height: 200px;
 	margin:0 auto;
-}
+}*/
 
-#footer a{
+/*footer a{
 	color: black;
+}*/
+
+/*footer a:hover{
+	color: #3c7a0b;
+}*/
+
+/*footer>nav,
+footer>p{
+	display:inline-block;
+}*/
+
+footer>nav{
+	vertical-align:top;
 }
 
-#footer a:hover{
+footer nav a{
+	text-decoration:none;
+	color: black;
+	font-size: 12pt;
+}
+
+footer nav a:hover{
+	/*text-decoration:none;*/
 	color: #3c7a0b;
 }
 
-#footer_menu{
+/*#footer_menu{
 	float: right;
+}*/
+
+footer>p{
+	/*text-align:right;*/
+	position:absolute;
+	bottom:0;
+	right:10px;
+	/*border:1px dashed red;*/
+	}
+
+footer>p>mark{
+	background-color:transparent;
+	color:grey;
 }
 
-#footer_menu ul{
+footer nav ul{
 	list-style-type:none;
 	padding:0;
 }
 
-#footer_menu>ul{
+footer nav>ul{
 	min-width:600px;
 }
 
-#footer_menu>ul>li{
+footer nav>ul>li{
 	display:inline-block;
 	padding:5px;
 	float:left;
@@ -916,7 +950,7 @@ span.spanValid{
 	color: #919191;
 }
 
-#footer_index{
+/*#footer_index{
 	width:100px;
 }
 
@@ -934,37 +968,26 @@ span.spanValid{
 
 #footer_formulaire{
 	width:100px;
-}
+}*/
 
-#footer_menu>ul>li>ul>li{
+footer nav>ul>li>ul>li{
 	margin-left: 15px;
 }
 
-#footer_menu>ul>li>ul>li:hover:before{
+footer nav>ul>li>ul>li:hover:before{
 	content: "- ";
 	font-weight: bold;
 	margin-left: -11px;
 }
 
-#footer_menu>ul>li>ul>li>a{
+footer nav>ul>li>ul>li>a{
 	font-size: 10pt;
 }
 
-#footer_menu a{
-	text-decoration:none;
-	color: black;
-	font-size: 12pt;
-}
-
-#footer_menu a:hover{
-	text-decoration:none;
-	color: #3c7a0b;
-}
-
-#footer_menuContainer{
+/*#footer_menuContainer{
 	width: 1024px;
 	margin:auto;
-}
+}*/
 
 /* formatage region et langue footer */
 .region{

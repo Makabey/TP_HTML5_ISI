@@ -7,7 +7,7 @@ if(false === function_exists('genererMenuTopItem')){
 		global $sNomDeCettePage;
 
 		$retour = '<li';
-		#$retour .= ' id="'. $MenusID . $nomMenu . '"';
+		$retour .= ' id="'. $MenusID . $nomMenu . '"';
 		if(($sNomDeCettePage == $nomMenu) && ($MenusID == 'header_')){
 			$retour .= ' class="activePage"';
 		}

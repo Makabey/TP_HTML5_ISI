@@ -23,37 +23,37 @@ require_once "assets/inc/csvFunctions.inc.php";
 		<meta name="author" content="Eric Robert et Olivier Berthier" />
 		<meta name="description" content="HTML5 - TP - Eric et Olivier" />
 		<meta name="keywords" content="" />
-		<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<!--<script type="text/javascript" src="assets/js/functions.js"></script>-->
-		<script type="text/javascript">
+		<link rel="stylesheet" href="assets/css/styles.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!--<script src="assets/js/functions.js"></script>-->
+		<script>
 		"use strict";
 		var PageTitle = "La Fabrique de Jouet"; // cette variable est pour l'éventuel changement à la page catalogue pour permettre d'avoir un nom de base pour dynamiquement reconstruire le title de la page.
 		
 		window.addEventListener("load", function(){ // J'utilise un listener pour éviter de marcher sur les platebandes de jQuery
 			// Support pour les sous-menus
-			/*$("#header_produits").hover(function () {
+			$("#header_produits").hover(function () {
 				if ($("#header_menuNiv1_Item1_submenu2").is(":hidden")) {
 					$("#header_menuNiv1_Item1_submenu2").slideDown(100);
 				} else {
 					$("#header_menuNiv1_Item1_submenu2").slideUp(100);
 				}
-			});*/
-			$("header>div>nav>ul>li").hover(function () {
+			});
+			/*$("header>div>nav>ul>li").hover(function () {
 				if ($("header>div>nav>ul>li>ul").is(":hidden")) {
 					$("header>div>nav>ul>li>ul").slideDown(100);
 				} else {
 					$("header>div>nav>ul>li>ul").slideUp(100);
 				}
-			});
+			});*/
 
-			/*$("#header_gestion_produits").hover(function () {
+			$("#header_gestion_produits").hover(function () {
 				if ($("#header_menuNiv1_Item1_submenu6").is(":hidden")) {
 					$("#header_menuNiv1_Item1_submenu6").slideDown(50);
 				} else {
 					$("#header_menuNiv1_Item1_submenu6").slideUp(50);
 				}
-			});*/
+			});
 		});
 
 		/* Variables nécessaires pour le fichier JS qui suit, si applicable */
@@ -84,7 +84,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 				break;
 
 			case 'gestion_panier':
-				$panierSousTotal  = 0; // Utilisé dans 'gestion_panier.php'
+				$panierSousTotal = 0; // Utilisé dans 'gestion_panier.php'
 				$panierPrix = '';
 				if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
 					$retour = chargerProduits($produits_charger);
@@ -104,7 +104,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 		<?php
 			// NE PAS modifier $sNomDeCettePage parce qu'elle est utilisée aussi dans "menu.inc.php"
 			if(file_exists('assets/js/'.$sNomDeCettePage.'.js')){
-				echo '<script type="text/javascript" src="assets/js/',$sNomDeCettePage,'.js"></script>',PHP_EOL;
+				echo '<script src="assets/js/',$sNomDeCettePage,'.js"></script>',PHP_EOL;
 			}
 		?>
 	</head>
