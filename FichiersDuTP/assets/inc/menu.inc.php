@@ -7,7 +7,7 @@ if(false === function_exists('genererMenuTopItem')){
 		global $sNomDeCettePage;
 
 		$retour = '<li';
-		$retour .= ' id="'. $MenusID . $nomMenu . '"';
+		#$retour .= ' id="'. $MenusID . $nomMenu . '"';
 		if(($sNomDeCettePage == $nomMenu) && ($MenusID == 'header_')){
 			$retour .= ' class="activePage"';
 		}
@@ -21,13 +21,13 @@ if(false === function_exists('genererMenuTopItem')){
 require_once "assets/inc/csvFunctions.inc.php";
 $retour = chargerCategories($arrCategories);
 ?>
-					<nav role="navigation" id="<?php echo $MenusID; ?>menu">
+					<nav role="navigation">
 						<ul>
 							<?php echo genererMenuTopItem('index'); ?>
 								<a href="index.php"<?php if($sNomDeCettePage == 'index') echo ' class="aActiveFix"'; ?>>Accueil</a>
 							</li>
 							<?php echo genererMenuTopItem('produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'produits') echo ' aActiveFix'; ?>">Catégories</span>
-								<ul id="<?php echo $MenusID; ?>menuNiv1_Item1_submenu2">
+								<ul>
 									<?php
 									foreach($arrCategories as $index => $details){
 										if($index>0){ # Ne pas afficher catégorie "tout", alias "0"
@@ -50,7 +50,7 @@ $retour = chargerCategories($arrCategories);
 							<?php } ?>
 							<?php If(isset($_SESSION['user']) && ($_SESSION['user'] == 'admin')){ ?>
 							<?php echo genererMenuTopItem('gestion_produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'gestion_produits') echo ' aActiveFix'; ?>">Gestion</span>
-								<ul id="<?php echo $MenusID; ?>menuNiv1_Item1_submenu6">
+								<ul>
 									<li><a href="gestion_produits.php">Produits</a></li>
 									<li><a href="gestion_produits_inventaire.php">Inventaire</a></li>
 									<li><a href="gestion_produits_factures.php">Factures clients</a></li>

@@ -19,7 +19,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8" />
-		<title><?php echo $sPageTitle; ?> | La Fabrique de Jouet</title>
+		<title><?php echo $sPageTitle; ?>La Fabrique de Jouet</title>
 		<meta name="author" content="Eric Robert et Olivier Berthier" />
 		<meta name="description" content="HTML5 - TP - Eric et Olivier" />
 		<meta name="keywords" content="" />
@@ -32,20 +32,13 @@ require_once "assets/inc/csvFunctions.inc.php";
 		
 		window.addEventListener("load", function(){ // J'utilise un listener pour éviter de marcher sur les platebandes de jQuery
 			// Support pour les sous-menus
-			$("#header_produits").hover(function () {
+			/*$("#header_produits").hover(function () {
 				if ($("#header_menuNiv1_Item1_submenu2").is(":hidden")) {
 					$("#header_menuNiv1_Item1_submenu2").slideDown(100);
 				} else {
 					$("#header_menuNiv1_Item1_submenu2").slideUp(100);
 				}
 			});
-			/*$("header>div>nav>ul>li").hover(function () {
-				if ($("header>div>nav>ul>li>ul").is(":hidden")) {
-					$("header>div>nav>ul>li>ul").slideDown(100);
-				} else {
-					$("header>div>nav>ul>li>ul").slideUp(100);
-				}
-			});*/
 
 			$("#header_gestion_produits").hover(function () {
 				if ($("#header_menuNiv1_Item1_submenu6").is(":hidden")) {
@@ -53,7 +46,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 				} else {
 					$("#header_menuNiv1_Item1_submenu6").slideUp(50);
 				}
-			});
+			});*/
 		});
 
 		/* Variables nécessaires pour le fichier JS qui suit, si applicable */
@@ -108,7 +101,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 			}
 		?>
 	</head>
-	<body>
+	<body id="<?php echo $sNomDeCettePage; ?>">
 		<div id="container">
 			<header role="banner">
 				<div id="center_menu">
