@@ -10,13 +10,16 @@
 
 
 #Eric :
-- {FAIT} [TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)
+- ~~[TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)~~
 - [JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS
 - {EN COURS}[HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
 - [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
-- [CSS, JS] Une fois la règle en place, enlever le code hover en jQ et les ID dans PHP
-- {FAIT} Dans "facture_client", "gestion_panier" remplacer le code autour de "$odd_even_row "  et dans "gestion_produits_factures" autour de "$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';" pour utiliser la règle CSS "nth-child(event)" comme proposé ci-dessous
+- ~~[CSS, JS] Une fois la règle en place, enlever le code hover en jQ et les ID dans PHP~~
+- ~~Dans "facture_client", "gestion_panier" remplacer le code autour de "$odd_even_row "  et dans "gestion_produits_factures" autour de "$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';" pour utiliser la règle CSS "nth-child(event)" comme proposé ci-dessous~~
 - Proposition pour le menu "Mon profil" : enlever "Déconnexion" dans le menu et rendre le nom cliquable, un UL apparaitra en hover avec les choix "Modifier" (qui mène à une nouvelle page Formulaire, celle demandée pour ce TP) et "Déconnexion"
+- réviser le code qui recoit et analyse les donnés du formulaire inscription/authentification et les query string (en passer au mode POST s'il le faut)
+- [AJAX] valider en temps réel le nom d'usager (inscription)
+- ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
 
 ###changements fait au HTML influencant le CSS:
 * (div) #header => header
@@ -58,7 +61,7 @@
 18. [DB, AJAX] Passer la page d'ajouts des produits à AJAX pour lecture/écriture, l'exeption initiale est le chargement par PHP de la liste des items connus
 19. [PHP] Pousser les fonctions qui s'occupent des items vers une/des classes?
 20. [PHP] Pousser le panier plus loin pour qu'il sépare et reconnaisse les couleurs de jouets de façon à pouvoir commander le même en plusieurs couleurs?
-21. [PHP, JS] Quand on ajoute un item au panier, qu'il y en as déjà ET que c'est la même couleur, demander si on doit ajouter à la quantité ou remplacer la quantité? Ou alors par défaut on ajoute ET on l'indique en haut de la page pour que le client sache ce qu'il s'est passé  
+21. [PHP, JS] Quand on ajoute un item au panier, qu'il y en as déjà ET que c'est la même couleur, demander si on doit ajouter à la quantité ou remplacer la quantité? Ou alors par défaut on ajoute ET on l'indique en haut de la page pour que le client sache ce qu'il s'est passé , le faire même pour un nouvel ajout/item 
 22. [HTML] Ajouter les éléments SEO (meta keywords/author/description/...), pour une version "porte-folio"
 23. [WEB] Acheter un domaine et créer une page simple mais intéressante visuellement pour mener à chacun des projets (avec entre parenthèses si c'était un sujet imposé ou non et peut-être faits dans quels cours)
 24. [TOUT] Site supplémentaire de 1-2 pages avec [média son] d'un concurrent qui vend des jouets électronique en plastique et qui se moque des ébéniste en faisant rouler un camion téléguidé sur une copie de la page d'accueil de la Fabrique en laissant des traces de pneus. "Le bois c'est pour les cure-dents!"

@@ -277,7 +277,7 @@ span.spanFix_li_hover{
 	padding: 40px 0;
 }
 
-.formulaire #userTaken{
+#loginDiv form #userTaken{
 	color: red;
 	font-size: 9pt;
 }
@@ -288,12 +288,12 @@ span.spanFix_li_hover{
 	text-align:center;
 }
 
+/* formatage du formulaire ---> */
 #loginDiv form{
 	vertical-align:top;
-}
+/*}
 
-/* formatage du formulaire ---> */
-.formulaire{
+.formulaire{*/
 	position: relative;
 	display: inline-block;
 	border:1px solid #D0D0D0;
@@ -308,7 +308,7 @@ span.spanFix_li_hover{
 	text-align:left;
 }
 
-.fieldForm{
+/*.fieldForm{
 	margin-top: 0px!important;
 	background-color: #D0D0D0;
 	-moz-border-radius-topleft: 5px;
@@ -317,20 +317,20 @@ span.spanFix_li_hover{
 	-moz-border-radius-bottomright: 5px;
 	-webkit-border-top-right-radius: 5px;
 	border-top-right-radius: 5px;
-}
+}*/
 
-.formulaire h3{
+#loginDiv form h3{
 	margin: 0;
 	font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
 	text-align:center;
 }
 
-.formulaire h5{
+#loginDiv form h5{
 	margin: 20px 0 5px 0;
 	font: 16px "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-.formulaire input.rounded{
+#loginDiv form input{
 	width: 250px;
 	border: 1px solid #D0D0D0;
 	-moz-border-radius: 5px;
@@ -343,18 +343,18 @@ span.spanFix_li_hover{
 	margin-bottom: 20px;
 }
 
-.formulaire fieldset{
+#loginDiv form fieldset{
 	border:none;
 }
 
-.formulaire input.rounded:focus {
+#loginDiv form input:focus {
  border: 1px solid #6DB536;
 }
 
 /* formatage des composantes */
 /* Select 1 ---->
 */
-.selection select{
+/*.selection select{
 	width: 120px;
 	margin-left: 230px;
 }
@@ -376,28 +376,28 @@ span.spanFix_li_hover{
 .selection label{
 	position: absolute;
 	left: 50px;
-}
+}*/
 
 #send{
 	margin-top:10px;
 }
 
-.formulaire textarea{
+/*#loginDiv form textarea{
 	width: 350px;
 	height: 150px;
 	resize: none;
-}
+}*/
 
-.formulaire > p{
+#loginDiv form > p{
 	font-size: 12px;
 	margin: 0 0 30px 0;
 }
 
-.formulaire > div{
+#loginDiv form > div{
 	margin:0;
 }
 
-button.rounded{
+#loginDiv form button{
 	border: 1px solid #D0D0D0;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -408,11 +408,11 @@ button.rounded{
 	background-color: #fff;
 }
 
-button.rounded:hover{
+#loginDiv form button:hover{
 	border: 1px solid #D6B68B;
 }
 
-button.rounded:active{
+#loginDiv form button:active{
 	border: 1px solid #D6B68B;
 	background: rgb(211,211,211); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(211,211,211,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
@@ -439,11 +439,11 @@ span.spanValid{
 	display:inline-block;
 }
 
-.formulaire + div > ul{
+#loginDiv form + div > ul{
 	list-style: none;
 }
 
-.formulaire #userInvalid{
+#loginDiv form #userInvalid{
 	color: red;
 	font-size: 9pt;
 }

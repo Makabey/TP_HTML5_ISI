@@ -24,7 +24,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 		<title><?php echo $sPageTitle; ?>La Fabrique de Jouet</title>
 		<meta name="author" content="Eric Robert et Olivier Berthier" />
 		<meta name="description" content="HTML5 - TP - Eric et Olivier" />
-		<meta name="keywords" content="" />
+		<meta name="keywords" content="jouets, bois, jouets en bois, jouets sur mesure, naturel, durable, enfant" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<!--<script src="assets/js/functions.js"></script>-->
@@ -130,7 +130,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 						}
 						echo '<div><a href="logout.php">Déconnexion</a></div>';
 					}else{
-						echo '<div><a href="formulaire.php">Se connecter / s\'enregister</a></div>';
+						echo '<div><a href="authentify.php">Se connecter / s\'enregister</a></div>';
 					}
 					echo '</div>', PHP_EOL;
 					$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
