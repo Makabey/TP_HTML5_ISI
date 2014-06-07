@@ -15,7 +15,7 @@
 - {EN COURS}[HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
 - [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
 - [CSS, JS] Une fois la règle en place, enlever le code hover en jQ et les ID dans PHP
-- Dans "facture_client", "gestion_panier" remplacer le code autour de "$odd_even_row "  et dans "gestion_produits_factures" autour de "$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';" pour utiliser la règle CSS "nth-child(event)" comme proposé ci-dessous
+- {FAIT} Dans "facture_client", "gestion_panier" remplacer le code autour de "$odd_even_row "  et dans "gestion_produits_factures" autour de "$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';" pour utiliser la règle CSS "nth-child(event)" comme proposé ci-dessous
 - Proposition pour le menu "Mon profil" : enlever "Déconnexion" dans le menu et rendre le nom cliquable, un UL apparaitra en hover avec les choix "Modifier" (qui mène à une nouvelle page Formulaire, celle demandée pour ce TP) et "Déconnexion"
 
 ###changements fait au HTML influencant le CSS:
