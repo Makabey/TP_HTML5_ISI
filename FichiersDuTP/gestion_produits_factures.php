@@ -1,10 +1,10 @@
 <?php
-$sPageTitle = "La Fabrique de Jouet - Gestion des factures";
+$sPageTitle = "Gestion des factures | ";
 
 require_once "assets/inc/csvFunctions.inc.php";
 require_once "assets/inc/header.inc.php";
 
-echo tabs(4),'<div id="gestionFactures">',PHP_EOL;
+#echo tabs(4),'<div>',PHP_EOL;
 
 $retour = chargerProduits($arrProduits);
 if($retour === false){
@@ -18,11 +18,11 @@ if($retour === false){
 ?>
 					<table>
 						<tr>
-							<th id="gpFacture_no">No Facture</th>
-							<th id="gpFacture_date">Date d'achat</th>
-							<th id="gpFacture_nomclient">Nom du client</th>
-							<th class="gpFacture_total">Total (taxes incluse)</th>
-							<th id="gpFacture_lien">Détails</th>
+							<th>No Facture</th>
+							<th>Date d'achat</th>
+							<th>Nom du client</th>
+							<th>Total (taxes incluse)</th>
+							<th>Détails</th>
 						</tr>
 						<?php
 						$nroLigne = 0;
@@ -35,7 +35,7 @@ if($retour === false){
 								if(!empty($client)){
 									
 									foreach($facture as $facture_ID => $produits){
-										$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';
+										#$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';
 										$total = 0;
 										foreach($produits['produits'] as $product_ID => $details){
 											if(isset($arrProduits[$product_ID])){ # c'est pas a cette page de dire si ou non un item de la facture est valide!
@@ -44,13 +44,16 @@ if($retour === false){
 										}
 										$total = ajouterTaxes($total, 2);
 										
-										echo '<tr class="',$class_fctr,'">',PHP_EOL;
+										#echo '<tr class="',$class_fctr,'">',PHP_EOL;
+										echo '<tr>',PHP_EOL;
 										echo '<td>',str_pad($facture_ID, 6, '0', STR_PAD_LEFT),'</td>';
-										echo '<td>',$produits['dateAchat'],'</td>';
+										$dateAchatRemixed = explode(' ',$produits['dateAchat']);
+										$dateAchatRemixed[0] = explode('/', $dateAchatRemixed[0]);
+										echo '<td><time datetime="',$dateAchatRemixed[0][2],'-',$dateAchatRemixed[0][1],'-',$dateAchatRemixed[0][0],' ',$dateAchatRemixed[1],'">',$produits['dateAchat'],'</time></td>';
 										$nomClient = $client[$client_ID]['prenom'].'&nbsp;'.$client[$client_ID]['nomFamille'];
 										echo '<td>',ucwords($nomClient),'</td>';
-										echo '<td class="gpFacture_total">',number_format($total, 2),'$CDN</td>';
-										echo '<td><a href="facture_client.php?oper=consulter&nrof=',$facture_ID,'">Afficher</a></td>';
+										echo '<td>',number_format($total, 2),'$CDN</td>';
+										echo '<td><a href="facture_client.php?oper=consulter&amp;nrof=',$facture_ID,'">Afficher</a></td>';
 										echo '</tr>',PHP_EOL;
 										$nroLigne++;
 									}
@@ -65,7 +68,7 @@ if($retour === false){
 	}
 }
 
-echo tabs(4),'</div>',PHP_EOL;
+#echo tabs(4),'</div>',PHP_EOL;
 
 require_once "assets/inc/footer.inc.php";
 ?>

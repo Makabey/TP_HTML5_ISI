@@ -111,7 +111,7 @@ require_once "assets/inc/header.inc.php";
 					</div>
 					<?php if(isset($_SESSION['user'])){ ?>
 					<div id="produits_infos_ajouterpanier">
-						<label >Quantitée : <input type="number" maxlength="4" value="<?php echo $iProduit_QTE; ?>" min="1" max="99" required="required" /></label><img class="cursor_hand icons_basket" id="produits_infos_prodid" src="assets/images/shopping-cart-add1.png" alt="Ajouter au panier" title="Ajouter au panier" />
+						<label >Quantitée : <input type="number" value="<?php echo $iProduit_QTE; ?>" min="1" max="99" required="required" /></label><img class="cursor_hand icons_basket" id="produits_infos_prodid" src="assets/images/shopping-cart-add1.png" alt="Ajouter au panier" title="Ajouter au panier" />
 					</div>
 					<?php } ?>
 				</div>

@@ -103,7 +103,7 @@ if(isset($_SESSION['user'])){
 	if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
 ?>
 	<!-- Tableau d'affichage de la liste de produits dans le panier -->
-	<form id="frmPanier" method="post" action="">
+	<form id="frmPanier" method="post" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>">
 		<input id="oper" name="oper" value="" type="hidden" />
 		<input id="pid" name="pid" value="" type="hidden" />
 		<table id="itemsDuClient">
@@ -145,7 +145,7 @@ if(isset($_SESSION['user'])){
 					}
 			?>
 			<!--<tr><td colspan="7">&nbsp;</td></tr>-->
-			<tr><td class="textright" colspan="3">Sous-total : </td><td class="textright"><output class="textright" id="listePanierSousTotal"><?php echo number_format($panierSousTotal, 2),'$CDN'; ?></output></td></tr>
+			<tr><td class="textright" colspan="3">Sous-total : </td><td class="textright"><output class="textright" id="listePanierSousTotal"><?php echo number_format($panierSousTotal, 2),'$CDN'; ?></output></td><td colspan="2">&nbsp;</td></tr>
 			<tr>
 				<td colspan="3"><span id="listePanier_Magasiner" class="cursor_hand">&lt;-- Continuer de magasiner.</span></td>
 				<td id="listePanier_Payer" colspan="2"><img class="cursor_hand icons_basket" id="gp_Payer" alt="Payer" title="Payer" src="assets/images/shopping-cart-buy.png" /></td>
