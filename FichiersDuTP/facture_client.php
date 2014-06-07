@@ -1,6 +1,6 @@
 <?php
 
-$sPageTitle = "La Fabrique de Jouet - Gestion des produits";
+$sPageTitle = "Facture client | ";
 
 require_once "assets/inc/csvFunctions.inc.php";
 require_once "assets/inc/header.inc.php";
@@ -21,20 +21,19 @@ if(isset($_GET)){
 			$retour = chargerUsager($usager, $client_ID);
 			$usager = $usager[$client_ID];
 			if(false === $retour){
-				echo '<h2>(4)Une erreur est survenue lors de la lecture de la facture, nous en sommes désolés.</h2>';
+				echo '<h2>Une erreur est survenue lors de la lecture de la facture, nous en sommes désolés.[Erreur #4]</h2>';
 			}else{
 				$retour = chargerProduits($produits_charger);
 				if(false === $retour){
-					echo '<h2>(3)Une erreur est survenue lors de la lecture de la facture, nous en sommes désolés.</h2>';
+					echo '<h2>Une erreur est survenue lors de la lecture de la facture, nous en sommes désolés.[Erreur #3]</h2>';
 				}else{
 ?>
-		<table id="factureEntete">
+		<table>
 			<tr><td>Facture #</td><td><?php echo str_pad($nrof, 6, '0', STR_PAD_LEFT); ?></td></tr>
 			<tr><td>Achats faits le</td><td><?php echo $arrFacture['dateAchat'] ?></td></tr>
 			<tr><td>Par</td><td><?php echo ucwords($usager['prenom'].' '.$usager['nomFamille']) ,' / ', $usager['adresse'] ,' / ', $usager['email']; ?></td></tr>
 		</table>
-		<table id="factureClient">
-			<caption></caption>
+		<table id="itemsDuClient">
 			<tr>
 				<th>ID</th>
 				<th>Produit</th>
@@ -48,21 +47,21 @@ if(isset($_GET)){
 					$total = 0;
 					$taxes = 0;
 					// boucle d'affichage du panier
-					$odd_even_row = 'odd';
+					#$odd_even_row = 'odd';
 					foreach($arrFacture['produits'] as $pid => $details){
 						$sommeItem=$details['quantite'] * $produits_charger[$pid]['prix'];
 						$sousTotal += $sommeItem;
 						echo '
-							<tr class="',$odd_even_row,'">
-								<td class="listePanier_ID">',str_pad($pid, 6, '0', STR_PAD_LEFT),'</td>
-								<td class="listePanier_PROD">',$produits_charger[$pid]['nom'],'</td>
-								<td class="listePanier_CLR">',couleursTokensVersNoms($details['couleurs']),'</td>
-								<td class="listePanier_PRIX">',number_format($produits_charger[$pid]['prix'], 2),'$CDN</td>
-								<td class="listePanier_QTE">',$details['quantite'],'</td>
-								<td class="listePanier_TTL">',number_format($sommeItem, 2),'$CDN</td>
+							<tr  class="rangeeItem">
+								<td>',str_pad($pid, 6, '0', STR_PAD_LEFT),'</td>
+								<td>',$produits_charger[$pid]['nom'],'</td>
+								<td>',couleursTokensVersNoms($details['couleurs']),'</td>
+								<td>',number_format($produits_charger[$pid]['prix'], 2),'$CDN</td>
+								<td>',$details['quantite'],'</td>
+								<td>',number_format($sommeItem, 2),'$CDN</td>
 							</tr>
 						';
-						$odd_even_row	= ($odd_even_row == 'odd')?'even':'odd';
+						#$odd_even_row	= ($odd_even_row == 'odd')?'even':'odd';
 					}
 					$taxes = calculerTaxes($sousTotal);
 					$total = round($sousTotal + $taxes, 2);

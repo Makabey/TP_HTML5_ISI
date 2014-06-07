@@ -23,7 +23,7 @@ function startSliderAnimation(){
 	var tSliderStarting = setInterval(function(){
 		$("#sliderJQ_img>ul").animate({marginLeft:-1024},800,function(){$(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));});
 
-		$("#sliderJQ_desc span").text($("#sliderJQ_img>ul>li:nth-of-type(2) img").attr("alt"));
+		//$("#sliderJQ_desc span").text($("#sliderJQ_img>ul>li:nth-of-type(2) img").attr("alt"));
 		}, 3500);
 
 	return tSliderStarting;

@@ -106,7 +106,7 @@ if(isset($_SESSION['user'])){
 	<form id="frmPanier" method="post" action="">
 		<input id="oper" name="oper" value="" type="hidden" />
 		<input id="pid" name="pid" value="" type="hidden" />
-		<table id="listePanier">
+		<table id="itemsDuClient">
 			<caption>Votre panier</caption>
 			<tr>
 				<th>ID</th>
@@ -145,11 +145,11 @@ if(isset($_SESSION['user'])){
 					}
 			?>
 			<!--<tr><td colspan="7">&nbsp;</td></tr>-->
-			<tr><td class="textright"  colspan="3">Sous-total : </td><td class="textright"><span class="textright" id="listePanierSousTotal"><?php echo number_format($panierSousTotal, 2),'$CDN'; ?></span></td></tr>
+			<tr><td class="textright" colspan="3">Sous-total : </td><td class="textright"><output class="textright" id="listePanierSousTotal"><?php echo number_format($panierSousTotal, 2),'$CDN'; ?></output></td></tr>
 			<tr>
 				<td colspan="3"><span id="listePanier_Magasiner" class="cursor_hand">&lt;-- Continuer de magasiner.</span></td>
 				<td id="listePanier_Payer" colspan="2"><img class="cursor_hand icons_basket" id="gp_Payer" alt="Payer" title="Payer" src="assets/images/shopping-cart-buy.png" /></td>
-				<td id="listePanier_Vider"><img class="icons_basket"  id="gp_Vider" alt="Vider le panier" title="Vider le panier" src="assets/images/shopping-cart-remove.png"  /></td>
+				<td id="listePanier_Vider"><img class="cursor_hand icons_basket" id="gp_Vider" alt="Vider le panier" title="Vider le panier" src="assets/images/shopping-cart-remove.png" /></td>
 			</tr>
 		</table>
 	</form>

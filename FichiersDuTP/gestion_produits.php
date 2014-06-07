@@ -1,5 +1,5 @@
 <?php
-$sPageTitle = "La Fabrique de Jouet - Gestion des produits";
+$sPageTitle = "Gestion des produits | ";
 
 require_once "assets/inc/csvFunctions.inc.php";
 

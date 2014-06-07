@@ -139,4 +139,4 @@ require_once "assets/inc/csvFunctions.inc.php";
 				</div>
 			</header>
 
-			<div id="content">
+			<div id="content" role="main">

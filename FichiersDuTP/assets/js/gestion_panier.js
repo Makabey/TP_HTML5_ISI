@@ -9,7 +9,7 @@ $(function(){
 	*/
 
 	// S'assurer que l'usager ne peux entrer que des nombres
-	$('.panier_qte_input').keydown(function(e){
+	/*$('.panier_qte_input').keydown(function(e){
 		e = e || window.event;
 		var key = e.keycode || e.which;
 
@@ -18,9 +18,9 @@ $(function(){
 				return false;
 			}
 		}
-	});
+	});*/
 
-	$('.panier_qte_input').blur(function(){
+	$('.panier_qte_input').change(function(){
 		var iSousTotal = 0;
 		var iIndexPrix = 0;
 		var iQte = 0;
@@ -50,7 +50,6 @@ $(function(){
 	});
 
 	$("#gp_Vider").click(function(){
-	
 		if(confirm("Voulez-vous réellement vider votre panier?")){
 			$("#oper").val("vider");
 			$("#frmPanier").attr("action", "gestion_panier.php");

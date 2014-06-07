@@ -81,7 +81,6 @@ body ::-webkit-scrollbar-thumb {
 	border-bottom-right-radius: 5px;
 }
 
-
 /* Header------------->
 */
 header{
@@ -223,12 +222,12 @@ header nav>ul>li>ul>li:hover{
 	border-top:1px solid #963;
 	border-left:1px solid #963;
 	border-right:1px solid #963;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 	-moz-border-radius-topleft: 5px;
 	-webkit-border-top-left-radius: 5px;
-	border-top-left-radius: 5px;
 	-moz-border-radius-bottomright: 5px;
 	-webkit-border-top-right-radius: 5px;
-	border-top-right-radius: 5px;
 	box-shadow:0 -7px 10px rgba(0,0,0,0.3);
 }
 
@@ -253,9 +252,9 @@ header h1:hover{
 #userWrap > #search{
 	width: 200px;
 	border: 1px solid #D0D0D0;
+	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	border-radius: 5px;
 	padding: 3px 7px;
 	outline: 0;
 	font-size: 14px;
@@ -295,7 +294,6 @@ content{
 	min-height: 400px;
 	padding: 40px 0;
 }
-
 
 .formulaire #userTaken{
 	color: red;
@@ -518,13 +516,13 @@ span.spanValid{
 	margin:0 auto;
 }
 
-#sliderJQ_desc{
+/*#sliderJQ_desc{
 	width:1000px;
 	height:30px;
 	text-align:center;
 	color: black;
 	padding:5px 20px;
-}
+}*/
 
 #sliderWrap{
 	-moz-border-radius-bottomleft: 5px;
@@ -535,8 +533,7 @@ span.spanValid{
 	border-bottom-right-radius: 5px;
 }
 
-#sliderJQ_stopstartBtn{
-	/*border: 1px solid #67a034;*/
+/*#sliderJQ_stopstartBtn{
 	border: 1px solid #5C3E18;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -550,8 +547,7 @@ span.spanValid{
 	position:relative;
 	top:-50px;
 	width:94px;
-}
-
+}*/
 
 /** PRODUITS **/
 /*#produits{
@@ -739,6 +735,7 @@ span.spanValid{
 	outline:3px solid #999;
 }
 
+/* De .red à .green, ces classes sont nécessaires pour les carrés de sélection de couleurs dans le "catalogue" */
 .red{
 	background-color:#f00;
 }
@@ -770,53 +767,52 @@ span.spanValid{
 	background-color:#0f0;
 }
 
-
 /** PANIER **/
 #gestion_panier #container #content h2{
 	margin: 0 auto;
 	width: 900px;
 }
 
-#listePanier, #factureEntete, #factureClient{
+#gestion_panier #itemsDuClient, #facture_client table{
 	margin:0 auto;
 	width: 900px;
 	border-collapse:collapse;
 }
 
-#listePanier tr:first-child, #factureClient tr:first-child{
+#itemsDuClient tr:first-child{
 	border:1px solid;
 }
 
-#listePanier th, #factureClient th{
+#itemsDuClient th{
 	text-align: center;
 }
 
-#listePanier th, #listePanier td{
+#itemsDuClient th, #itemsDuClient td{
 	padding-left:5px;
+	padding-right:10px;
 }
 
 /*#listePanier td, #factureClient td{
 	height: 20px;
 }*/
 
-#listePanier tr.rangeeItem:nth-child(odd), #factureClient tr.odd{
+#itemsDuClient tr.rangeeItem:nth-child(odd){
 	background-color: #b4c0cc /*#99b2cc; /*#69c;*/
 }
 
-#listePanier tr.rangeeItem:nth-child(even), #factureClient tr.even{
+#itemsDuClient tr.rangeeItem:nth-child(even){
 	background-color: #b4ccc0 /*#99ccb2; /*#6c9;*/
 }
 
-#listePanier tr:nth-last-child(2){
+#gestion_panier #itemsDuClient tr:nth-last-child(2){
 	border:1px solid;
 }
 
-#listePanier caption, #factureClient caption{
+#itemsDuClient caption{
 	text-align:center;
 	font-weight:bold;
 	font-size:1.5em;
 }
-
 
 #listePanier_Vider{
 	text-align: right;
@@ -826,44 +822,43 @@ span.spanValid{
 	text-align:center;
 }
 
-
-#listePanier tr.rangeeItem>td:first-child{
+#itemsDuClient tr.rangeeItem>td:first-child{
 /*.listePanier_ID{*/
 	width:70px;
 	text-align:right;
 	padding-right: 10px;
 }
 
-#listePanier tr.rangeeItem>td:nth-child(2){
+#itemsDuClient tr.rangeeItem>td:nth-child(2){
 /*.listePanier_PROD{*/
 	width:400px;
 }
 
-#listePanier tr.rangeeItem>td:nth-child(3){
+#itemsDuClient tr.rangeeItem>td:nth-child(3){
 /*.listePanier_CLR{*/
 	width:100px;
 }
 
-#listePanier tr.rangeeItem>td:nth-child(4){
+#itemsDuClient tr.rangeeItem>td:nth-child(4){
 /*.listePanier_PRIX{*/
 	width:125px;
 	text-align: right;
 	padding-right:10px;
 }
 
-#listePanier tr.rangeeItem>td:nth-child(5){
+#itemsDuClient tr.rangeeItem>td:nth-child(5){
 /*.listePanier_QTE{*/
 	width: 50px;
 	text-align: center;
 }
 
-#listePanier tr.rangeeItem>td:nth-child(5) input[type=number]{
+#itemsDuClient tr.rangeeItem>td:nth-child(5) input[type=number]{
 /*.listePanier_QTE input[type=text]{*/
 	text-align: right;
 	width: 3em;
 }
 
-#listePanier tr.rangeeItem>td:last-child{
+#gestion_panier #itemsDuClient tr.rangeeItem>td:last-child{
 /*.listePanier_BTN{*/
 	width: 20px;
 	text-align:right;
@@ -874,8 +869,7 @@ span.spanValid{
 	padding-right:5px;
 }*/
 
-
-.listePanier_TTL{
+#facture_client #itemsDuClient tr.rangeeItem>td:last-child{
 	width: 100px;
 	text-align:right;
 }
@@ -995,7 +989,7 @@ footer nav>ul>li>ul>li>a{
 }*/
 
 /* formatage region et langue footer */
-.region{
+/*.region{
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -1011,7 +1005,7 @@ footer nav>ul>li>ul>li>a{
 
 #langues_regions{
 	display: inline-block;
-}
+}*/
 
 /** A PROPOS **/
 .aProposBox{
@@ -1121,7 +1115,6 @@ footer nav>ul>li>ul>li>a{
 #gestionFactures tr.odd{
 	background-color:#ccc;
 }
-
 
 #gpFacture_no{
 	width:100px;

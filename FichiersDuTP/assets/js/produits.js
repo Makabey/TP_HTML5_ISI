@@ -66,8 +66,7 @@ $(function(){
 		/*
 			Mise en place des événements pour produits.php
 
-			Si la page as recu un nom via $_GET['pid'], ce nom correspond à une image "produit", son index
-			est mis dans "iIndexFiche" pour forcer la navigation à commencer sur ce produit.
+			Si la page as recu un nom via $_GET['pid'], ce nom correspond à une image "produit", son index est mis dans "iIndexFiche" pour forcer la navigation à commencer sur ce produit.
 		*/
 		$("#produits_infos_btns").show();
 
