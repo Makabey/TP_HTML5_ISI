@@ -48,10 +48,10 @@ $messErreurLogin = null;
 // validation des champs formulaire
 if(isset($_POST['nomReg'])){
 	$formValidation['nom'] = test_input($_POST['nomReg']);
-	$formValidation['nomFamille'] = test_input($_POST['nomFamilleReg']);
-	$formValidation['prenom'] = test_input($_POST['prenomReg']);
+	$formValidation['nomFamille'] = ""; #test_input($_POST['nomFamilleReg']);
+	$formValidation['prenom'] = ""; #test_input($_POST['prenomReg']);
 	$formValidation['password'] = test_input($_POST['passwordReg']);
-	$formValidation['adresse'] = test_input($_POST['adresse']);
+	$formValidation['adresse'] = ""; #test_input($_POST['adresse']);
 	$formValidation['email'] = test_input($_POST['email']);
 
 	$return = chargerUsager($usagertest,$formValidation['nom']);
@@ -95,7 +95,7 @@ elseif(isset($_POST['login'])){
 					<fieldset>
 						<label for="login">Votre identifiant : </label>
 						<div>
-							<input id="login" name="login" type="text" required="required"  autofocus="autofocus" placeholder="votre identifiant" pattern="[A-Z][a-zA-Z0-9]{3,11}"  title="Une majuscule suivie de 3 à 11 caractères" />
+							<input id="login" name="login" type="text" required="required" autofocus="autofocus" placeholder="votre identifiant" pattern="[A-Z][a-zA-Z0-9]{3,11}" title="Une majuscule suivie de 3 à 11 caractères" />
 							<!--<span id="loginOk" class="spanValid"></span> -->
 						</div>
 						<!--<span id="errorLogin" class="spanError"></span> -->
@@ -103,7 +103,7 @@ elseif(isset($_POST['login'])){
 					<fieldset>
 						<label for="passwordLog">Mot de passe : </label>
 						<div>
-							<input id="passwordLog" name="passwordLog" type="password" required="required"  pattern="[a-zA-Z0-9]{3,12}" title="De 3 à 12 caractères" />
+							<input id="passwordLog" name="passwordLog" type="password" required="required" pattern="[a-zA-Z0-9]{3,12}" title="De 3 à 12 caractères" />
 						</div>
 						<!--<span id="errorPasswordLog" class="spanError"></span> -->
 					</fieldset>
@@ -122,56 +122,62 @@ elseif(isset($_POST['login'])){
 						<label for="nomReg">Choisir un identifiant : </label>
 						<div>
 							<span id="userTakenReg"><?php echo $messErreur; ?></span>
-							<input id="nomReg"  name="nomReg"  type="text" required="required"   autocomplete="off" placeholder="Au moins 3 charactères" pattern="[A-Z][a-zA-Z0-9]{3,11}"  title="Une majuscule suivie de 3 à 11 caractères."  list="suggestionsIdent"/>
+							<input id="nomReg" name="nomReg" type="text" required="required" autocomplete="off" placeholder="Au moins 3 charactères" pattern="[A-Z][a-zA-Z0-9]{3,11}" title="Une majuscule suivie de 3 à 11 caractères." list="suggestionsIdent"/>
 							<datalist id="suggestionsIdent"></datalist> <!-- Remplir avec javacript -->
 							<!--<span id="nomOk" class="spanValid"></span> -->
 						</div>
-						
 						<!--<span id="errorNomReg" class="spanError"></span> -->
 					</fieldset>
-					<fieldset>
+					<!--<fieldset>
 						<label for="prenomReg">Votre prénom : </label>
 						<div>
-							<input id="prenomReg"  name="prenomReg" type="text"  required="required"   autocomplete="off" placeholder="Au moins 3 charactères" pattern="[A-Z][a-zA-Z0-9]{3,19}"  title="Une majuscule suivie de 3 à 19 caractères." />
-							<!--<span id="prenomOk" class="spanValid"></span> -->
+							<input id="prenomReg" name="prenomReg" type="text" required="required" autocomplete="off" placeholder="Au moins 3 charactères" pattern="[A-Z][a-zA-Z0-9]{3,19}" title="Une majuscule suivie de 3 à 19 caractères." />
+							<! --<span id="prenomOk" class="spanValid"></span> -- >
 						</div>
-						<!--<span id="errorPrenomReg" class="spanError"></span> -->
+						<! --<span id="errorPrenomReg" class="spanError"></span> -- >
 					</fieldset>
 					<fieldset>
 						<label for="nomFamilleReg">Votre nom : </label>
 						<div>
-							<input id="nomFamilleReg" name="nomFamilleReg" type="text"  required="required"   autocomplete="off" placeholder="Au moins 3 charactères" pattern="[A-Z][a-zA-Z0-9]{3,19}"  title="Une majuscule suivie de 3 à 19 caractères." />
-							<!--<span id="nomFamilleOk" class="spanValid"></span> -->
+							<input id="nomFamilleReg" name="nomFamilleReg" type="text" required="required" autocomplete="off" placeholder="Au moins 3 charactères" pattern="[A-Z][a-zA-Z0-9]{3,19}" title="Une majuscule suivie de 3 à 19 caractères." />
+							<! --<span id="nomFamilleOk" class="spanValid"></span> -- >
 						</div>
-						<!--<span id="errorNomFamilleReg" class="spanError"></span> -->
-					</fieldset>
+						<! --<span id="errorNomFamilleReg" class="spanError"></span> -- >
+					</fieldset>-->
 					<fieldset>
 						<label for="passwordReg">Choisir un mot de passe : </label>
 						<div>
-							<input id="passwordReg"  name="passwordReg" type="password"  required="required"   autocomplete="off"  placeholder="Au moins 6 charactères" pattern="[a-zA-Z0-9]{6,12}"  title="De 6 à 12 caractères." />
+							<input id="passwordReg" name="passwordReg" type="password" required="required" autocomplete="off" placeholder="Au moins 6 charactères" pattern="[a-zA-Z0-9]{6,12}" title="De 6 à 12 caractères." />
 							<!--<span id="passwordOkReg" class="spanValid"></span> -->
 						</div>
 						<!--<span id="errorPasswordReg" class="spanError"></span> -->
 					</fieldset>
 					<fieldset>
+						<label for="passwordRegConfirm">Confirmez votre mot de passe : </label>
+						<div>
+							<input id="passwordRegConfirm" type="password" required="required" autocomplete="off" placeholder="Tapez-le ici de nouveau" pattern="[a-zA-Z0-9]{6,12}" title="De 6 à 12 caractères." />
+							<!--<span id="passwordRegConfirmOk" class="spanValid"></span>-->
+						</div>
+						<span id="passwordRegConfirmError" class="spanError"></span>
+					</fieldset>
+					<!--<fieldset>
 						<label for="adresse">Votre adresse civique : </label>
 						<div>
-							<input id="adresse"  name="adresse" />
-							<!--<span id="adresseOk" class="spanValid"></span> -->
+							<input id="adresse" name="adresse" />
+							<! --<span id="adresseOk" class="spanValid"></span> -- >
 						</div>
-						<!--<span id="errorAdresse" class="spanError"></span> -->
-					</fieldset>
+						<! --<span id="errorAdresse" class="spanError"></span> -- >
+					</fieldset>-->
 					<fieldset>
 						<label for="email">Votre courriel : </label>
 						<div>
-							<input id="email"  name="email" />
+							<input id="email" name="email" type="email" required="required" autocomplete="off" placeholder="utilisateur@domaine.com"  />
 							<!--<span id="emailOk" class="spanValid"></span> -->
 						</div>
 						<!--<span id="errorEmail" class="spanError"></span> -->
 					</fieldset>
 					<fieldset>
-						<button type="button" id="register">Envoyer</button>
-						
+						<button type="submit" id="register">Envoyer</button>
 						<!--<span id="errorFormReg" class="spanError"></span> -->
 					</fieldset>
 				</form><!-- FIN formulaire inscription -->

@@ -7,6 +7,7 @@
 - [CSS] Éliminer les règles mortes
 - [CSS, HTML] Passer le HTML au peigne fin pour voir ce qui pourrait se passer de classe ou ID et éliminer ou réécrire les règles concernées
 - Incorporer au moins une animation CSS3. (slider? -> demande du TP, point 5)
+- pour authentify.js/php >> classes CSS passwordValid / passwordInvalid, serviront à indiquer que le mot de passe as bien été retapé.
 
 
 #Eric :
@@ -21,24 +22,33 @@
 - [AJAX] valider en temps réel le nom d'usager (inscription)
 - ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
 
+sur le feu::
+- formulaire : reste des champs et support du login => faire le register avant!!
+- page de l'inventaire (HTML5) >> gestion_produits_inventaire
+- page d'ajout à l'inventaire (HTML5) + voir si div/class inventory_box_parent vraiment nécessaire >> gestion_produits
+
 ###changements fait au HTML influencant le CSS:
-* (div) #header => header
-* (div) #header_menu => header nav
-* (div) #footer => footer
-* (div) #footer_menu => footer nav
+* ~~(div) #header => header~~
+* ~~(div) #header_menu => header nav~~
+* ~~(div) #footer => footer~~
+* ~~(div) #footer_menu => footer nav~~
 
 ###suggestions de changements au CSS:
-1. {FAIT}  la classe cursor_hand devrais se lire (j'ai trouvé cette correction durant le cours de SEO)
+1. ~~la classe cursor_hand devrais se lire (j'ai trouvé cette correction durant le cours de SEO)
 .cursor_hand{
 	cursor:pointer;
 	/*cursor:hand;*/ /* IE 5.0, 5.5 */
-}
+}~~
 
-2. Changer la règle "#listePanier tr.even, #factureClient tr.even" pour "#listePanier tr:nth-child(even),  #factureClient tr:nth-child(even)"
+2. ~~Changer la règle "#listePanier tr.even, #factureClient tr.even" pour "#listePanier tr:nth-child(even),  #factureClient tr:nth-child(even)"~~
 
 ##Ce dont on devrais pouvoir se passer :
 25. Fichier .htaccess
 26. Ajouter plus de jouets
+
+##Tailles devices
+Galaxy Tab3 1024*600 (paysage)
+iPhone4 640*960 (portrait)
 
 ##Reserve
 8. [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe

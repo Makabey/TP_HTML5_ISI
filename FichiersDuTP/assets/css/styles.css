@@ -427,8 +427,8 @@ span.spanFix_li_hover{
 .spanError{
 	font-size:10pt;
 	color: red;
-	float:right;
-	margin-right: 30px;
+	/*float:right;*/
+	/*margin-right: 30px;*/
 }
 
 span.spanValid{
@@ -605,21 +605,28 @@ span.spanValid{
 	margin-right:3px;
 }
 
-.inventory_box img,
+/*.inventory_box img,*/
+#inventory_box_parent>div>img,
 #gestion_fiche img{
 	width:300px;
 }
 
-#inventory_box_parent{
+/*#inventory_box_parent{
 	margin-top:20px;
-}
+}*/
 
-.inventory_box{
-	margin:10px 0;
+/*.inventory_box{*/
+#inventory_box_parent>div{
+	padding:20px;
 	border-bottom:3px solid gray;
 }
 
-.inventory_box div{
+#inventory_box_parent>div:last-child{
+	border-bottom:none;
+}
+
+/*.inventory_box div{*/
+#inventory_box_parent>div>ul{
 	vertical-align:top;
 	display:inline-block;
 }
@@ -640,36 +647,16 @@ span.spanValid{
 
 /*	De .red à .green, ces classes sont nécessaires pour les
 	carrés de sélection de couleurs dans le "catalogue" */
-.red{
-	background-color:#f00;
-}
-.blue{
-	background-color:#00f;
-}
-.yellow{
-	background-color:#ff0;
-}
-.brown{
-	background-color:#960;
-}
-.violet{
-	background-color:#90f;
-}
-.darkorange{
-	background-color:#c63;
-}
-.white{
-	background-color:#fff;
-}
-.black{
-	background-color:#000;
-}
-.bisque{
-	background-color:#ffc;
-}
-.green{
-	background-color:#0f0;
-}
+.red{ background-color:#f00; }
+.blue{ background-color:#00f; }
+.yellow{ background-color:#ff0; }
+.brown{ background-color:#960; }
+.violet{ background-color:#90f; }
+.darkorange{ background-color:#c63; }
+.white{ background-color:#fff; }
+.black{ background-color:#000; }
+.bisque{ background-color:#ffc; }
+.green{ background-color:#0f0; }
 
 /** PANIER **/
 #gestion_panier #container #content h2{

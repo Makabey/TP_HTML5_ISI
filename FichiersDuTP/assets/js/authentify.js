@@ -33,6 +33,28 @@ $(function(){
 	});*/
 
 	// validation formulaire -----> Register
+	$("#passwordRegConfirm").keyup(function(){
+		var pwd = $("#passwordReg").val();
+		
+		if($(this).val() == pwd){
+			$(this).addClass("passwordValid");
+			$(this).removeClass("passwordInvalid");
+		}else{
+			$(this).addClass("passwordInvalid");
+			$(this).removeClass("passwordValid");
+		}
+	});
+
+	$("#passwordRegConfirm").blur(function(){
+		var pwd = $("#passwordReg").val();
+		
+		if($(this).val() == pwd){
+			$("#passwordRegConfirmError").text("");
+		}else{
+			$("#passwordRegConfirmError").text("Les mots de passe ne correspondent pas.");
+		}
+	});	
+	
 	/*$("#nomReg").blur(function(){
 		var saisie = $(this).val();
 		var error = $("#errorNomReg");
