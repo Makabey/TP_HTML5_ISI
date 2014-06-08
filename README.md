@@ -17,11 +17,12 @@
 - ~~[HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc~~
 - ~~[CSS, JS] Une fois la règle en place, enlever le code hover en jQ et les ID dans PHP~~
 - ~~Dans "facture_client", "gestion_panier" remplacer le code autour de "$odd_even_row "  et dans "gestion_produits_factures" autour de "$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';" pour utiliser la règle CSS "nth-child(event)" comme proposé ci-dessous~~
-- [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
+- == 2 ==> [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
 - Proposition pour le menu "Mon profil" : enlever "Déconnexion" dans le menu et rendre le nom cliquable, un UL apparaitra en hover avec les choix "Modifier" (qui mène à une nouvelle page Formulaire, celle demandée pour ce TP) et "Déconnexion"
 - réviser le code qui recoit et analyse les donnés du formulaire inscription/authentification et les query string (en passer au mode POST s'il le faut)
-- [AJAX] valider en temps réel le nom d'usager (inscription)
+- ==1==> [AJAX] valider en temps réel le nom d'usager (inscription)
 - ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
+- page authetification ajouter des bandeaux vert et rouge pour indiquer si ok ou probleme... malgré que si tout ok, tend presentement a fiare un login...
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~
