@@ -98,7 +98,7 @@ $(function(){
 		validationCourriel(saisie, error, valid);
 	});*/
 
-	$("#register").click(function(){
+	/*$("#register").click(function(){
 		var nbrElements = 0;
 		var nbrOk = 0;
 		$("#formRegister .spanValid").each(function(){
@@ -112,11 +112,11 @@ $(function(){
 		if(nbrElements == nbrOk){
 			$("#formRegister").submit();
 		}
-	});
+	});*/
 });
 
 // Fonctions générique de validation des champs pour un formulaire
-function validationAlpha(saisie, error, valid){
+/*function validationAlpha(saisie, error, valid){
 		if(saisie.match(/^[a-zA-Z]+$/)){
 			$(valid).text("Ok");
 			$(error).text("");
@@ -130,7 +130,8 @@ function validationAlpha(saisie, error, valid){
 			$(valid).text("");
 		}
 	}
-
+*/
+/*
 function validationAlphaNumerique(saisie, error, valid){
 	if(saisie.match(/^[a-zA-Z0-9]+$/)){
 		$(valid).text("Ok");
@@ -145,7 +146,8 @@ function validationAlphaNumerique(saisie, error, valid){
 			$(valid).text("");
 		}
 }
-
+*/
+/*
 function validationAlphaNumSpace(saisie, error, valid){
 	if(saisie.match(/^[a-zA-Z0-9\s]+$/)){
 		$(valid).text("Ok");
@@ -160,7 +162,8 @@ function validationAlphaNumSpace(saisie, error, valid){
 			$(valid).text("");
 		}
 }
-
+*/
+/*
 function validationCourriel(saisie, error, valid){
 	if(saisie.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)){
 		$(valid).text("Ok");
@@ -175,5 +178,5 @@ function validationCourriel(saisie, error, valid){
 			$(valid).text("");
 		}
 }
-
+*/
 /* == EOF == */

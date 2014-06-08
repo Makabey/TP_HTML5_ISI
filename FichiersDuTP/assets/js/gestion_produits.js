@@ -76,10 +76,10 @@ $(function(){
 	});
 
 
-	$("#btnEnregistrer").click(function(){
+	/*$("#btnEnregistrer").click(function(){
 		$("#actionAFaire").val('enregistrer');
 		$("#formGestionProduits").submit();
-	});
+	});*/
 
 
 	$("#btnEffacer").click(function(){

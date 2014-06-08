@@ -7,25 +7,21 @@
 - [CSS] Éliminer les règles mortes
 - [CSS, HTML] Passer le HTML au peigne fin pour voir ce qui pourrait se passer de classe ou ID et éliminer ou réécrire les règles concernées
 - Incorporer au moins une animation CSS3. (slider? -> demande du TP, point 5)
-- pour authentify.js/php >> classes CSS passwordValid / passwordInvalid, serviront à indiquer que le mot de passe as bien été retapé.
+- pour authentify.js/php >> classes CSS passwordValid / passwordInvalid, serviront à indiquer que le mot de passe as bien été REtapé.
+- [CSS] Remplacer le code jQuery (qui ne fonctionne pas vraiment) pour animer l'apparition des sous-menu par une/des transitions sous une règle "li:hover>ul" ? Les IDs ne servent que pour jQuery donc si on suit "header nav>ul>li:nth-child(2)>ul",  "header nav>ul>li:nth-child(4)>ul" et "header nav>ul>li:nth-child(5)>ul" on devrais pouvoir éliminer les "<?php echo $MenusID; ?>menuNiv1_Item1_submenuX"
 
 
 #Eric :
 - ~~[TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)~~
-- [JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS
-- {EN COURS}[HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc
-- [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
+- ~~[JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS~~
+- ~~[HTML] Utiliser/ajouter les tags HTML5 tel que header, footer etc~~
 - ~~[CSS, JS] Une fois la règle en place, enlever le code hover en jQ et les ID dans PHP~~
 - ~~Dans "facture_client", "gestion_panier" remplacer le code autour de "$odd_even_row "  et dans "gestion_produits_factures" autour de "$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';" pour utiliser la règle CSS "nth-child(event)" comme proposé ci-dessous~~
+- [HTML, CSS] Sous "Mon Profil"(nouvelle option qui apparait à côté du nom quand on est identifié); Ajouter une page de profil où les gens peuvent mettre leurs contacts et informations de paiement (pas obligé de supporter l'enregistrement?) (demande du TP, point 4)
 - Proposition pour le menu "Mon profil" : enlever "Déconnexion" dans le menu et rendre le nom cliquable, un UL apparaitra en hover avec les choix "Modifier" (qui mène à une nouvelle page Formulaire, celle demandée pour ce TP) et "Déconnexion"
 - réviser le code qui recoit et analyse les donnés du formulaire inscription/authentification et les query string (en passer au mode POST s'il le faut)
 - [AJAX] valider en temps réel le nom d'usager (inscription)
 - ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
-
-sur le feu::
-- formulaire : reste des champs et support du login => faire le register avant!!
-- page de l'inventaire (HTML5) >> gestion_produits_inventaire
-- page d'ajout à l'inventaire (HTML5) + voir si div/class inventory_box_parent vraiment nécessaire >> gestion_produits
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~
@@ -47,8 +43,8 @@ sur le feu::
 26. Ajouter plus de jouets
 
 ##Tailles devices
-Galaxy Tab3 1024*600 (paysage)
-iPhone4 640*960 (portrait)
+- Galaxy Tab3 1024*600 (paysage)
+- iPhone4 640*960 (portrait)
 
 ##Reserve
 8. [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
@@ -56,9 +52,9 @@ iPhone4 640*960 (portrait)
 10. [HTML, CSS] Sous "Mon Profil"; permettre de changer son mot de passe?
 11. [HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue
 12. [VIDEO] conversion en tout les formats supportés
-13. [HTML] composer le texte de la page (demande du TP, point 1)
+13. ~~[HTML] composer le texte de la page (demande du TP, point 1)~~
 14. [HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé
-15. [CSS] Remplacer le code jQuery (qui ne fonctionne pas vraiment) pour animer l'apparition des sous-menu par une/des transitions sous une règle "li:hover>ul" ? Les IDs ne servent que pour jQuery donc si on suit "header nav>ul>li:nth-child(2)>ul",  "header nav>ul>li:nth-child(4)>ul" et "header nav>ul>li:nth-child(5)>ul" on devrais pouvoir éliminer les "<?php echo $MenusID; ?>menuNiv1_Item1_submenuX"
+
 
 à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même?
 

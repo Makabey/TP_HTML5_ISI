@@ -46,18 +46,18 @@ require_once "assets/inc/header.inc.php";
 
 echo $sErreurEcriture;
 ?>
-				<div id="GestionProduits">
-					<form id="formGestionProduits" method="get" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>">
-						<legend>Gestion des produits</legend>
+				<!--<div id="GestionProduits">-->
+					<form id="formGestionProduits" method="get" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" autocomplete="off">
+						<h2>Gestion des produits</h2>
+						<input type="hidden" id="actionAFaire" name="actionAFaire" value="enregistrer" />
 						<fieldset id="gestion_fiche">
-							<caption>Fiche :</caption>
-							<input type="hidden" id="actionAFaire" name="actionAFaire" />
+							<legend>Fiche :</legend>
 							<ul>
 								<li>
 									<ul>
 										<li><label for="product_ID">ID du produit :</label></li>
 										<li>
-											<select id="product_ID" name="product_ID" title="géré automatiquement">
+											<select id="product_ID" name="product_ID" title="l'ID est géré automatiquement">
 												<?php
 													$cle=-1;
 													if(!empty($arrProduits)){
@@ -79,25 +79,25 @@ echo $sErreurEcriture;
 								<li>
 									<ul>
 										<li><label for="nom">Nom :</label></li>
-										<li><input type="text" id="nom" name="nom" title="Nom entre 3 et 25 caractères" size="25" value="<?php echo $_GET['nom']; ?>" /></li>
+										<li><input type="text" id="nom" name="nom" title="Nom entre 3 et 25 caractères, commençant par une majuscule" placeholder="Nom de l'item" required="required" pattern="[A-Z].{2,25}" value="<?php echo $_GET['nom']; ?>" /></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li><label for="prix">Prix :</label></li>
-										<li><input type="text" id="prix" name="prix" title="format préféré : 5.2 ex: 31275.98" value="<?php echo $_GET['prix']; ?>" /></li>
+										<li><input type="text" id="prix" name="prix" title="format préféré : 5.2 ex: 31275.98" placeholder="ex: 12.95" required="required" pattern="[0-9]{1,5}\.?[0-9]{0,2}\$?"  value="<?php echo $_GET['prix']; ?>" /></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li><label for="nbrEnInventaire">Nombre en inventaire :</label></li>
-										<li><input type="text" id="nbrEnInventaire" name="nbrEnInventaire" title="Entre 0 et 32767" value="<?php echo $_GET['nbrEnInventaire']; ?>" /></li>
+										<li><input type="number" id="nbrEnInventaire" name="nbrEnInventaire" title="Entre 0 et 32767" min="0" max="32767"  required="required"  value="<?php echo $_GET['nbrEnInventaire']; ?>" /></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li><label for="gestion_fiche_description">Description :</label></li>
-										<li><textarea id="gestion_fiche_description" name="description" title="Entre 3 et 240 caractères" cols="100" rows="7"><?php echo $_GET['description']; ?></textarea></li>
+										<li><textarea id="gestion_fiche_description" name="description" title="(optionel) Entrez une description de 3 à 240 caractères, commençant par une majuscule" placeholder="(optionel) Entrez une description de 3 à 240 caractères, commençant par une majuscule" pattern="[A-Z].{2,240}" cols="94" rows="7" ><?php echo $_GET['description']; ?></textarea></li>
 									</ul>
 								</li>
 								<!-- accept="image/*" n'est pas une validation mais une petite restriction/guide! -->
@@ -112,7 +112,7 @@ echo $sErreurEcriture;
 							</ul>
 						</fieldset>
 						<fieldset class="gestion_fiche_choix">
-							<caption>Catégories :</caption>
+							<legend>Catégories :</legend>
 							<ul id="checks_categories">
 								<?php
 									if(false === chargerCategories($arrCategories)){
@@ -130,7 +130,7 @@ echo $sErreurEcriture;
 							</ul>
 						</fieldset>
 						<fieldset class="gestion_fiche_choix">
-							<caption>Couleurs :</caption>
+							<legend>Couleurs :</legend>
 							<ul id="checks_couleurs">
 								<?php
 									if(false === chargerCouleurs($arrCouleurs)){
@@ -146,7 +146,7 @@ echo $sErreurEcriture;
 							</ul>
 						</fieldset>
 						<fieldset class="gestion_fiche_choix">
-							<caption>Matériaux :</caption>
+							<legend>Matériaux :</legend>
 							<ul id="checks_materiaux">
 								<?php
 									if(false === chargerMateriaux($arrMateriaux)){
@@ -162,11 +162,11 @@ echo $sErreurEcriture;
 							</ul>
 						</fieldset>
 						<fieldset>
-							<input type="button" class="frmGP_Btns" id="btnEnregistrer" value="Enregistrer" />
+							<input type="submit" class="frmGP_Btns" id="btnEnregistrer" value="Enregistrer" />
 							<input type="button" class="frmGP_Btns" id="btnEffacer" value="Effacer" />
 						</fieldset>
 					</form>
-				</div>
+				<!--</div>-->
 <?php
 require_once "assets/inc/footer.inc.php";
 ?>

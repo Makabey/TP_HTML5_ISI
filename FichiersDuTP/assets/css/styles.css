@@ -851,40 +851,42 @@ footer nav>ul>li>ul>li>a{
 }
 
 /* GESTION PRODUITS */
-#GestionProduits{
-	margin:0;
-	padding:0 10px;
+#gestion_produits #content{
+	/*margin:0;*/
+	padding:40px 10px;
 }
 
-#formGestionProduits legend{
+/*#gestion_produits #content form legend{
 	font-weight:bold;
 	font-size:2em;
-}
+}*/
 
-#formGestionProduits fieldset{
+#gestion_produits #content form fieldset:last-child{
 	border:none;
 }
 
-#formGestionProduits ul{
+#gestion_produits #content form ul{
 	list-style-type:none;
 	margin:0;
 	padding:0;
 }
 
-#formGestionProduits li{
+#gestion_produits #content form li{
 	vertical-align:top;
 }
 
-#gestion_fiche ul>li>ul>li{
+/*#gestion_produits #content>form>fieldset:first-child>ul>li>ul>li{*/
+#gestion_produits #content form fieldset ul li ul li{
 	display:inline-block;
 	padding:5px 0;
-}
+/*}
 
-#gestion_fiche ul>li>ul>li:first-child{
+#gestion_produits #content form ul>li>ul>li:first-child{*/
 	width:175px;
 }
 
-#gestion_fiche_description{
+#gestion_produits #content form textarea{
+/*#gestion_fiche_description{*/
 	resize:none;
 }
 

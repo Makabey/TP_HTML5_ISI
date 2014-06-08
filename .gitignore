@@ -12,6 +12,7 @@ tmp/
 *.swp
 *~.nib
 *.pdf
+*.old
 local.properties
 .classpath
 .settings/

@@ -13,7 +13,7 @@ $sImages_PathProduits = "assets/images/produits/"; # le path doit finir par un '
 $sImages_PathSlider = "assets/images/slider/"; # le path doit finir par un '/',
 $sNomDeCettePage = substr($_SERVER['SCRIPT_NAME'], (strrpos($_SERVER['SCRIPT_NAME'],'/')+1));
 $sNomDeCettePage = substr($sNomDeCettePage, 0, (strpos($sNomDeCettePage,'.')));
-		
+
 require_once "assets/inc/tools.inc.php";
 require_once "assets/inc/csvFunctions.inc.php";
 ?>
@@ -31,7 +31,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 		<script>
 		"use strict";
 		var PageTitle = "La Fabrique de Jouet"; // cette variable est pour l'éventuel changement à la page catalogue pour permettre d'avoir un nom de base pour dynamiquement reconstruire le title de la page.
-		
+
 		window.addEventListener("load", function(){ // J'utilise un listener pour éviter de marcher sur les platebandes de jQuery
 			// Support pour les sous-menus
 			/*$("#header_produits").hover(function () {
@@ -117,8 +117,13 @@ require_once "assets/inc/csvFunctions.inc.php";
 					}
 
 					if($return !== false){
-						$client_ID = key($usagertest);
-						$userFullName = ucwords($usagertest[$client_ID]['prenom'] . ' ' . $usagertest[$client_ID]['nomFamille']);
+						#$client_ID = key($usagertest);
+						#$userFullName = ucwords($usagertest[$client_ID]['prenom'] . ' ' . $usagertest[$client_ID]['nomFamille']);
+						#var_dump($_SESSION['user']);
+						#var_dump($userFullName);
+						#if(strlen($userFullName) < 3){
+							$userFullName = $_SESSION['user'];
+						#}
 						echo "<div>Bonjour, $userFullName</div>";
 						if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
 							echo '<div><a href="gestion_panier.php">';

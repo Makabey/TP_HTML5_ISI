@@ -218,7 +218,6 @@ function lireCSV_VersTblIdx(&$refArrDonnees, $sNomFichier, $sIndexMode='fichier'
 
 					if($clesChamps !== false){
 						while(($ligne = fgetcsv($HndFichier, 1000, ";")) !== false){
-
 							if(intval($ligne[0]) == $idOuNomRechercher){
 								unset($ligne[0]);
 								unset($clesChamps[0]);
