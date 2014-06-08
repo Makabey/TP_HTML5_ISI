@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box;
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
@@ -128,7 +128,7 @@ header nav > ul > li{
 	vertical-align: top;
 	position:relative;
 	list-style: none;
-	
+
 }
 header nav > ul > li:not(:first-child){
 	border-left: 1px solid white;
@@ -155,7 +155,7 @@ header nav > ul > li > ul > li:last-child{
 /* NAV TRANSITION */
 header nav > ul > li{
 	background: black;
-	
+
 	-moz-transition:background 0.1s 0.15s ease-out;
 	-webkit-transition:background 0.1s 0.15s ease-out;
 	-o-transition:background 0.15s 0.15s ease-out;
@@ -169,9 +169,9 @@ header nav > ul > li:hover{
 header nav > ul > li > ul{
 	opacity: 0;
 	visibility: hidden;
-	
+
 	/* transition en opacité et visibilité de 0 à 1 */
-	-moz-transition:opacity 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear; 
+	-moz-transition:opacity 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
 	-webkit-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 	-o-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
@@ -186,7 +186,7 @@ header nav > ul > li > ul > li{
 	margin-top:-15px;
 	opacity: 0;
 	visibility: hidden;
-	
+
 	/* transition en opacité et margin-top -15 vers margin-top 0 */
 	-moz-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 	-webkit-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
@@ -287,7 +287,7 @@ header nav > ul > li:hover > ul > li{
 	background-color: rgba(0,0,0,0.08);
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	margin: 20px 0 0 20px;
 	text-align:left;
@@ -564,7 +564,7 @@ span.spanValid{
 
 #produits_description{
 	margin-bottom:10px;
-	height:150px; 
+	height:150px;
 	width:99%;
 }
 
@@ -669,11 +669,11 @@ span.spanValid{
 }
 
 #itemsDuClient tr.rangeeItem:nth-child(odd){
-	background-color: #b4c0cc 
+	background-color: #b4c0cc
 }
 
 #itemsDuClient tr.rangeeItem:nth-child(even){
-	background-color: #b4ccc0 
+	background-color: #b4ccc0
 }
 
 #gestion_panier #itemsDuClient tr:nth-last-child(2){
@@ -958,5 +958,73 @@ footer nav>ul>li>ul>li>a{
 	display:none;
 }
 /* \Formulaires */
+
+/* header.inc */
+
+/*html body#index div#container header div#center_menu div#userWrap div
+html body#gestion_produits div#container header div#center_menu div#userWrap div*/
+
+/*#container header div div div:first-child{*/
+/*#container header div div{
+	position:relative;
+}*/
+#container header div div div:first-child ul{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	/*display: flex;
+	flex-direction: column;*/
+	/*position:absolute;
+	z-index:10;*/
+}
+
+#container header div div div:first-child ul li{
+	cursor: pointer;
+	/*color: white;*/
+}
+#container header div div div:first-child ul li a{
+	color: white;
+}
+
+/*#container header div div div:first-child>ul{
+	position:absolute;
+	z-index:10;
+}*/
+
+#container header div div div:first-child>ul>li{
+	vertical-align: top;
+	position:relative;
+}
+
+#container header div div div:first-child>ul>li>ul{
+	/*display:none;*/
+	visibility: hidden;
+	/*z-index:10;*/
+	position:absolute;
+}
+#container header div div div:first-child>ul>li:hover>ul{
+	/*display:inline-block;*/
+	visibility: visible;
+}
+
+#container header div div div:first-child > ul > li > ul > li{
+	/*display: inline-block;*/
+	width: 155px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px solid white;
+	background: black;
+	/*padding: 10px;*/
+	padding: 3px 20px 3px 20px;
+}
+#container header div div div:first-child > ul > li > ul > li:last-child{
+	border-bottom: 1px solid white;
+}
+#container header div div div:first-child > ul > li > ul > li:hover{
+	/*color: black;*/
+	background: rgba(0,0,0,0.8);
+}
+/* \header.inc */
+
 /* \Ajouts Eric */
 /** == EOF == **/

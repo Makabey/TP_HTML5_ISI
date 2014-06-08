@@ -4,7 +4,8 @@
 			<footer>
 				<!--<div id="footer_content">--><?php
 					$MenusID="footer_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
-					require "assets/inc/menu.inc.php";
+					#require "assets/inc/menus.inc.php";
+					spawnMainMenu();
 					?>
 
 					<!-- non fonctionnel DÉCORATIF-->

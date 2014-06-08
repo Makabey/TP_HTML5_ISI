@@ -16,6 +16,7 @@ $sNomDeCettePage = substr($sNomDeCettePage, 0, (strpos($sNomDeCettePage,'.')));
 
 require_once "assets/inc/tools.inc.php";
 require_once "assets/inc/csvFunctions.inc.php";
+require_once "assets/inc/menus.inc.php";
 ?>
 <!DOCTYPE html>
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
@@ -131,7 +132,9 @@ require_once "assets/inc/csvFunctions.inc.php";
 						#if(strlen($userFullName) < 3){
 							$userFullName = $_SESSION['user'];
 						#}
-						echo "<div>Bonjour, $userFullName</div>";
+						echo "<div><ul><li>Bonjour, $userFullName";
+						spawnMonProfilMenu();
+						echo "</li></ul></div>";
 						if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
 							echo '<div><a href="gestion_panier.php">';
 							$nombreItems = count($_SESSION['panier']);
@@ -146,7 +149,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 					}
 					echo '</div>', PHP_EOL;
 					$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
-					require "assets/inc/menus.inc.php";
+					#require "assets/inc/menus.inc.php";
 					spawnMainMenu();
 					?>
 				</div>
