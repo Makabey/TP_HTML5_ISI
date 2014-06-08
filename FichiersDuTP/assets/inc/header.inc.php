@@ -92,7 +92,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 				}
 				echo tabs(3),'var arrPanierPrix = {',$panierPrix,'};',PHP_EOL;
 				break;
-			
+
 			/*case 'authentify':
 				echo '<script src="assets/xhr/xhrFunctions.js"></script>',PHP_EOL;
 				break;*/
@@ -146,7 +146,8 @@ require_once "assets/inc/csvFunctions.inc.php";
 					}
 					echo '</div>', PHP_EOL;
 					$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
-					require "assets/inc/menu.inc.php";
+					require "assets/inc/menus.inc.php";
+					spawnMainMenu();
 					?>
 				</div>
 			</header>
