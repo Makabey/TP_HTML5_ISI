@@ -90,6 +90,7 @@ elseif(isset($_POST['login'])){
 	}
 }
 ?>
+			<div class="boiteErreursFormulaires"><span id="boiteErreursFormulaires_Login"></span></div>
 			<div id="loginDiv">
 				<!-- DÉBUT formulaire login -->
 				<form id="formLogin" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">

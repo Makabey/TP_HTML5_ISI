@@ -23,6 +23,7 @@
 - ==1==> [AJAX] valider en temps réel le nom d'usager (inscription)
 - ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
 - page authetification ajouter des bandeaux vert et rouge pour indiquer si ok ou probleme... malgré que si tout ok, tend presentement a fiare un login...
+-modifier menu.inc pour menuS.inc avec fonctions "spawnMainMenu" et "spawnMonProfilMenu"
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~

@@ -16,8 +16,8 @@ $(function(){
 		validationAlphaNumerique(saisie, error, valid);
 	});*/
 	
-	/*$("#connecter").click(function(){
-		var nbrElements = 0;
+	$("#connecter").click(function(){
+		/*var nbrElements = 0;
 		var nbrOk = 0;
 		$("#formLogin .spanValid").each(function(){
 			nbrElements++;
@@ -29,8 +29,30 @@ $(function(){
 
 		if(nbrElements == nbrOk){
 			$("#formLogin").submit();
+		}*/
+		console.log("fct connecter as été lancée");
+		
+		var xhr = getXhr();
+		var element;
+		var queryString="?";
+		// On défini ce qu'on va faire quand on aura la réponse
+		xhr.onreadystatechange = function(){
+			// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
+			if(xhr.readyState == 4 && xhr.status == 200){
+				//alert(xhr.responseText);
+			}
 		}
-	});*/
+		
+		element = document.getElementById("login");
+		queryString += "login=" + element.value;
+		element = document.getElementById("passwordLog");
+		queryString +="&amp;passwordLog=" + element.value;
+		console.log(queryString);
+		//xhr.open("GET","ajax.php",true);
+		//xhr.send(null);
+		
+		//return false;
+	});
 
 	// validation formulaire -----> Register
 	$("#passwordRegConfirm").keyup(function(){

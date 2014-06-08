@@ -943,4 +943,16 @@ footer nav>ul>li>ul>li>a{
 }
 /* \Inclassés */
 
+/* Ajouts Eric */
+/* Formulaires */
+.boiteErreursFormulaires{
+	border:1px solid #f00;
+	color:#f00;
+	background-color:#fcc;
+	padding:20px 0;
+	margin-bottom:20px;
+	display:none;
+}
+/* \Formulaires */
+/* \Ajouts Eric */
 /** == EOF == **/

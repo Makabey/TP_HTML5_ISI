@@ -92,6 +92,10 @@ require_once "assets/inc/csvFunctions.inc.php";
 				}
 				echo tabs(3),'var arrPanierPrix = {',$panierPrix,'};',PHP_EOL;
 				break;
+			
+			/*case 'authentify':
+				echo '<script src="assets/xhr/xhrFunctions.js"></script>',PHP_EOL;
+				break;*/
 		}
 		?>
 		</script>
@@ -100,6 +104,9 @@ require_once "assets/inc/csvFunctions.inc.php";
 			// NE PAS modifier $sNomDeCettePage parce qu'elle est utilisée aussi dans "menu.inc.php"
 			if(file_exists('assets/js/'.$sNomDeCettePage.'.js')){
 				echo '<script src="assets/js/',$sNomDeCettePage,'.js"></script>',PHP_EOL;
+			}
+			if($sNomDeCettePage == 'authentify'){
+				echo '<script src="assets/xhr/xhrFunctions.js"></script>',PHP_EOL;
 			}
 		?>
 	</head>
@@ -135,7 +142,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 						}
 						echo '<div><a href="logout.php">Déconnexion</a></div>';
 					}else{
-						echo '<div><a href="authentify.php">Se connecter / s\'enregister</a></div>';
+						echo '<div><a href="authentify.php">Se connecter / s\'enregistrer</a></div>';
 					}
 					echo '</div>', PHP_EOL;
 					$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
