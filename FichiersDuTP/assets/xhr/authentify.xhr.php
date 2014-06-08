@@ -8,6 +8,7 @@ if(strlen(session_id()) == 0){
 	session_start();
 }
 
+define('CSV_BASE_DIR', '../res/');
 require_once "../inc/csvFunctions.inc.php";
 
 // function pour éliminer les characetres spéciaux

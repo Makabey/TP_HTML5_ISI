@@ -59,6 +59,7 @@ $(function(){
 					window.location.href="index.php";
 				}else{
 					//element = document.getElementById("")
+					$("#boiteErreursFormulaires_Login>span").text("[Authentification] Le nom d'usager ou le mot de passe est invalide!");
 					$("#boiteErreursFormulaires_Login").css("display", "block");
 					//$("#boiteErreursFormulaires_Login").css("margin", "0 auto 20px auto");
 				}
