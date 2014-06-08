@@ -8,33 +8,34 @@ define('DATE_ACHAT', 2);
 define('PRODUCT_ID', 3);
 define('COULEURS', 4);
 define('QUANTITE', 5);
+define('BASE_REP_FICHIERS', '../res/');
 
 ########################################
 
 function chargerCategories(&$refArrDonnees, $sIndexMode='fichier'){
 	/* Wrapper */
-	return lireCSV_VersTblIdx($refArrDonnees, 'assets/res/table_categories.csv', $sIndexMode);
+	return lireCSV_VersTblIdx($refArrDonnees, BASE_REP_FICHIERS.'table_categories.csv', $sIndexMode);
 }
 
 function chargerCouleurs(&$refArrDonnees, $sIndexMode='fichier'){
 	/* Wrapper */
-	return lireCSV_VersTblIdx($refArrDonnees, 'assets/res/table_couleurs.csv', $sIndexMode);
+	return lireCSV_VersTblIdx($refArrDonnees, BASE_REP_FICHIERS.'table_couleurs.csv', $sIndexMode);
 }
 
 function chargerMateriaux(&$refArrDonnees, $sIndexMode='fichier'){
 	/* Wrapper */
-	return lireCSV_VersTblIdx($refArrDonnees, 'assets/res/table_materiaux.csv', $sIndexMode);
+	return lireCSV_VersTblIdx($refArrDonnees, BASE_REP_FICHIERS.'table_materiaux.csv', $sIndexMode);
 }
 
 function chargerProduits(&$refArrDonnees, $sIndexMode='fichier'){
 	/* Wrapper */
-	return lireCSV_VersTblIdx($refArrDonnees, 'assets/res/table_produits.csv', $sIndexMode);
+	return lireCSV_VersTblIdx($refArrDonnees, BASE_REP_FICHIERS.'table_produits.csv', $sIndexMode);
 }
 
 function chargerPanier(&$refArrDonnees, $iID_Client){
 	/* Wrapper */
 	if($iID_Client < 10) $iID_Client = '0'.$iID_Client;
-	$iID_Client = 'assets/res/panier_'.$iID_Client.'.csv';
+	$iID_Client = BASE_REP_FICHIERS.'panier_'.$iID_Client.'.csv';
 
 	$retour = lireCSV_VersTblIdx($refArrDonnees, $iID_Client);
 
@@ -50,17 +51,17 @@ function chargerPanier(&$refArrDonnees, $iID_Client){
 function ecrireProduits(&$refArrDonnees, $sModeEcriture='ajout'){
 	/* Wrapper */
 	# Pour rendre ecrireCSV_VersTblIdx générique, il suffirait de transformer les sous-array en chaines ici??
-	return ecrireCSV_VersTblIdx($refArrDonnees, 'assets/res/table_produits.csv');
+	return ecrireCSV_VersTblIdx($refArrDonnees, BASE_REP_FICHIERS.'table_produits.csv');
 }
 
 function chargerUsager(&$refArrDonnees, $iID_Client=-1){
 	/* Wrapper */
-	return lireCSV_VersTblIdx($refArrDonnees, 'assets/res/table_usagers.csv', 'fichier', $iID_Client);
+	return lireCSV_VersTblIdx($refArrDonnees, BASE_REP_FICHIERS.'table_usagers.csv', 'fichier', $iID_Client);
 }
 
 function chargerFacture(&$refArrDonnees, $iID_Client=-1){
 	/* Wrapper */
-	return chargerFactureCSV($refArrDonnees, 'assets/res/clients_factures.csv', $iID_Client);
+	return chargerFactureCSV($refArrDonnees, BASE_REP_FICHIERS.'clients_factures.csv', $iID_Client);
 }
 
 
@@ -236,9 +237,9 @@ function lireCSV_VersTblIdx(&$refArrDonnees, $sNomFichier, $sIndexMode='fichier'
 					}
 				}
 				fclose($HndFichier); # Inutile mais fait par mesure de propreté
-			}
-		}
-	}
+			}else{$retour=-3;} # impossible de lire le fichier
+		}else{$retour=-2;} # fichier est un répertoire
+	}else{$retour=-1;} # fichier non lisible
 
 	return $retour;
 }
@@ -344,7 +345,7 @@ function incrementerCompteur($sCompteur){
 		FALSE si problème
 		0+ pour le decompte courant
 	*/
-	$sNomFichier = 'assets/res/table_compteur.csv';
+	$sNomFichier = BASE_REP_FICHIERS.'table_compteur.csv';
 	$retour = false;
 
 	# Tenter d'ouvrir le fichier
@@ -408,7 +409,7 @@ function lireCompteur($sCompteur){
 		0+ pour le decompte courant, c'est à dire l'index le plus haut pour $sCompteur
 	*/
 
-	$sNomFichier = 'assets/res/table_compteur.csv';
+	$sNomFichier = BASE_REP_FICHIERS.'table_compteur.csv';
 	$retour = false;
 	# Par sanité, vérifier si $sNomFichier existe et est en fait ou non un nom de répertoire
 	if(is_readable($sNomFichier)){
@@ -446,7 +447,7 @@ function ecrireUsager(&$refArrDonnees, $sModeEcriture = 'enregistrer'){
 		0+ nombre de caractère écrits
 	*/
 
-	$sNomFichier = 'assets/res/table_usagers.csv';
+	$sNomFichier = BASE_REP_FICHIERS.'table_usagers.csv';
 	$retour = false;
 
 	# Tenter d'ouvrir le fichier
@@ -530,7 +531,7 @@ function ecrirePanier(&$refArrDonnees, $iID_Client){
 
 	if(!empty($refArrDonnees)){
 		if($iID_Client < 10) $iID_Client = '0'.$iID_Client;
-		$sNomFichier = 'assets/res/panier_'.$iID_Client.'.csv';
+		$sNomFichier = BASE_REP_FICHIERS.'panier_'.$iID_Client.'.csv';
 
 		if(($HndFichier = fopen($sNomFichier, 'wb')) !== false){
 			$entetes = array('produit_ID', 'quantite');
@@ -623,7 +624,7 @@ function ecrireFacture(&$refArrDonnees, $iID_Client){
 			0+			: nombre de caractères écrits
 	*/
 	$retour = false;
-	$sNomFichier = 'assets/res/clients_factures.csv';
+	$sNomFichier = BASE_REP_FICHIERS.'clients_factures.csv';
 	$iCumulEcrit = 0; # Le nombre d'Octets écris
 
 	if(!empty($refArrDonnees)){

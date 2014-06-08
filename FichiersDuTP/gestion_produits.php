@@ -85,13 +85,13 @@ echo $sErreurEcriture;
 								<li>
 									<ul>
 										<li><label for="prix">Prix :</label></li>
-										<li><input type="text" id="prix" name="prix" title="format préféré : 5.2 ex: 31275.98" placeholder="ex: 12.95" required="required" pattern="[0-9]{1,5}\.?[0-9]{0,2}\$?"  value="<?php echo $_GET['prix']; ?>" /></li>
+										<li><input type="text" id="prix" name="prix" title="format préféré : 5.2 ex: 31275.98" placeholder="ex: 12.95" required="required" pattern="[0-9]{1,5}\.?[0-9]{0,2}\$?" value="<?php echo $_GET['prix']; ?>" /></li>
 									</ul>
 								</li>
 								<li>
 									<ul>
 										<li><label for="nbrEnInventaire">Nombre en inventaire :</label></li>
-										<li><input type="number" id="nbrEnInventaire" name="nbrEnInventaire" title="Entre 0 et 32767" min="0" max="32767"  required="required"  value="<?php echo $_GET['nbrEnInventaire']; ?>" /></li>
+										<li><input type="number" id="nbrEnInventaire" name="nbrEnInventaire" title="Entre 0 et 32767" min="0" max="32767" required="required" value="<?php echo $_GET['nbrEnInventaire']; ?>" /></li>
 									</ul>
 								</li>
 								<li>

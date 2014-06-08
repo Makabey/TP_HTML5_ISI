@@ -262,10 +262,10 @@ header nav > ul > li:hover > ul > li{
 	padding: 40px 0;
 }
 
-#loginDiv form #userTaken{
+/*#loginDiv form #userTaken{
 	color: red;
 	font-size: 9pt;
-}
+}*/
 
 #loginDiv{
 	width:830px;
@@ -310,10 +310,10 @@ header nav > ul > li:hover > ul > li{
 	text-align:center;
 }
 
-#loginDiv form h5{
+/*#loginDiv form h5{
 	margin: 20px 0 5px 0;
 	font: 16px "Trebuchet MS", Arial, Helvetica, sans-serif;
-}
+}*/
 
 #loginDiv form input{
 	width: 250px;
@@ -363,9 +363,9 @@ header nav > ul > li:hover > ul > li{
 	left: 50px;
 }*/
 
-#send{
+/*#send{
 	margin-top:10px;
-}
+}*/
 
 /*#loginDiv form textarea{
 	width: 350px;
@@ -946,11 +946,15 @@ footer nav>ul>li>ul>li>a{
 /* Ajouts Eric */
 /* Formulaires */
 .boiteErreursFormulaires{
-	border:1px solid #f00;
+	border:3px solid #f00;
 	color:#f00;
 	background-color:#fcc;
 	padding:20px 0;
-	margin-bottom:20px;
+	/*margin-bottom:20px;*/
+	margin:0 auto 10px;
+	width:700px;
+	text-align:center;
+	font-weight:bold;
 	display:none;
 }
 /* \Formulaires */

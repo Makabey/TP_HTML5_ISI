@@ -24,7 +24,7 @@ function getXhr(){
 /** EXEMPLE!!!
 * Méthode qui sera appelée sur le click du bouton
 */
-function go(){
+/*function go(){
 	var xhr = getXhr()
 	// On défini ce qu'on va faire quand on aura la réponse
 	xhr.onreadystatechange = function(){
@@ -36,13 +36,11 @@ function go(){
 	xhr.open("GET","ajax.php",true);
 	xhr.send(null);
 
-	/*
-		dans l'exemple sur la page, 'ajax.php' contient simplement
-
-		<?php
-			echo "Bonjour de php";
-		?>
+	//		dans l'exemple sur la page, 'ajax.php' contient simplement
+	//
+	//	<?php
+	//		echo "Bonjour de php";
+	//	?>
 		
-		l'auteur argumente qu'utiliser XMLHttpRequest avec une page PHP, ce n'est pas réellement du AJAX si la page n'est pas du pur XML, mais plutôt simplement utiliser XMLHttpRequest
-	*/
-}
+	//	l'auteur argumente qu'utiliser XMLHttpRequest avec une page PHP, ce n'est pas réellement du AJAX si la page n'est pas du pur XML, mais plutôt simplement utiliser XMLHttpRequest
+}*/

@@ -16,7 +16,18 @@ $(function(){
 		validationAlphaNumerique(saisie, error, valid);
 	});*/
 	
-	$("#connecter").click(function(){
+	$("#formLogin").submit(function(){
+		/*
+			On doit attrapper l'évènement SUBMIT directement sur le FORM
+			parce que si on agit sur le CLICK d'un bouton et que le FORM
+			n'est pas valide selon le BROWSER, la fonction du bouton est
+			appellée malgré tout.
+		*/
+		console.log("formLogin :: submit");
+		//return false;
+	//});
+	
+	//$("#connecter").click(function(){
 		/*var nbrElements = 0;
 		var nbrOk = 0;
 		$("#formLogin .spanValid").each(function(){
@@ -30,28 +41,41 @@ $(function(){
 		if(nbrElements == nbrOk){
 			$("#formLogin").submit();
 		}*/
-		console.log("fct connecter as été lancée");
+		//console.log("fct connecter as été lancée");
 		
 		var xhr = getXhr();
-		var element;
-		var queryString="?";
+		//var element;
+		var queryString="assets/xhr/authentify.xhr.php?";
 		// On défini ce qu'on va faire quand on aura la réponse
 		xhr.onreadystatechange = function(){
 			// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
 			if(xhr.readyState == 4 && xhr.status == 200){
 				//alert(xhr.responseText);
+				/*console.log("résultat XHR = '"+xhr.responseText+"'");
+				if(parseInt(xhr.responseText) === true){
+					console.log("TRUE");
+				}*/
+				if(xhr.responseText == true){
+					window.location.href="index.php";
+				}else{
+					//element = document.getElementById("")
+					$("#boiteErreursFormulaires_Login").css("display", "block");
+					//$("#boiteErreursFormulaires_Login").css("margin", "0 auto 20px auto");
+				}
 			}
 		}
 		
-		element = document.getElementById("login");
-		queryString += "login=" + element.value;
-		element = document.getElementById("passwordLog");
-		queryString +="&amp;passwordLog=" + element.value;
+		//element = document.getElementById("login");
+		//queryString += "login=" + element.value;
+		queryString += "login=" + $("#login").val();
+		//element = document.getElementById("passwordLog");
+		//queryString +="&passwordLog=" + element.value;
+		queryString +="&passwordLog=" + $("#passwordLog").val();
 		console.log(queryString);
-		//xhr.open("GET","ajax.php",true);
-		//xhr.send(null);
+		xhr.open("GET", queryString ,true);
+		xhr.send(null);
 		
-		//return false;
+		return false;
 	});
 
 	// validation formulaire -----> Register

@@ -90,7 +90,7 @@ elseif(isset($_POST['login'])){
 	}
 }
 ?>
-			<div class="boiteErreursFormulaires"><span id="boiteErreursFormulaires_Login"></span></div>
+			<div class="boiteErreursFormulaires" id="boiteErreursFormulaires_Login"><span>Le nom d'usager ou le mot de passe est invalide!</span></div>
 			<div id="loginDiv">
 				<!-- DÉBUT formulaire login -->
 				<form id="formLogin" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">

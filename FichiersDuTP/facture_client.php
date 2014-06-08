@@ -52,7 +52,7 @@ if(isset($_GET)){
 						$sommeItem=$details['quantite'] * $produits_charger[$pid]['prix'];
 						$sousTotal += $sommeItem;
 						echo '
-							<tr  class="rangeeItem">
+							<tr class="rangeeItem">
 								<td>',str_pad($pid, 6, '0', STR_PAD_LEFT),'</td>
 								<td>',$produits_charger[$pid]['nom'],'</td>
 								<td>',couleursTokensVersNoms($details['couleurs']),'</td>
