@@ -23,7 +23,14 @@ require_once "assets/inc/csvFunctions.inc.php";
 											}
 										}
 										?>
-										<li><a href="galerie.php">Galerie</a></li>
+										<li><a href="galerie.php">Galerie</a><img src="assets/images/arrow_down_menu.png"/>
+											<ul>
+												<li>Sous-menu 1</li>
+												<li>Sous-menu 2</li>
+												<li>Sous-menu 3</li>
+												<li>Sous-menu 4</li>
+											</ul>
+										</li>
 									</ul>
 								</li>
 								<?php
