@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
@@ -85,7 +85,7 @@ body ::-webkit-scrollbar-thumb {
 	border-bottom: 3px solid gray;
 }
 
-#container>header img{
+#container header #center_menu > a > img{
 	margin-top: 10px;
 	width: 140px
 }
@@ -96,6 +96,10 @@ header nav{
 	position: absolute;
 	top: 91px;
 	margin-left: 40px;
+	text-transform:uppercase;
+	font-size:10px;
+	width: 100%;
+	margin: auto;
 }
 header nav *{
 	box-sizing: border-box;
@@ -105,22 +109,31 @@ header nav ul{
 	margin: 0;
 }
 header nav ul li{
-	padding: 3px 20px 3px 20px;
+	padding: 5px 20px 6px 20px;
 	cursor: pointer;
-	color: white;
+	color:rgba(255,255,255,0.6);
+	
 }
 header nav ul li:hover{
-	/*color: black;*/
-	background: rgba(0,0,0,0.8);
+	color: #fff;
 }
-header nav ul li a{
-	color: white;
+header nav > ul > li > a{
+	color:rgba(255,255,255,0.6);
 }
-header nav ul li:hover a{
+header nav > ul > li:hover > a{
 	/*color: black;*/
+	color: #fff;
+}
+header nav > ul > li > ul > li > a{
+	color:rgba(255,255,255,0.6);
+}
+header nav > ul > li > ul > li:hover > a{
+	/*color: black;*/
+	color: #fff;
 }
 header nav > ul{
 	display: flex;
+	margin-left: 40px;
 	flex-direction: row;
 }
 header nav > ul > li{
@@ -128,50 +141,99 @@ header nav > ul > li{
 	vertical-align: top;
 	position:relative;
 	list-style: none;
-
+	
 }
 header nav > ul > li:not(:first-child){
-	border-left: 1px solid white;
+	border-left: 1px solid rgba(255,255,255,0.6);
 }
 header nav > ul > li > ul{
 	position: absolute;
 	left: 0;
-	top: 28px;
+	top: 26px;
 	list-style: none;
 	padding: 0 0 0 0;
 }
 header nav > ul > li > ul > li{
 	display: inline-block;
 	width: 130px;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
-	border-top: 1px solid white;
+	border-left: 1px solid rgba(255,255,255,0.6);
+	border-right: 1px solid rgba(255,255,255,0.6);
+	border-top: 1px solid rgba(255,255,255,0.6);
 	background: black;
+	
+	border-color: rgba(255,255,255,0.6);
+}
+header nav > ul > li > ul > li:hover{
+	background: #222;
+	border-color: #fff;
+	
+	-moz-transition:background 0.3s ease-out,border 0.3s ease-out;
+	-webkit-transition:background 0.3s ease-out,border 0.3s ease-out;
+	-o-transition:background 0.3s ease-out,border 0.3s ease-out;
+	transition:background 0.3s ease-out,border 0.3s ease-out;
 }
 header nav > ul > li > ul > li:last-child{
 	border-bottom: 1px solid white;
 }
-
+header nav > ul > li:nth-child(2) img{
+	display: inline-block;
+	position: absolute;
+	margin-left: 3px;
+	margin-top: 3px;
+	max-width: 0px;
+	opacity: 0.6;
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+}
+header nav > ul > li:hover img{
+	opacity: 1;
+	max-width: 10px;
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+}
 /* NAV TRANSITION */
+/* transition de color du texte */
+header nav a{
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	transition:color 0.3s ease-out;
+}
+header nav ul li:hover{
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	transition:color 0.3s ease-out;
+}
+header nav > ul > li:nth-child(2) img{
+	-moz-transition:all 0.3s ease-out;
+	-webkit-transition:all 0.3s ease-out;
+	-o-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out;
+}
+/* transition du background des <li> */
 header nav > ul > li{
 	background: black;
-
-	-moz-transition:background 0.1s 0.15s ease-out;
-	-webkit-transition:background 0.1s 0.15s ease-out;
-	-o-transition:background 0.15s 0.15s ease-out;
-	transition:background 0.15s 0.15s ease-out;
+	
+	-moz-transition:background 0.3s ease-out;
+	-webkit-transition:background 0.3s ease-out;
+	-o-transition:background 0.3s ease-out;
+	transition:background 0.3s ease-out;
 }
 header nav > ul > li:hover{
-	background: gray;
+	background: #222;
 }
 
 /* Transition d'opacité de 0 à 1 du <ul> */
 header nav > ul > li > ul{
 	opacity: 0;
 	visibility: hidden;
-
+	background: #000;
+	
 	/* transition en opacité et visibilité de 0 à 1 */
-	-moz-transition:opacity 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
+	-moz-transition:opacity 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear; 
 	-webkit-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 	-o-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
@@ -186,7 +248,7 @@ header nav > ul > li > ul > li{
 	margin-top:-15px;
 	opacity: 0;
 	visibility: hidden;
-
+	
 	/* transition en opacité et margin-top -15 vers margin-top 0 */
 	-moz-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 	-webkit-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
@@ -287,7 +349,7 @@ header nav > ul > li:hover > ul > li{
 	background-color: rgba(0,0,0,0.08);
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	margin: 20px 0 0 20px;
 	text-align:left;
@@ -564,7 +626,7 @@ span.spanValid{
 
 #produits_description{
 	margin-bottom:10px;
-	height:150px;
+	height:150px; 
 	width:99%;
 }
 
@@ -669,11 +731,11 @@ span.spanValid{
 }
 
 #itemsDuClient tr.rangeeItem:nth-child(odd){
-	background-color: #b4c0cc
+	background-color: #b4c0cc 
 }
 
 #itemsDuClient tr.rangeeItem:nth-child(even){
-	background-color: #b4ccc0
+	background-color: #b4ccc0 
 }
 
 #gestion_panier #itemsDuClient tr:nth-last-child(2){
@@ -945,8 +1007,10 @@ footer nav>ul>li>ul>li>a{
 
 /* Ajouts Eric */
 /* Formulaires */
-.boiteErreursFormulaires,
-.boiteMessagesFormulaires{
+.boiteErreursFormulaires{
+	border:3px solid #f00;
+	color:#f00;
+	background-color:#fcc;
 	padding:20px 0;
 	/*margin-bottom:20px;*/
 	margin:0 auto 10px;
@@ -955,84 +1019,6 @@ footer nav>ul>li>ul>li>a{
 	font-weight:bold;
 	display:none;
 }
-.boiteErreursFormulaires{
-	border:3px solid #f00;
-	color:#f00;
-	background-color:#fcc;
-}
-.boiteMessagesFormulaires{
-	border:3px solid #0f0;
-	color:#0f0;
-	background-color:#cfc;
-}
 /* \Formulaires */
-
-/* header.inc */
-
-/*html body#index div#container header div#center_menu div#userWrap div
-html body#gestion_produits div#container header div#center_menu div#userWrap div*/
-
-/*#container header div div div:first-child{*/
-/*#container header div div{
-	position:relative;
-}*/
-#container header div div div:first-child ul{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-	/*display: flex;
-	flex-direction: column;*/
-	/*position:absolute;
-	z-index:10;*/
-}
-
-#container header div div div:first-child ul li{
-	cursor: pointer;
-	/*color: white;*/
-}
-#container header div div div:first-child ul li a{
-	color: white;
-}
-
-/*#container header div div div:first-child>ul{
-	position:absolute;
-	z-index:10;
-}*/
-
-#container header div div div:first-child>ul>li{
-	vertical-align: top;
-	position:relative;
-}
-
-#container header div div div:first-child>ul>li>ul{
-	/*display:none;*/
-	visibility: hidden;
-	/*z-index:10;*/
-	position:absolute;
-}
-#container header div div div:first-child>ul>li:hover>ul{
-	/*display:inline-block;*/
-	visibility: visible;
-}
-
-#container header div div div:first-child > ul > li > ul > li{
-	/*display: inline-block;*/
-	width: 155px;
-	border-left: 1px solid white;
-	border-right: 1px solid white;
-	border-top: 1px solid white;
-	background: black;
-	/*padding: 10px;*/
-	padding: 3px 20px 3px 20px;
-}
-#container header div div div:first-child > ul > li > ul > li:last-child{
-	border-bottom: 1px solid white;
-}
-#container header div div div:first-child > ul > li > ul > li:hover{
-	/*color: black;*/
-	background: rgba(0,0,0,0.8);
-}
-/* \header.inc */
-
 /* \Ajouts Eric */
 /** == EOF == **/
