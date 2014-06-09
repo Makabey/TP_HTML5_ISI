@@ -945,10 +945,8 @@ footer nav>ul>li>ul>li>a{
 
 /* Ajouts Eric */
 /* Formulaires */
-.boiteErreursFormulaires{
-	border:3px solid #f00;
-	color:#f00;
-	background-color:#fcc;
+.boiteErreursFormulaires,
+.boiteMessagesFormulaires{
 	padding:20px 0;
 	/*margin-bottom:20px;*/
 	margin:0 auto 10px;
@@ -956,6 +954,16 @@ footer nav>ul>li>ul>li>a{
 	text-align:center;
 	font-weight:bold;
 	display:none;
+}
+.boiteErreursFormulaires{
+	border:3px solid #f00;
+	color:#f00;
+	background-color:#fcc;
+}
+.boiteMessagesFormulaires{
+	border:3px solid #0f0;
+	color:#0f0;
+	background-color:#cfc;
 }
 /* \Formulaires */
 

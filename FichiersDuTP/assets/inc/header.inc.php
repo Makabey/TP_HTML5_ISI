@@ -143,7 +143,7 @@ require_once "assets/inc/menus.inc.php";
 						}else{
 							echo'<div>&nbsp;</div>';
 						}
-						echo '<div><a href="logout.php">Déconnexion</a></div>';
+						#echo '<div><a href="logout.php">Déconnexion</a></div>';
 					}else{
 						echo '<div><a href="authentify.php">Se connecter / s\'enregistrer</a></div>';
 					}

@@ -52,7 +52,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 			#If(isset($_SESSION['user']) && ($_SESSION['user'] != 'admin')){
 			#If(isset($_SESSION['user'])){
 			?>
-			<li><a href="monprofil.php"<?php #if($sNomDeCettePage == 'gestion_profil') echo ' class="aActiveFix"'; ?>>Mon Profil</a></li>
+			<li><a href="mon_profil.php"<?php #if($sNomDeCettePage == 'gestion_profil') echo ' class="aActiveFix"'; ?>>Mon Profil</a></li>
 			<li><a href="logout.php">Déconnexion</a></li>
 			<?php
 				#If(isset($_SESSION['user']) && ($_SESSION['user'] == 'admin')){

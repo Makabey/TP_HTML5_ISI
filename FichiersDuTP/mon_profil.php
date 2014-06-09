@@ -1,183 +1,109 @@
 <?php
+session_start();
+if(!isset($_SESSION['user'])){
+	header("Location:index.php");
+	#header("Location:".$_SERVER['REFERER']);
+	exit();
+}
+
 $sPageTitle = "Mon profil | ";
 
-require_once "assets/inc/csvFunctions.inc.php";
+#require_once "assets/inc/csvFunctions.inc.php";
 require_once "assets/inc/header.inc.php";
 
-// function pour éliminer les characetres spéciaux
-function test_input($data) {
- $data = trim($data);
- $data = stripslashes($data);
- $data = htmlspecialchars($data);
- $data = strtolower($data);
- return $data;
-}
-
-function authentifier_user($nom_user, $password_user){
-	$retour = chargerUsager($data_user, $nom_user);
-	if($retour !== FALSE){
-		if(!empty($data_user)){
-			if($data_user[key($data_user)]['password']==$password_user){
-				$retour = true; // Tout correspond
-			}
-			else{
-				$retour = 2; // Mot de passe invalide
-			}
-		}
-		else{
-			$retour = 3; // Usager inexistant
-		}
-	}
-	return $retour;
-}
-
-// Formulaire d'enregistrement ------>
-$formValidation = array(
-	'client_ID' => null,
-	'nom' => null,
-	'nomFamille' => null,
-	'prenom' => null,
-	'password' => null,
-	'adresse' => null,
-	'email' => null,
-);
-
-$messErreur = null;
-$messErreurLogin = null;
-
-// validation des champs formulaire
-if(isset($_POST['nom'])){
-	$formValidation['nom'] = test_input($_POST['nom']);
-	$formValidation['nomFamille'] = test_input($_POST['nomFamille']);
-	$formValidation['prenom'] = test_input($_POST['prenom']);
-	$formValidation['password'] = test_input($_POST['password']);
-	$formValidation['adresse'] = test_input($_POST['adresse']);
-	$formValidation['email'] = test_input($_POST['email']);
-
-	$return = chargerUsager($usagertest,$formValidation['nom']);
-
-	if(!empty($usagertest)){
-		$messErreur = 'Usager existant';
-	}
-	else{
-		$formValidation['client_ID'] = incrementerCompteur('client_ID');
-		$return = ecrireUsager($formValidation);
-
-		$_SESSION['user'] = $formValidation['nom'];
-		header("Location:index.php");
-		exit();
-	}
-
-	if($return === FALSE){
-		$messErreur = "Il y a eu un probleme d'écriture.";
-	}
-}
-elseif(isset($_POST['login'])){
-// formulaire de connexion ----->
-	if(isset($_POST['password'])){
-		$username = $_POST['login'];
-		$password = $_POST['password'];
-		$resultat = authentifier_user($username, $password);
-		if($resultat === true){
-			$_SESSION['user'] = $username;
-			header("Location:index.php");
-			exit();
-		}elseif(($resultat == 2) || ($resultat == 3)){
-			$messErreurLogin = "Erreur, recommencez";
-		}
-	}
-}
+/*
+	Il n'y as aucune validation, aucun traitement parce que ce n'est pas le but de l'exercice!
+*/
 ?>
+ et les nouveaux attributs et fonctionnalités de formulaires du HTML5
 
-Un formulaire qui devra contenir des champs de texte, boutons radio, cases à 
-cocher, liste déroulante, champ de texte multi ligne, et les nouveaux attributs et 
-fonctionnalités de formulaires du HTML5
-
+			<div class="boiteMessagesFormulaires" id="boiteErreursFormulaires_Login"><span>Merci, vos changements ont été enregistrés.</span></div>
 			<div id="loginDiv">
-				<!-- DÉBUT formulaire login -->
-				<form id="formLogin" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-					<h3>Identifiez-vous !</h3>
-					<p>Entrez votre identifiant et mot de passe.</p>
+				<form id="formIdentite" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 					<fieldset>
-						<label for="login">Votre identifiant : </label>
-						<div>
-							<input id="login" class="rounded" name="login" />
-							<span id="loginOk" class="spanValid"></span>
-						</div>
-						<span id="errorLogin" class="spanError"></span>
+						<legend>Votre identitée</legend>
+						<dl>
+							<dt><span>Votre identifiant : </span></dt>
+							<dd><span><?php echo $_SESSION['user']; ?></span></dd>
+							
+							<dt><label for="prenom">Votre prénom : </label></dt>
+							<dd><input id="prenom"  name="prenom" type="text" /></dd>
+							
+							<dt><label for="nomFamille">Votre nom : </label></dt>
+							<dd><input id="nomFamille" name="nomFamille" type="text"  /></dd>
+							
+							<dt><label for="adresse">Votre adresse civique : </label></dt>
+							<dd><input id="adresse" name="adresse"  type="text"   /></dd>
+							
+							<dt><label for="courriel">Votre courriel : </label></dt>
+							<dd><input id="courriel" name="courriel" type="email"/></dd>
+							
+							<dt><span>Vous êtes : </span></dt>
+							<dd><input id="genreF" name="genre" type="radio" value="femme" /><label for="genreF">Une femme</label>
+									<input id="genreH" name="genre" type="radio" value="homme" /><label for="genreH">Un homme</label></dd>
+						</dl>
+						<button type="button" id="envoyerIdentite">Enregistrer</button>
 					</fieldset>
+				</form>
+				
+				<form id="formInfosCredits" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 					<fieldset>
-						<label for="passwordLog">Mot de passe : </label>
-						<div>
-							<input id="passwordLog" class="rounded" name="password" type="password" />
-						</div>
-						<span id="errorPasswordLog" class="spanError"></span>
+						<legend>Vos informations de crédit</legend>
+						<dl>
+							<dt><span>Adresse de livraison : </span></dt>
+							<dd><input id="choixAdresseLivraison1" name="choixAdresseLivraison"  type="radio"   value="principale" /><label for="choixAdresseLivraison1">Idem que principale</label>
+									<input id="choixAdresseLivraison2" name="choixAdresseLivraison"  type="radio"   value="autre" /><input id="adresseLivraisonAutre" name="adresseLivraisonAutre"  type="text"   /></dd>
+							
+							<dt><span>Mode de paiement : </span></dt>
+							<dd>{radio CC:  [Visa image]  [MC image]  [Discover image] [Prépayée] (entrer numéro)} {radio cheque (no banque)} {radio mandat poste}{radio internet [PayPal] [Bitcoin]}</dd>
+						</dl>
+						<button type="button" id="envoyerInfosCredit">Enregistrer</button>
 					</fieldset>
-					<fieldset>
-						<button type="button" id="connecter" class="rounded">Connexion</button>
-						<span id="userInvalid"><?php echo $messErreurLogin; ?></span>
-						<span id="errorFormLog" class="spanError"></span>
-					</fieldset>
-				</form><!-- FIN formulaire login -->
+				</form>
 
-				<!-- DÉBUT formulaire inscription -->
-				<form id="formRegister" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
-					<h3>Pas déjà membre ?</h3>
-					<p>Veuillez remplir tous les champs pour vous inscrire.</p>
+				<form id="formMDP" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 					<fieldset>
-						<label for="nomReg">Choisir un identifiant : </label>
-						<div>
-							<input id="nomReg" class="rounded" name="nom" />
-							<span id="nomOk" class="spanValid"></span>
-						</div>
-						<span id="errorNomReg" class="spanError"></span>
+						<legend>Modifier votre mot de passe</legend>
+						<dl>
+							<dt><label for="passwordOld">Mot de passe actuel : </label></dt>
+							<dd><input id="passwordOld" name="passwordOld" type="password" /></dd>
+							<dt><label for="passwordNew">Nouveau mot de passe : </label></dt>
+							<dd><input id="passwordNew" name="passwordNew" type="password" /></dd>
+							<dt><label for="passwordCnf">Retapez le mot de passe : </label></dt>
+							<dd><input id="passwordCnf" name="passwordCnf" type="password" /></dd>
+						</dl>
+						<button type="button" id="envoyerMDP">Enregistrer</button>
 					</fieldset>
+				</form>
+
+				<form id="formInterets" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 					<fieldset>
-						<label for="prenomReg">Votre prénom : </label>
-						<div>
-							<input id="prenomReg" class="rounded" name="prenom" />
-							<span id="prenomOk" class="spanValid"></span>
-						</div>
-						<span id="errorPrenomReg" class="spanError"></span>
+						<legend>Les produits qui vous intéressent</legend>
+						<label for="interet1"><input id="interet1" name="interets[]" type="checkbox" value="casse_tetes" />Casse-têtes</label>
+						<label for="interet2"><input id="interet2" name="interets[]" type="checkbox" value="poupees" />Poupées</label>
+						<label for="interet3"><input id="interet3" name="interets[]" type="checkbox" value="marionettes" />Marionettes</label>
+						<label for="interet4"><input id="interet4" name="interets[]" type="checkbox" value="vehicules" />Véhicules</label>
+						<button type="button" id="envoyerInterets">Enregistrer</button>
 					</fieldset>
+				</form>
+				
+				<form id="formCommentaires" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 					<fieldset>
-						<label for="nomFamilleReg">Votre nom : </label>
-						<div>
-							<input id="nomFamilleReg" class="rounded" name="nomFamille" />
-							<span id="nomFamilleOk" class="spanValid"></span>
-						</div>
-						<span id="errorNomFamilleReg" class="spanError"></span>
+						<legend>Des questions ou des commentaires?</legend>
+						<dl>
+							<dt><label for="choixSujet">De quoi voulez-vous nous entretenir ? </label></dt>
+							<dd><select name="choixSujet">
+								<option value="sujet1">sujet1</option>
+								<option value="sujet2">sujet2</option>
+								<option value="sujet3">sujet3</option>
+								<option value="sujet4">sujet4</option>
+							</select></dd>
+							<dt><label for="commentaire">Votre commentaire : </label></dt>
+							<dd><textarea id="commentaire" name="commentaire"></textarea></dd>
+						</dl>
+						<button type="button" id="envoyerCommenraires">Envoyer</button>
 					</fieldset>
-					<fieldset>
-						<label for="passwordReg">Choisir un mot de passe : </label>
-						<div>
-							<input id="passwordReg" class="rounded" name="password" type="password" />
-							<span id="passwordOkReg" class="spanValid"></span>
-						</div>
-						<span id="errorPasswordReg" class="spanError"></span>
-					</fieldset>
-					<fieldset>
-						<label for="adresse">Votre adresse civique : </label>
-						<div>
-							<input id="adresse" class="rounded" name="adresse" />
-							<span id="adresseOk" class="spanValid"></span>
-						</div>
-						<span id="errorAdresse" class="spanError"></span>
-					</fieldset>
-					<fieldset>
-						<label for="email">Votre courriel : </label>
-						<div>
-							<input id="email" class="rounded" name="email" />
-							<span id="emailOk" class="spanValid"></span>
-						</div>
-						<span id="errorEmail" class="spanError"></span>
-					</fieldset>
-					<fieldset>
-						<button type="button" id="register" class="rounded">Envoyer</button>
-						<span id="userTaken"><?php echo $messErreur; ?></span>
-						<span id="errorFormReg" class="spanError"></span>
-					</fieldset>
-				</form><!-- FIN formulaire inscription -->
+				</form>
 			</div>
 <?php
 require_once "assets/inc/footer.inc.php";

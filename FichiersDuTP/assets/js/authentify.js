@@ -8,25 +8,24 @@ $(function(){
 		var valid = $("#loginOk");
 		validationAlpha(saisie, error, valid);
 	});*/
-	
+
 	/*$("#passwordLog").blur(function(){
 		var saisie = $(this).val();
 		var error = $("#errorPasswordLog");
 		var valid = $("#passwordOkLog");
 		validationAlphaNumerique(saisie, error, valid);
 	});*/
-	
+
 	$("#formLogin").submit(function(){
 		/*
-			On doit attrapper l'évènement SUBMIT directement sur le FORM
-			parce que si on agit sur le CLICK d'un bouton et que le FORM
-			n'est pas valide selon le BROWSER, la fonction du bouton est
-			appellée malgré tout.
+			On doit attrapper l'évènement SUBMIT directement sur le FORM parce que si on agit sur le CLICK d'un bouton et que le FORM
+			n'est pas valide selon le BROWSER, la fonction du bouton est 	appellée malgré tout.
 		*/
-		console.log("formLogin :: submit");
+		
+		//console.log("formLogin :: submit");
 		//return false;
 	//});
-	
+
 	//$("#connecter").click(function(){
 		/*var nbrElements = 0;
 		var nbrOk = 0;
@@ -42,10 +41,12 @@ $(function(){
 			$("#formLogin").submit();
 		}*/
 		//console.log("fct connecter as été lancée");
-		
+
 		var xhr = getXhr();
 		//var element;
-		var queryString="assets/xhr/authentify.xhr.php?";
+		var urlAuthentify="assets/xhr/authentify.xhr.php";
+		var queryString;
+
 		// On défini ce qu'on va faire quand on aura la réponse
 		xhr.onreadystatechange = function(){
 			// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
@@ -65,24 +66,43 @@ $(function(){
 				}
 			}
 		}
-		
+
 		//element = document.getElementById("login");
 		//queryString += "login=" + element.value;
-		queryString += "login=" + $("#login").val();
+		queryString = "login=" + $("#login").val();
 		//element = document.getElementById("passwordLog");
 		//queryString +="&passwordLog=" + element.value;
-		queryString +="&passwordLog=" + $("#passwordLog").val();
-		console.log(queryString);
-		xhr.open("GET", queryString ,true);
-		xhr.send(null);
-		
+		queryString += "&passwordLog=" + $("#passwordLog").val();
+		//urlAuthentify += '?'+queryString;
+
+		//console.log(urlAuthentify);
+
+		//xhr.open("GET", urlAuthentify ,true);
+		//xhr.send(null);
+
+		/*
+
+		http://fr.openclassrooms.com/informatique/cours/ajax-et-l-echange-de-donnees-en-javascript/l-objet-xmlhttprequest-1 ::
+
+		Dans le cas de GET les variables sont transmises directement dans l'URL :
+
+xhr.open("GET", "handlingData.php?variable1=truc&variable2=bidule", true);
+xhr.send(null);
+
+Pour POST, il faut spécifier les variables dans l'argument de send :*/
+
+		//console.log(urlAuthentify + '?' + queryString);
+		xhr.open("POST", urlAuthentify, true);
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xhr.send(queryString);
+
 		return false;
 	});
 
 	// validation formulaire -----> Register
 	$("#passwordRegConfirm").keyup(function(){
 		var pwd = $("#passwordReg").val();
-		
+
 		if($(this).val() == pwd){
 			$(this).addClass("passwordValid");
 			$(this).removeClass("passwordInvalid");
@@ -94,14 +114,14 @@ $(function(){
 
 	$("#passwordRegConfirm").blur(function(){
 		var pwd = $("#passwordReg").val();
-		
+
 		if($(this).val() == pwd){
 			$("#passwordRegConfirmError").text("");
 		}else{
 			$("#passwordRegConfirmError").text("Les mots de passe ne correspondent pas.");
 		}
-	});	
-	
+	});
+
 	/*$("#nomReg").blur(function(){
 		var saisie = $(this).val();
 		var error = $("#errorNomReg");
