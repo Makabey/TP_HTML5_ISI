@@ -8,7 +8,7 @@ require_once "assets/inc/header.inc.php";
 if(isset($_GET)){
 	// On recoit deux code d' "OPER" mais en fin de compte un seul ou pas du tout ferais l'affaire
 	$nrof = $_GET['nrof'];
-	$retour = chargerFacture($arrItems, $nrof, 'facture_ID');
+	$retour = chargerFacture($arrItems, $nrof);
 
 	if(false === $retour){
 		echo '<h2>Une erreur est survenue lors de la lecture de la facture, nous en sommes désolés.</h2>';

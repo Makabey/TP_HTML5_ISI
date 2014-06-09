@@ -10,7 +10,14 @@ $retour = chargerProduits($arrProduits);
 if($retour === false){
 	echo 'Une erreur est survenue lors du chargement des produits; impossible de continuer.',PHP_EOL;
 }else{
-	$retour = chargerFacture($arrFactures);
+	/*
+		si on recoit un parametre, c'est que la page est appellée du choix menu-client "mes factures";
+		question sécuritée, c'est de la bouette parce que cette même page est utilisée par les admins,
+		sinon pour illustration, ça va!
+	*/
+	$client_ID  = (isset($_GET['nroc']))?strval($_GET['nroc']):-1;
+
+	$retour = chargerFacture($arrFactures, $client_ID);
 
 	if($retour === false){
 		echo 'Une erreur est survenue lors du chargement des factures; impossible de continuer.',PHP_EOL;

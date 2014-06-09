@@ -16,13 +16,17 @@ require_once "assets/inc/csvFunctions.inc.php";
 								</li>
 								<?php echo genererMenuTopItem('produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'produits') echo ' aActiveFix'; ?>">Catalogue</span><img src="assets/images/arrow_down_menu.png"/>
 									<ul>
-										<?php
-										foreach($arrCategories as $index => $details){
-											if($index>0){ # Ne pas afficher catégorie "tout", alias "0"
-												echo tabs(2),'<li><a href="produits.php?cat=',$index,'">',$details['nom'],'</a></li>',PHP_EOL;
-											}
-										}
-										?>
+										<li>Catégories
+											<ul>
+												<?php
+												foreach($arrCategories as $index => $details){
+													if($index>0){ # Ne pas afficher catégorie "tout", alias "0"
+														echo tabs(2),'<li><a href="produits.php?cat=',$index,'">',$details['nom'],'</a></li>',PHP_EOL;
+													}
+												}
+												?>
+											</ul>
+										</li>
 										<li><a href="galerie.php">Galerie</a></li>
 									</ul>
 								</li>
@@ -52,7 +56,15 @@ require_once "assets/inc/csvFunctions.inc.php";
 			#If(isset($_SESSION['user']) && ($_SESSION['user'] != 'admin')){
 			#If(isset($_SESSION['user'])){
 			?>
-			<li><a href="mon_profil.php"<?php #if($sNomDeCettePage == 'gestion_profil') echo ' class="aActiveFix"'; ?>>Mon Profil</a></li>
+			<li><a href="mon_profil.php">Mon Profil</a></li>
+			<?php
+			$retour = chargerUsager($arrUsager, $_SESSION['user']);
+			if(false !== $retour){
+				#$arrUsager = $arrUsager[key($arrUsager)];
+				echo '<li><a href="gestion_produits_factures.php?nroc=', $arrUsager[key($arrUsager)]['client_ID'], '">Mes factures</a></li>', PHP_EOL;
+			#}else{
+			}
+			?>
 			<li><a href="logout.php">Déconnexion</a></li>
 			<?php
 				#If(isset($_SESSION['user']) && ($_SESSION['user'] == 'admin')){
