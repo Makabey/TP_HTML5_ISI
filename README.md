@@ -10,7 +10,6 @@
 - pour authentify.js/php >> classes CSS passwordValid / passwordInvalid, serviront à indiquer que le mot de passe as bien été REtapé.
 - [CSS] Remplacer le code jQuery (qui ne fonctionne pas vraiment) pour animer l'apparition des sous-menu par une/des transitions sous une règle "li:hover>ul" ? Les IDs ne servent que pour jQuery donc si on suit "header nav>ul>li:nth-child(2)>ul",  "header nav>ul>li:nth-child(4)>ul" et "header nav>ul>li:nth-child(5)>ul" on devrais pouvoir éliminer les "<?php echo $MenusID; ?>menuNiv1_Item1_submenuX"
 
-
 #Eric :
 - ~~[TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)~~
 - ~~[JS, HTML, CSS] Réécrire/retirer le JS de la page formulaires/inscription pour utiliser au max les nouvelles tag/attributs HTML5, càd pousser en HTML/CSS~~
@@ -28,8 +27,7 @@
 - enlever de "authentify" le cde rendu ds le fichier XHR
 - ~~[HTML, CSS] Sous "Mon Profil"; permettre de consulter ses factures passées~~
 - ~~[HTML, CSS] Sous "Mon Profil"; permettre de changer son mot de passe?~~
-
-
+- [HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~
@@ -58,7 +56,6 @@
 8. [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
 11. [HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue
 12. [VIDEO] conversion en tout les formats supportés
-14. [HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé
 
 
 à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même?
