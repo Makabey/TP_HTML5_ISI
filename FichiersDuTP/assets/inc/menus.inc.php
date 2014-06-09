@@ -14,7 +14,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 								<?php echo genererMenuTopItem('index'); ?>
 									<a href="index.php"<?php if($sNomDeCettePage == 'index') echo ' class="aActiveFix"'; ?>>Accueil</a>
 								</li>
-								<?php echo genererMenuTopItem('produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'produits') echo ' aActiveFix'; ?>">Catalogue</span>
+								<?php echo genererMenuTopItem('produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'produits') echo ' aActiveFix'; ?>">Catalogue</span><img src="assets/images/arrow_down_menu.png"/>
 									<ul>
 										<?php
 										foreach($arrCategories as $index => $details){
