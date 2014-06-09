@@ -49,11 +49,11 @@ if(false !== $retour){
 							<dd><input id="courriel" name="courriel" type="email" required="required" placeholder="utilisateur@domaine.com" value="<?php echo $arrUsager['email']; ?>" /></dd>
 							
 							<dt><span>Vous êtes : </span></dt>
-							<dd><input id="genreF" name="genre" type="radio" value="femme" /><label for="genreF">Une femme</label>
-									<input id="genreH" name="genre" type="radio" value="homme" /><label for="genreH">Un homme</label>
-									<input id="genreA" name="genre" type="radio" value="secret" checked="checked" /><label for="genreA">Secret</label></dd>
+							<dd><input name="genre" type="radio" value="femme" /><label for="genreF">Une femme</label>
+									<input name="genre" type="radio" value="homme" /><label for="genreH">Un homme</label>
+									<input name="genre" type="radio" value="secret" checked="checked" /><label for="genreA">Secret</label></dd>
 						</dl>
-						<button type="submit" id="envoyerIdentite">Enregistrer</button>
+						<button type="submit">Enregistrer</button>
 					</fieldset>
 				</form>
 				
@@ -62,17 +62,25 @@ if(false !== $retour){
 						<legend>Vos informations de crédit</legend>
 						<dl>
 							<dt><span>Adresse de livraison : </span></dt>
-							<dd><input id="choixAdresseLivraison1" name="choixAdresseLivraison" type="radio" value="principale" /><label for="choixAdresseLivraison1">Idem que principale</label>
-									<input id="choixAdresseLivraison2" name="choixAdresseLivraison" type="radio" value="autre" /><input id="adresseLivraisonAutre" name="adresseLivraisonAutre" type="text" /></dd>
-							
+							<dd><input id="choixAdresseLivraison1" name="choixAdresseLivraison" type="radio" value="principale" checked="checked" /><label for="choixAdresseLivraison1">Idem que principale</label>
+									<input id="choixAdresseLivraison2" name="choixAdresseLivraison" type="radio" value="autre" /><input id="adresseLivraisonAutre" name="adresseLivraisonAutre" type="text" placeholder="111111, rue du finfin, #1A" pattern="[0-9]{1,6},?\ ?[a-zA-Z\.\ ]{3,30},?\ ?#?[0-9A-Z]{1,5}" title="Numéro civique, rue et appartement; au plus 40 charactères" /></dd>
 							<dt><span>Mode de paiement : </span></dt>
-							<dd>{radio CC: [Visa image] [MC image] [Discover image] [Prépayée] (entrer numéro)} {radio cheque (no banque)} {radio mandat poste}{radio internet [PayPal] [Bitcoin]}</dd>
+							<dd>
+								<dl>
+									<dt><input id="mpCC_Visa" name="modePaiement" type="radio" value="cc_visa" checked="checked" /><label for="mpCC_Visa"><img src="assets/images/paiement/visa-curved-32px.png" alt="icone carte de crédit Visa" /></label></dt>
+									<dd><input id="mpCC_MasterC" name="modePaiement" type="radio" value="cc_mastercard" /><label for="mpCC_MasterC"><img src="assets/images/paiement/mastercard-curved-32px.png" alt="icone carte de crédit MasterCard" /></label></dd>
+									<dt><input id="mpCC_Discover" name="modePaiement" type="radio" value="cc_discover" /><label for="mpCC_Discover"><img src="assets/images/paiement/discover-curved-32px.png" alt="icone carte de crédit discover" /></label></dt>
+									<dd><input id="mpITN_Paypal" name="modePaiement" type="radio" value="itn_Paypal" /><label for="mpITN_Paypal"><img src="assets/images/paiement/paypal-curved-32px.png" alt="icone internet paypal" /></label></dd>
+								</dl>
+							</dd>
+							<dt><label for="mpCC_INT_Nro">Numéro de carte ou de compte : </label></dt>
+							<dd><input id="mpCC_INT_Nro" name="mpCC_INT_Nro" type="text" required="required" placeholder="Numéro de 12 chiffres" pattern="[0-9]{3}\ ?[0-9]{3}\ ?[0-9]{3}\ ?[0-9]{3}" title="12 chiffres avec ou sans espaces" autocomplete="off" /><input id="mpCC_INT_NroVerif" name="mpCC_INT_NroVerif" type="text" required="required" pattern="[0-9]{3}" title="numéro de contrôle ou 000 pour Paypal" autocomplete="off" /></dd>
 						</dl>
-						<button type="submit" id="envoyerInfosCredit">Enregistrer</button>
+						<button type="submit">Enregistrer</button>
 					</fieldset>
 				</form>
 
-				<form id="formMDP" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
+				<form id="formMDP" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>" autocomplete="off">
 					<fieldset>
 						<legend>Modifier votre mot de passe</legend>
 						<dl>
@@ -83,36 +91,38 @@ if(false !== $retour){
 							<dt><label for="passwordCnf">Retapez le mot de passe : </label></dt>
 							<dd><input id="passwordCnf" name="passwordCnf" type="password" required="required" pattern="[a-zA-Z0-9]{6,12}" title="De 6 à 12 caractères" /></dd>
 						</dl>
-						<button type="submit" id="envoyerMDP">Enregistrer</button>
+						<button type="submit">Enregistrer</button>
 					</fieldset>
 				</form>
 
 				<form id="formInterets" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 					<fieldset>
 						<legend>Les produits qui vous intéressent</legend>
-						<label for="interet1"><input id="interet1" name="interets[]" type="checkbox" value="casse_tetes" />Casse-têtes</label>
-						<label for="interet2"><input id="interet2" name="interets[]" type="checkbox" value="poupees" />Poupées</label>
-						<label for="interet3"><input id="interet3" name="interets[]" type="checkbox" value="marionettes" />Marionettes</label>
-						<label for="interet4"><input id="interet4" name="interets[]" type="checkbox" value="vehicules" />Véhicules</label>
-						<button type="submit" id="envoyerInterets">Enregistrer</button>
+						<dl>
+							<dt><label for="interet1"><input id="interet1" name="interets[]" type="checkbox" value="casse_tetes" />Casse-têtes</label></dt>
+							<dd><label for="interet2"><input id="interet2" name="interets[]" type="checkbox" value="poupees" />Poupées</label></dd>
+							<dt><label for="interet3"><input id="interet3" name="interets[]" type="checkbox" value="marionettes" />Marionettes</label></dt>
+							<dd><label for="interet4"><input id="interet4" name="interets[]" type="checkbox" value="vehicules" />Véhicules</label></dd>
+						</dl>
+						<button type="submit">Enregistrer</button>
 					</fieldset>
 				</form>
 				
-				<form id="formCommentaires" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
+				<form id="formCommentaires" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>" autocomplete="off">
 					<fieldset>
 						<legend>Des questions ou des commentaires?</legend>
 						<dl>
 							<dt><label for="choixSujet">De quoi voulez-vous nous entretenir ? </label></dt>
 							<dd><select name="choixSujet">
-								<option value="sujet1">sujet1</option>
-								<option value="sujet2">sujet2</option>
-								<option value="sujet3">sujet3</option>
-								<option value="sujet4">sujet4</option>
+								<option value="sujet1">Requête de jouet</option>
+								<option value="sujet2">Le service à la clientèle</option>
+								<option value="sujet3">La qualité de vos produits</option>
+								<option value="sujet4">Produits à venir</option>
 							</select></dd>
 							<dt><label for="commentaire">Votre commentaire : </label></dt>
-							<dd><textarea id="commentaire" name="commentaire"></textarea></dd>
+							<dd><textarea id="commentaire" name="commentaire" placeholder="Laissez-nous un message d'au plus 1024 caractères" title="Laissez-nous un message d'au plus 1024 caractères" pattern=".{1,1024}" required="required"></textarea></dd>
 						</dl>
-						<button type="submit" id="envoyerCommenraires">Envoyer</button>
+						<button type="submit">Envoyer</button>
 					</fieldset>
 				</form>
 			</div>
