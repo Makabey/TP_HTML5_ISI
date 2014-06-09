@@ -1007,10 +1007,8 @@ footer nav>ul>li>ul>li>a{
 
 /* Ajouts Eric */
 /* Formulaires */
-.boiteErreursFormulaires{
-	border:3px solid #f00;
-	color:#f00;
-	background-color:#fcc;
+.boiteErreursFormulaires,
+.boiteMessagesFormulaires{
 	padding:20px 0;
 	/*margin-bottom:20px;*/
 	margin:0 auto 10px;
@@ -1019,6 +1017,83 @@ footer nav>ul>li>ul>li>a{
 	font-weight:bold;
 	display:none;
 }
+.boiteErreursFormulaires{
+	border:3px solid #f00;
+	color:#f00;
+	background-color:#fcc;
+}
+.boiteMessagesFormulaires{
+	border:3px solid #0f0;
+	color:#0f0;
+	background-color:#cfc;
+}
 /* \Formulaires */
+
+/* header.inc */
+
+/*html body#index div#container header div#center_menu div#userWrap div
+html body#gestion_produits div#container header div#center_menu div#userWrap div*/
+
+/*#container header div div div:first-child{*/
+/*#container header div div{
+	position:relative;
+}*/
+#container header div div div:first-child ul{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	/*display: flex;
+	flex-direction: column;*/
+	/*position:absolute;
+	z-index:10;*/
+}
+
+#container header div div div:first-child ul li{
+	cursor: pointer;
+	/*color: white;*/
+}
+#container header div div div:first-child ul li a{
+	color: white;
+}
+
+/*#container header div div div:first-child>ul{
+	position:absolute;
+	z-index:10;
+}*/
+
+#container header div div div:first-child>ul>li{
+	vertical-align: top;
+	position:relative;
+}
+
+#container header div div div:first-child>ul>li>ul{
+	/*display:none;*/
+	visibility: hidden;
+	/*z-index:10;*/
+	position:absolute;
+}
+#container header div div div:first-child>ul>li:hover>ul{
+	/*display:inline-block;*/
+	visibility: visible;
+}
+
+#container header div div div:first-child > ul > li > ul > li{
+	/*display: inline-block;*/
+	width: 155px;
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-top: 1px solid white;
+	background: black;
+	/*padding: 10px;*/
+	padding: 3px 20px 3px 20px;
+}
+#container header div div div:first-child > ul > li > ul > li:last-child{
+	border-bottom: 1px solid white;
+}
+#container header div div div:first-child > ul > li > ul > li:hover{
+	/*color: black;*/
+	background: rgba(0,0,0,0.8);
+}
+/* \header.inc */
 /* \Ajouts Eric */
 /** == EOF == **/
