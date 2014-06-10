@@ -132,9 +132,9 @@ require_once "assets/inc/menus.inc.php";
 						#if(strlen($userFullName) < 3){
 							$userFullName = $_SESSION['user'];
 						#}
-						echo "<div><ul><li>Bonjour, $userFullName";
+						echo "<div><ul><li><p>Bonjour, $userFullName";
 						spawnMonProfilMenu();
-						echo "</li></ul></div>";
+						echo "</p></li></ul></div>";
 						if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
 							echo '<div><a href="gestion_panier.php">';
 							$nombreItems = count($_SESSION['panier']);

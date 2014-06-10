@@ -14,8 +14,7 @@ body{
 #container{
 	background-color: white!important;
 	margin:0 auto;
-	max-width: 1024px;
-	width: 100%;
+	width: 1024px;
 }
 
 .clearBoth{
@@ -84,7 +83,6 @@ body ::-webkit-scrollbar-thumb {
 	background-image: url("../images/header.jpg");
 	background-color:green;
 	border-bottom: 3px solid gray;
-	width: 100%;
 }
 
 #container header #center_menu > a > img{
