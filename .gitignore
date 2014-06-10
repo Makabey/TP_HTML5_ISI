@@ -13,6 +13,13 @@ tmp/
 *~.nib
 *.pdf
 *.old
+*.flv
+*.3gp
+*.mp4
+*.webm
+*.ogg
+*.ogv
+*.ogm
 local.properties
 .classpath
 .settings/
