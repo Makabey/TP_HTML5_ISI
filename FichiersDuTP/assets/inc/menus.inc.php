@@ -16,8 +16,8 @@ require_once "assets/inc/csvFunctions.inc.php";
 								</li>
 								<?php echo genererMenuTopItem('produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'produits') echo ' aActiveFix'; ?>">Catalogue</span><img src="assets/images/arrow_down_menu.png"/>
 									<ul>
-										<li>Catégories<img src="assets/images/arrow_down_menu.png"/>
-											<ul>
+										<!--<li>Catégories<img src="assets/images/arrow_down_menu.png"/>-->
+											<!--<ul>-->
 												<?php
 												foreach($arrCategories as $index => $details){
 													if($index>0){ # Ne pas afficher catégorie "tout", alias "0"
@@ -25,15 +25,13 @@ require_once "assets/inc/csvFunctions.inc.php";
 													}
 												}
 												?>
-											</ul>
+											<!--</ul>-->
 										</li>
 										<!--<li><a href="galerie.php">Galerie</a></li>-->
 										<li><a href="galerie_photos.php">Galerie</a><img src="assets/images/arrow_down_menu.png"/>
 											<ul>
 												<li><a href="galerie_photos.php">Photos</a></li>
 												<li><a href="galerie_videos.php">Vidéos</a></li>
-												<li>Sous-menu 3</li>
-												<li>Sous-menu 4</li>
 											</ul>
 										</li>
 									</ul>
