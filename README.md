@@ -31,6 +31,10 @@
 - ~~[HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé + media query~~
 - cleanup code PHP et JS
 - réviser HTML5
+- [HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue
+- [VIDEO] conversion en tout les formats supportés
+- http://www.webmproject.org/tools/
+- http://monochrome.sutic.nu/2010/06/14/video-editing-with-blender.html#section.10.4
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~
@@ -57,8 +61,6 @@
 
 ##Reserve
 8. [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
-11. [HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue
-12. [VIDEO] conversion en tout les formats supportés
 
 
 à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même?

@@ -29,6 +29,7 @@ if(!empty($arr_Medias)){
 
 var_dump($arr_Medias);
 var_dump($arr_MediasClasses);
+exit();
 ?>
 			<h1>Galerie vidéos</h1>
 			<div>
@@ -39,6 +40,19 @@ var_dump($arr_MediasClasses);
 					foreach($arr_Medias as $image){
 						echo '<div>';
 						echo '<img src="', $path_Media, $image, '" alt="', $image, '" />';
+						echo '
+						
+						
+									<video id="movie" width="320" height="240">
+				<source src="video/small.mp4" type="video/mp4">
+				<source src="video/small.ogv" type="video/ogg">
+				<source src="video/small.webm" type="video/webm">
+				<source src="video/small.3gp" type="video/3gp">
+				<object data="video/small.mp4" width="320" height="240">
+					<embed src="video/small.flv" width="320" height="240">
+				</object>
+			</video>
+						';
 						echo '</div>';
 						echo PHP_EOL;
 
