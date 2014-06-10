@@ -1,24 +1,7 @@
 <?php
-
-/*
-	Le test permet à une page de démarrer elle-même la SESSION sans nuire aux autres pages
-	qui voudrait faire de même, parce des appels multiples engendrent une erreur
-*/
-if(strlen(session_id()) == 0){
-	session_start();
-}
-
 define('CSV_BASE_DIR', '../res/');
 require_once "../inc/csvFunctions.inc.php";
-
-// function pour éliminer les characetres spéciaux
-function test_input($data) {
- $data = trim($data);
- $data = stripslashes($data);
- $data = htmlspecialchars($data);
- $data = strtolower($data);
- return $data;
-}
+require_once "../inc/tools.inc.php";
 
 function authentifier_user($nom_user, $password_user){
 	$retour = chargerUsager($data_user, $nom_user);
@@ -47,6 +30,14 @@ if(isset($_POST['login'])){
 		$password = test_input($_POST['passwordLog']);
 		$resultat = authentifier_user($username, $password);
 		if($resultat === true){
+			/*
+				Le test permet à une page de démarrer elle-même la SESSION sans nuire aux autres pages
+				qui voudrait faire de même, parce des appels multiples engendrent une erreur
+			*/
+			if(strlen(session_id()) == 0){
+				session_start();
+			}
+
 			$_SESSION['user'] = $username;
 		}
 	}

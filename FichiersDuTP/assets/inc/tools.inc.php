@@ -3,6 +3,20 @@ define('TAUX_TAXE_TPS', 0.05);
 define('TAUX_TAXE_TVQ', 0.09975);
 
 /*
+	Fonctions pour les formulaires
+*/
+// function pour éliminer les characetres spéciaux
+function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	$data = strtolower($data);
+
+	return $data;
+}
+
+
+/*
 	Fonctions générales
 */
 function calculerTaxes($fMontant, $iDecimales = -1){

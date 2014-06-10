@@ -34,19 +34,19 @@ if(false !== $retour){
 						<dl>
 							<dt><span>Votre identifiant : </span></dt>
 							<dd><span><?php echo $_SESSION['user']; ?></span></dd>
-							
+
 							<dt><label for="prenom">Votre prénom : </label></dt>
 							<dd><input id="prenom" name="prenom" type="text" placeholder="3 à 24 caractères" pattern="[A-Z][a-zA-Z]{2,25}" title="Majuscule suivie d'au plus 25 charactères" /></dd>
-							
+
 							<dt><label for="nomFamille">Votre nom : </label></dt>
 							<dd><input id="nomFamille" name="nomFamille" type="text" placeholder="2 à 24 caractères" pattern="[A-Z][a-zA-Z]{1,25}" title="Majuscule suivie d'au plus 25 charactères" /></dd>
-							
+
 							<dt><label for="adresse">Votre adresse civique : </label></dt>
 							<dd><input id="adresse" name="adresse" type="text" placeholder="111111, rue du finfin, #1A" pattern="[0-9]{1,6},?\ ?[a-zA-Z\.\ ]{3,30},?\ ?#?[0-9A-Z]{1,5}" title="Numéro civique, rue et appartement; au plus 40 charactères" /></dd>
-							
+
 							<dt><label for="courriel">Votre courriel : </label></dt>
 							<dd><input id="courriel" name="courriel" type="email" required="required" placeholder="utilisateur@domaine.com" value="<?php echo $arrUsager['email']; ?>" /></dd>
-							
+
 							<dt><span>Vous êtes : </span></dt>
 							<dd><input name="genre" type="radio" value="femme" /><label for="genreF">Une femme</label>
 									<input name="genre" type="radio" value="homme" /><label for="genreH">Un homme</label>
@@ -55,7 +55,7 @@ if(false !== $retour){
 						<button type="submit">Enregistrer</button>
 					</fieldset>
 				</form>
-				
+
 				<form id="formInfosCredits" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 					<fieldset>
 						<legend>Vos informations de crédit</legend>
@@ -73,7 +73,7 @@ if(false !== $retour){
 								</dl>
 							</dd>
 							<dt><label for="mpCC_INT_Nro">Numéro de carte ou de compte : </label></dt>
-							<dd><input id="mpCC_INT_Nro" name="mpCC_INT_Nro" type="text" required="required" placeholder="Numéro de 12 chiffres" pattern="[0-9]{3}\ ?[0-9]{3}\ ?[0-9]{3}\ ?[0-9]{3}" title="12 chiffres avec ou sans espaces" autocomplete="off" /><input id="mpCC_INT_NroVerif" name="mpCC_INT_NroVerif" type="text" required="required" pattern="[0-9]{3}" title="numéro de contrôle ou 000 pour Paypal" autocomplete="off" /></dd>
+							<dd><input id="mpCC_INT_Nro" name="mpCC_INT_Nro" type="text" required="required" placeholder="Numéro de 12 chiffres" pattern="[0-9]{3}\ ?[0-9]{3}\ ?[0-9]{3}\ ?[0-9]{3}" maxlength="15" title="12 chiffres avec ou sans espaces" autocomplete="off" /><input id="mpCC_INT_NroVerif" name="mpCC_INT_NroVerif" type="text" required="required" pattern="\d{3,4}" maxlength="4" placeholder="CVC" title="numéro de contrôle (CVC/CVV) ou 000 pour Paypal" autocomplete="off" /></dd>
 						</dl>
 						<button type="submit">Enregistrer</button>
 					</fieldset>
@@ -106,7 +106,7 @@ if(false !== $retour){
 						<button type="submit">Enregistrer</button>
 					</fieldset>
 				</form>
-				
+
 				<form id="formCommentaires" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>" autocomplete="off">
 					<fieldset>
 						<legend>Des questions ou des commentaires?</legend>

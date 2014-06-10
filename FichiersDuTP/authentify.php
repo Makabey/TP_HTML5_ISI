@@ -2,35 +2,8 @@
 $sPageTitle = "Authentification | ";
 
 require_once "assets/inc/csvFunctions.inc.php";
+require_once "assets/inc/tools.inc.php";
 require_once "assets/inc/header.inc.php";
-
-// function pour éliminer les characetres spéciaux
-function test_input($data) {
- $data = trim($data);
- $data = stripslashes($data);
- $data = htmlspecialchars($data);
- $data = strtolower($data);
- return $data;
-}
-
-function authentifier_user($nom_user, $password_user){
-	$retour = chargerUsager($data_user, $nom_user);
-	#var_dump($retour);
-	if($retour !== FALSE){
-		if(!empty($data_user)){
-			if($data_user[key($data_user)]['password']==$password_user){
-				$retour = true; // Tout correspond
-			}
-			else{
-				$retour = 2; // Mot de passe invalide
-			}
-		}
-		else{
-			$retour = 3; // Usager inexistant
-		}
-	}
-	return $retour;
-}
 
 // Formulaire d'enregistrement ------>
 $formValidation = array(
@@ -44,7 +17,7 @@ $formValidation = array(
 );
 
 $messErreur = null;
-$messErreurLogin = null;
+#$messErreurLogin = null;
 
 // validation des champs formulaire
 if(isset($_POST['nomReg'])){
@@ -71,24 +44,7 @@ if(isset($_POST['nomReg'])){
 	if($return === FALSE){
 		$messErreur = "Il y a eu un probleme d'écriture.";
 	}
-}
-elseif(isset($_POST['login'])){
-// formulaire de connexion ----->
-	if(isset($_POST['passwordLog'])){
-		$username = test_input($_POST['login']);
-		$password = test_input($_POST['passwordLog']);
-		#var_dump($username);
-		#var_dump($password);
-		$resultat = authentifier_user($username, $password);
-		if($resultat === true){
-			$_SESSION['user'] = $username;
-			header("Location:index.php");
-			exit();
-		}elseif(($resultat == 2) || ($resultat == 3)){
-			$messErreurLogin = "Erreur, recommencez";
-		}
-	}
-}
+}#elseif(isset($_POST['login'])){}
 ?>
 			<div class="boiteErreursFormulaires" id="boiteErreursFormulaires_Login"><span></span></div>
 			<div id="loginDiv">
@@ -113,7 +69,7 @@ elseif(isset($_POST['login'])){
 					</fieldset>
 					<fieldset>
 						<button type="submit" id="connecter">Connexion</button>
-						<span id="userInvalid"><?php echo $messErreurLogin; ?></span>
+						<!--<span id="userInvalid"><?php #echo $messErreurLogin; ?></span>-->
 						<!--<span id="errorFormLog" class="spanError"></span> -->
 					</fieldset>
 				</form><!-- FIN formulaire login -->
@@ -125,7 +81,7 @@ elseif(isset($_POST['login'])){
 					<fieldset>
 						<label for="nomReg">Choisir un identifiant : </label>
 						<div>
-							<span id="userTakenReg"><?php echo $messErreur; ?></span>
+							<span id="userTakenReg"><?php #echo $messErreur; ?></span>
 							<input id="nomReg" name="nomReg" type="text" required="required" placeholder="Au moins 4 charactères" pattern="[a-zA-Z0-9]{4,12}" title="De 4 à 12 caractères" list="suggestionsIdent"/>
 							<datalist id="suggestionsIdent"></datalist> <!-- Remplir avec javacript -->
 							<!--<span id="nomOk" class="spanValid"></span> -->
@@ -162,7 +118,7 @@ elseif(isset($_POST['login'])){
 							<input id="passwordRegConfirm" type="password" required="required" placeholder="Tapez-le ici de nouveau" pattern="[a-zA-Z0-9]{6,12}" title="De 6 à 12 caractères." />
 							<!--<span id="passwordRegConfirmOk" class="spanValid"></span>-->
 						</div>
-						<span id="passwordRegConfirmError" class="spanError"></span>
+						<!--<span id="passwordRegConfirmError" class="spanError"></span>-->
 					</fieldset>
 					<!--<fieldset>
 						<label for="adresse">Votre adresse civique : </label>

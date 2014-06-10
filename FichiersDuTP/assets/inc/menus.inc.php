@@ -65,16 +65,15 @@ require_once "assets/inc/csvFunctions.inc.php";
 			<li><a href="mon_profil.php">Mon Profil</a></li>
 			<?php
 			$retour = chargerUsager($arrUsager, $_SESSION['user']);
-			if(false !== $retour){
+			if((false !== $retour) &&  ($_SESSION['user'] != 'admin')){
 				#$arrUsager = $arrUsager[key($arrUsager)];
 				echo '<li><a href="gestion_produits_factures.php?nroc=', $arrUsager[key($arrUsager)]['client_ID'], '">Mes factures</a></li>', PHP_EOL;
 			#}else{
 			}
 			?>
-			<li><a href="logout.php">Déconnexion</a></li>
 			<?php
-				#If(isset($_SESSION['user']) && ($_SESSION['user'] == 'admin')){
-				If($_SESSION['user'] == 'admin'){
+			#If(isset($_SESSION['user']) && ($_SESSION['user'] == 'admin')){
+			If($_SESSION['user'] == 'admin'){
 			?>
 			<?php #echo genererMenuTopItem('gestion_produits'); ?><!--<span class="spanFix_li_hover<?php #if($sNomDeCettePage == 'gestion_produits') echo ' aActiveFix'; ?>">Gestion</span>-->
 				<!--<ul>-->
@@ -86,6 +85,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 			<?php
 				}
 			#} ?>
+			<li><a href="logout.php">Déconnexion</a></li>
 		</ul>
 	<?php
 	} # fin de "spawnMonProfilMenu"
