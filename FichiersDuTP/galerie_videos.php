@@ -1,24 +1,55 @@
 <?php
-$sPageTitle = "Photos | Galerie | ";
+$sPageTitle = "Vidéos | Galerie | ";
 
 #require_once "assets/inc/csvFunctions.inc.php";
 require_once "assets/inc/header.inc.php";
 
-$path_Media = "assets/images/videos";
-$reject_Media = 'broken_toy.jpg';
+$path_Media = "assets/videos/";
+$types_Media = "mov|avi|mp4|ogv|ogg";
+#$reject_Media = '';
 
-$str_Media = walkDirectory($path_Media, "mov|avi|mp4|ogv|ogg");
+$str_Media = walkDirectory($path_Media, $types_Media);
+
+#var_dump($str_Media);
+
+#$str_Media = str_replace($reject_Media, '', $str_Media);
+#$str_Media = str_replace('||', '|', $str_Media);
 
 var_dump($str_Media);
 
-$str_Media = str_replace($reject_Media, '', $str_Media);
-$str_Media = str_replace('||', '|', $str_Media);
+// fonction qui analyse les noms et les classent avec les extensions
+$arr_Medias = (!empty($str_Media))?explode('|', $str_Media):null;
+$arr_MediasClasses=null;
+if(!empty($arr_Medias)){
+	foreach($arr_Medias as $nom_media){
+		$nom_mediaExp = explode('.', $nom_media);
+		$arr_MediasClasses[$nom_mediaExp[0]][$nom_mediaExp[count($nom_mediaExp)-1]] = $nom_media;
+	}
+}
 
-var_dump($str_Media);
-
+var_dump($arr_Medias);
+var_dump($arr_MediasClasses);
 ?>
-			<h1>Galerie vid�os</h1>
+			<h1>Galerie vidéos</h1>
+			<div>
+			<?php
+				if(!empty($arr_MediasClasses)){
+					$iCmpt=1;
+					# Code ci-dessous à réécrire une fois que j'aurais de vrai données!
+					foreach($arr_Medias as $image){
+						echo '<div>';
+						echo '<img src="', $path_Media, $image, '" alt="', $image, '" />';
+						echo '</div>';
+						echo PHP_EOL;
 
+						$iCmpt++;
+						if($iCmpt % 2 == 0){
+							echo '</div>',  PHP_EOL, '<div>';
+						}
+					}
+				}
+			?>
+			</div>
 			
 <?php
 require_once "assets/inc/footer.inc.php";

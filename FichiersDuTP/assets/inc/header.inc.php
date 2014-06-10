@@ -26,7 +26,7 @@ require_once "assets/inc/menus.inc.php";
 		<meta name="author" content="Eric Robert et Olivier Berthier" />
 		<meta name="description" content="Petite fabrique de jouets en bois naturels, utilisant le strict minimum de matériaux autres tel que peinture, métaux et plastiques." />
 		<meta name="keywords" content="jouets, bois, jouets en bois, jouets sur mesure, naturel, durable, enfant" />
-		<link rel="stylesheet" href="assets/css/styles.css" />
+		<link rel="stylesheet" href="assets/css/styles.css" media="only screen" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<!--<script src="assets/js/functions.js"></script>-->
 		<script>

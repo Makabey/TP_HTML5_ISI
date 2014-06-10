@@ -4,11 +4,11 @@
 
 #Olivier :
 - [CSS] Passer au travers du CSS pour rassembler les règles qui se chevauchent ou s'annulent (en admettant qu'il y ais X+1 règles pour une seule entitée)
-- [CSS] Éliminer les règles mortes
+- ~~[CSS] Éliminer les règles mortes~~
 - [CSS, HTML] Passer le HTML au peigne fin pour voir ce qui pourrait se passer de classe ou ID et éliminer ou réécrire les règles concernées
-- Incorporer au moins une animation CSS3. (slider? -> demande du TP, point 5)
+- ~~Incorporer au moins une animation CSS3. (slider? -> demande du TP, point 5)~~
 - pour authentify.js/php >> classes CSS passwordValid / passwordInvalid, serviront à indiquer que le mot de passe as bien été REtapé.
-- [CSS] Remplacer le code jQuery (qui ne fonctionne pas vraiment) pour animer l'apparition des sous-menu par une/des transitions sous une règle "li:hover>ul" ? Les IDs ne servent que pour jQuery donc si on suit "header nav>ul>li:nth-child(2)>ul",  "header nav>ul>li:nth-child(4)>ul" et "header nav>ul>li:nth-child(5)>ul" on devrais pouvoir éliminer les "<?php echo $MenusID; ?>menuNiv1_Item1_submenuX"
+- ~~[CSS] Remplacer le code jQuery (qui ne fonctionne pas vraiment) pour animer l'apparition des sous-menu par une/des transitions sous une règle "li:hover>ul" ? Les IDs ne servent que pour jQuery donc si on suit "header nav>ul>li:nth-child(2)>ul",  "header nav>ul>li:nth-child(4)>ul" et "header nav>ul>li:nth-child(5)>ul" on devrais pouvoir éliminer les "<?php echo $MenusID; ?>menuNiv1_Item1_submenuX"~~
 
 #Eric :
 - ~~[TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)~~
@@ -28,7 +28,7 @@
 - [AJAX] valider en temps réel le nom d'usager (inscription) + ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
 - ~~[HTML] Ajouter les éléments SEO (meta keywords/author/description/...), pour une version "porte-folio"~~
 - mettre page catalogue (avec "tout bois", etc) en media query
-- [HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé + media query
+- ~~[HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé + media query~~
 - cleanup code PHP et JS
 - réviser HTML5
 
