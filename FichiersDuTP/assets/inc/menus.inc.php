@@ -26,7 +26,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 												}
 												?>
 											<!--</ul>-->
-										</li>
+										<!--</li>-->
 										<!--<li><a href="galerie.php">Galerie</a></li>-->
 										<li><a href="galerie_photos.php">Galerie</a><img src="assets/images/arrow_down_menu.png"/>
 											<ul>

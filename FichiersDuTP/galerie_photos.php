@@ -4,7 +4,7 @@ $sPageTitle = "Photos | Galerie | ";
 #require_once "assets/inc/csvFunctions.inc.php";
 require_once "assets/inc/header.inc.php";
 
-$path_Media = "assets/images/produits";
+$path_Media = "assets/images/produits/";
 $reject_Media = 'broken_toy.jpg';
 
 $str_Media = walkDirectory($path_Media, "jpg");
@@ -20,8 +20,11 @@ var_dump($arr_Media);
 
 ?>
 			<h1>Galerie photos</h1>
-
-			
+			<?php
+				foreach($arr_Media as $image){
+					echo '<div><img src="', $path_Media, $image, '" /></div>', PHP_EOL;
+				}
+			?>
 <?php
 require_once "assets/inc/footer.inc.php";
 ?>

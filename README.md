@@ -26,8 +26,7 @@
 - [HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé
 - ~~enlever de "authentify" le cde rendu ds le fichier XHR~~
 - réviser le code qui recoit et analyse les donnés du formulaire inscription/authentification et les query string (en passer au mode POST s'il le faut) <<--- seul "gestion_produits.php" (et les requêtes XHR) utilisent GET
-- [AJAX] valider en temps réel le nom d'usager (inscription)
-- ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
+- [AJAX] valider en temps réel le nom d'usager (inscription) + ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
 - [HTML] Ajouter les éléments SEO (meta keywords/author/description/...), pour une version "porte-folio"
 
 ###changements fait au HTML influencant le CSS:
