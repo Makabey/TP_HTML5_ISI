@@ -43,8 +43,8 @@ function tabs($nombre){
 }
 
 
-/*function walkDirectory($pathToSearch, $seekedExtensions){
-	/ *
+function walkDirectory($pathToSearch, $seekedExtensions){
+	/*
 		But :	sonder un répertoire spécifique et retourner tout les fichiers
 				dont le type corresponds à ce qui est recherché
 
@@ -55,7 +55,7 @@ function tabs($nombre){
 			false = le répertoire n'existe pas
 			<rien> = le répertoire ne contient aucun fichier recherché
 			chaine = liste des fichiers séparés par des pipes '|'
-	* /
+	*/
 	$retour = false;
 
 	if($resSearchedPath = @opendir($pathToSearch)){
@@ -85,7 +85,7 @@ function tabs($nombre){
 	}
 
 	return $retour;
-}*/
+}
 
 
 /*function findFilenamesAkinTo($substringInName, $pathToSearch, $seekedExtensions){

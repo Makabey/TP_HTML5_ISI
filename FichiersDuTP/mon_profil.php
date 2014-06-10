@@ -24,7 +24,6 @@ if(false !== $retour){
 	Il n'y as aucune validation, aucun traitement parce que ce n'est pas le but de l'exercice!
 */
 ?>
- et les nouveaux attributs et fonctionnalités de formulaires du HTML5
 			<h1>Mon Profil</h1>
 
 			<div class="boiteMessagesFormulaires" id="boiteMessagesFormulaires"><span>Merci, vos changements ont été enregistrés.</span></div>
