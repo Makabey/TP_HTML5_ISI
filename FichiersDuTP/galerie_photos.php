@@ -9,23 +9,23 @@ $reject_Media = 'broken_toy.jpg';
 
 $str_Media = walkDirectory($path_Media, "jpg");
 
-var_dump($str_Media);
+#var_dump($str_Media);
 
 $str_Media = str_replace($reject_Media, '', $str_Media);
 $str_Media = str_replace('||', '|', $str_Media);
 
 $arr_Media = explode('|', $str_Media);
 
-var_dump($arr_Media);
+#var_dump($arr_Media);
 
 ?>
 			<h1>Galerie photos</h1>
 			<div>
 			<?php
 				foreach($arr_Media as $image){
-					#echo '<div>';
-					echo '<img src="', $path_Media, $image, '" />';
-					#echo '</div>';
+					echo '<div>';
+					echo '<img src="', $path_Media, $image, '" alt="', $image, '" />';
+					echo '</div>';
 					echo PHP_EOL;
 				}
 			?>

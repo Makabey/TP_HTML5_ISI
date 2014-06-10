@@ -24,7 +24,7 @@ require_once "assets/inc/menus.inc.php";
 		<meta charset="utf-8" />
 		<title><?php echo $sPageTitle; ?>La Fabrique de Jouet</title>
 		<meta name="author" content="Eric Robert et Olivier Berthier" />
-		<meta name="description" content="HTML5 - TP - Eric et Olivier" />
+		<meta name="description" content="Petite fabrique de jouets en bois naturels, utilisant le strict minimum de matériaux autres tel que peinture, métaux et plastiques." />
 		<meta name="keywords" content="jouets, bois, jouets en bois, jouets sur mesure, naturel, durable, enfant" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -132,9 +132,9 @@ require_once "assets/inc/menus.inc.php";
 						#if(strlen($userFullName) < 3){
 							$userFullName = $_SESSION['user'];
 						#}
-						echo "<div><ul><li><p>Bonjour, $userFullName";
+						echo "<div><ul><li><p>Bonjour, $userFullName</p>";
 						spawnMonProfilMenu();
-						echo "</p></li></ul></div>";
+						echo "</li></ul></div>";
 						if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
 							echo '<div><a href="gestion_panier.php">';
 							$nombreItems = count($_SESSION['panier']);

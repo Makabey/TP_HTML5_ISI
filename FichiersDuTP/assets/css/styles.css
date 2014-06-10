@@ -1,7 +1,7 @@
 *{
 	box-sizing: border-box;
-	-webkit-box-sizing: border-box; 
-	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
@@ -118,7 +118,7 @@ header nav ul{
 header nav ul li{
 	cursor: pointer;
 	color:rgba(255,255,255,0.6);
-	
+
 	transition:color 0.3s ease-out;
 	-moz-transition:color 0.3s ease-out;
 	-webkit-transition:color 0.3s ease-out;
@@ -148,7 +148,7 @@ header nav > ul{
 	display: flex;
 	margin-left: 40px;
 	flex-direction: row;
-	
+
 }
 header nav > ul > li{
 	/*display: inline-block;*/
@@ -179,7 +179,7 @@ header nav > ul > li > ul > li{
 header nav > ul > li > ul > li:hover{
 	background: #222;
 	border-color: #fff;
-	
+
 	transition:background 0.3s ease-out,border 0.3s ease-out;
 	-moz-transition:background 0.3s ease-out,border 0.3s ease-out;
 	-webkit-transition:background 0.3s ease-out,border 0.3s ease-out;
@@ -202,7 +202,7 @@ header nav > ul > li:nth-child(2) img{
 	margin-top: 3px;
 	max-width: 0px;
 	opacity: 0.6;
-	
+
 	transform:rotate(180deg);
 	-ms-transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);
@@ -210,7 +210,7 @@ header nav > ul > li:nth-child(2) img{
 header nav > ul > li:hover img{
 	opacity: 1;
 	max-width: 10px;
-	
+
 	transform:rotate(0deg);
 	-ms-transform:rotate(0deg);
 	-webkit-transform:rotate(0deg);
@@ -229,7 +229,7 @@ header nav > ul > li >ul > li > ul{
 	opacity: 0;
 	visibility: hidden;
 	box-shadow: 6px 6px 15px 6px rgba(0,0,0,0.5);
-	
+
 
 	-moz-transition:all 0.4s 0.3s ease-out;
 	-webkit-transition:all 0.4s 0.3s ease-out;
@@ -242,8 +242,8 @@ header nav > ul > li >ul > li:hover > ul{
 	opacity: 1;
 	visibility: visible;
 	width: 100%;
-	
-	
+
+
 }
 header nav > ul > li >ul > li > ul > li{
 	margin-left: 0;
@@ -251,7 +251,7 @@ header nav > ul > li >ul > li > ul > li{
 	border-right: 1px solid rgba(255,255,255,0.6);
 	border-top: 1px solid rgba(255,255,255,0.6);
 	background: black;
-	
+
 	transition:all 0.3s ease-out;
 	-moz-transition:all 0.3s ease-out;
 	-webkit-transition:all 0.3s ease-out;
@@ -275,7 +275,7 @@ header nav > ul > li >ul > li:last-child > img{
 	transform:rotate(-90deg);
 	-ms-transform:rotate(-90deg);
 	-webkit-transform:rotate(-90deg);
-	
+
 	-moz-transition:all 0.4s 0.4s ease-out;
 	-webkit-transition:all 0.4s 0.4s ease-out;
 	-o-transition:all 0.4s 0.4s ease-out;
@@ -285,7 +285,7 @@ header nav > ul > li > ul > li:hover > img{
 	position: absolute;
 	z-index: 10;
 	right: -120px;
-	
+
 	transform:rotate(90deg);
 	-ms-transform:rotate(90deg);
 	-webkit-transform:rotate(90deg);
@@ -311,7 +311,7 @@ header nav > ul > li:nth-child(2) img{
 /* transition du background des <li> */
 header nav > ul > li{
 	background: black;
-	
+
 	transition:background 0.3s ease-out;
 	-moz-transition:background 0.3s ease-out;
 	-webkit-transition:background 0.3s ease-out;
@@ -326,10 +326,10 @@ header nav > ul > li > ul{
 	opacity: 0;
 	visibility: hidden;
 	background: #000;
-	
+
 	/* transition en opacité et visibilité de 0 à 1 */
 	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
-	-moz-transition:opacity 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear; 
+	-moz-transition:opacity 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
 	-webkit-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 	-o-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 }
@@ -343,7 +343,7 @@ header nav > ul > li > ul > li{
 	margin-top:-15px;
 	opacity: 0;
 	visibility: hidden;
-	
+
 	/* transition en opacité et margin-top -15 vers margin-top 0 */
 	transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 	-moz-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
@@ -442,7 +442,7 @@ header nav > ul > li:hover > ul > li{
 	background-color: rgba(0,0,0,0.08);
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	margin: 20px 0 0 20px;
 	text-align:left;
@@ -719,7 +719,7 @@ span.spanValid{
 
 #produits_description{
 	margin-bottom:10px;
-	height:150px; 
+	height:150px;
 	width:99%;
 }
 
@@ -824,11 +824,11 @@ span.spanValid{
 }
 
 #itemsDuClient tr.rangeeItem:nth-child(odd){
-	background-color: #b4c0cc 
+	background-color: #b4c0cc
 }
 
 #itemsDuClient tr.rangeeItem:nth-child(even){
-	background-color: #b4ccc0 
+	background-color: #b4ccc0
 }
 
 #gestion_panier #itemsDuClient tr:nth-last-child(2){
@@ -1122,39 +1122,55 @@ footer nav>ul>li>ul>li>a{
 }
 /* \Formulaires */
 
-
-/* \header.inc */
 /* galerie photo tiles */
 #galerie_photos #content{
 	text-align:center;
 }
 
 #galerie_photos #content>div{
-/*.galerie_photos_tiles{*/
 	border:1px dashed green;
 	margin:0 auto;
-	width:800px;/*100%;*/
-	position:relative;
-}
-#galerie_photos #content>div img{
-	/*height:100%;*/
-	width:170px;
-	vertical-align:middle;
-	/*display:table-cell;*/
-	margin:20px;
-	transition:1s all;
-	border:1px dotted green;
-}
-#galerie_photos #content>div img:hover{
-	/*z-index:10;*/
-	/*height:250px;*/
-	width:190px;
-	margin:0;
+	width:90%;
 }
 
+#galerie_photos #content>div>div{
+	border:1px dotted blue;
+	display:inline-block;
+	position:relative;
+	width:200px;
+	height:150px;
+	margin:10px;
+}
+#galerie_photos #content>div>div>img{
+	width:200px;
+	/*padding:20px;*/
+	transition:0.5s all;
+	border:1px dotted green;
+	/*max-height:200px;*/
+	position:absolute;
+	left:50%;
+	margin-left:-50%
+	/*right:0;*/
+}
+
+@media screen and (orientation:portrait) and (max-width:600px){
+	#content{
+		width:100%;
+	}
+
+	#galerie_photos #content>div>div>img:nth-child(2){
+		right:0;
+		left:auto;
+	}
+}
+#galerie_photos #content>div>div>img:hover{
+	/*padding:0;*/
+	width:300px;
+	z-index:10;
+	left:25%;
+	/*margin-left:0;*/
+}
 /* \galerie photo tiles */
-/* \Ajouts Eric */
-/** == EOF == **/
 
 /* header.inc */
 #container header div div div:first-child ul{
@@ -1168,11 +1184,11 @@ footer nav>ul>li>ul>li>a{
 	border-left: 1px solid rgba(255,255,255,0.6);
 	border-right: 1px solid rgba(255,255,255,0.6);
 	border-bottom: 1px solid rgba(255,255,255,0.6);
-}	
+}
 #container header div div div:first-child ul li{
 	height: 26px;
 	background: black;
-	
+
 	transition:background 0.3s ease-out;
 	-moz-transition:background 0.3s ease-out;
 	-webkit-transition:background 0.3s ease-out;
@@ -1229,3 +1245,8 @@ footer nav>ul>li>ul>li>a{
 #container header div div div:first-child ul li:hover{
 	background: #222;
 }
+/* \header.inc */
+
+/* \Ajouts Eric */
+
+/** == EOF == **/

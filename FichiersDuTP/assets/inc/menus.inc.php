@@ -14,9 +14,9 @@ require_once "assets/inc/csvFunctions.inc.php";
 								<?php echo genererMenuTopItem('index'); ?>
 									<a href="index.php"<?php if($sNomDeCettePage == 'index') echo ' class="aActiveFix"'; ?>>Accueil</a>
 								</li>
-								<?php echo genererMenuTopItem('produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'produits') echo ' aActiveFix'; ?>">Catalogue</span><img src="assets/images/arrow_down_menu.png"/>
+								<?php echo genererMenuTopItem('produits'); ?><span class="spanFix_li_hover<?php if($sNomDeCettePage == 'produits') echo ' aActiveFix'; ?>">Catalogue</span><img src="assets/images/arrow_down_menu.png" alt=">" />
 									<ul>
-										<!--<li>Catégories<img src="assets/images/arrow_down_menu.png"/>-->
+										<!--<li>Catégories<img src="assets/images/arrow_down_menu.png" alt=">" />-->
 											<!--<ul>-->
 												<?php
 												foreach($arrCategories as $index => $details){
@@ -28,7 +28,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 											<!--</ul>-->
 										<!--</li>-->
 										<!--<li><a href="galerie.php">Galerie</a></li>-->
-										<li><a href="galerie_photos.php">Galerie</a><img src="assets/images/arrow_down_menu.png"/>
+										<li><a href="galerie_photos.php">Galerie</a><img src="assets/images/arrow_down_menu.png" alt=">"/>
 											<ul>
 												<li><a href="galerie_photos.php">Photos</a></li>
 												<li><a href="galerie_videos.php">Vidéos</a></li>
@@ -58,33 +58,22 @@ require_once "assets/inc/csvFunctions.inc.php";
 	function spawnMonProfilMenu(){
 	?>
 		<ul>
-			<?php
-			#If(isset($_SESSION['user']) && ($_SESSION['user'] != 'admin')){
-			#If(isset($_SESSION['user'])){
-			?>
 			<li><a href="mon_profil.php">Mon Profil</a></li>
 			<?php
 			$retour = chargerUsager($arrUsager, $_SESSION['user']);
 			if((false !== $retour) &&  ($_SESSION['user'] != 'admin')){
-				#$arrUsager = $arrUsager[key($arrUsager)];
 				echo '<li><a href="gestion_produits_factures.php?nroc=', $arrUsager[key($arrUsager)]['client_ID'], '">Mes factures</a></li>', PHP_EOL;
-			#}else{
 			}
 			?>
 			<?php
-			#If(isset($_SESSION['user']) && ($_SESSION['user'] == 'admin')){
 			If($_SESSION['user'] == 'admin'){
 			?>
-			<?php #echo genererMenuTopItem('gestion_produits'); ?><!--<span class="spanFix_li_hover<?php #if($sNomDeCettePage == 'gestion_produits') echo ' aActiveFix'; ?>">Gestion</span>-->
-				<!--<ul>-->
-					<li><a href="gestion_produits.php">Produits</a></li>
-					<li><a href="gestion_produits_inventaire.php">Inventaire</a></li>
-					<li><a href="gestion_produits_factures.php">Factures clients</a></li>
-				<!--</ul></li>
-			</li>-->
+				<li><a href="gestion_produits.php">Produits</a></li>
+				<li><a href="gestion_produits_inventaire.php">Inventaire</a></li>
+				<li><a href="gestion_produits_factures.php">Factures clients</a></li>
 			<?php
 				}
-			#} ?>
+			 ?>
 			<li><a href="logout.php">Déconnexion</a></li>
 		</ul>
 	<?php
