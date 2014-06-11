@@ -51,7 +51,11 @@ require_once "assets/inc/menus.inc.php";
 				}
 			});*/
 		});
-
+		var li_fix_padding = $('header nav .centrerMenu > ul > li:last-child > a').text();
+		if(li_fix_padding == "Se connecter / s'enregistrer"){
+			alert ('allo');
+			$('header nav .centrerMenu > ul > li:last-child').css('padding','0');
+		}
 		/* Variables nécessaires pour le fichier JS qui suit, si applicable */
 		<?php
 		echo tabs(3),"var sImages_PathProduits = '$sImages_PathProduits';", PHP_EOL;
@@ -112,47 +116,14 @@ require_once "assets/inc/menus.inc.php";
 		?>
 	</head>
 	<body id="<?php echo $sNomDeCettePage; ?>">
-		<div id="container">
-			<header role="banner">
-				<div id="center_menu">
-					<a href="index.php"><img src="assets/images/logo.png" alt="Logo de 'La Fabrique'" /></a>
+		<header role="banner">
+					<!--<a href="index.php"><img src="assets/images/logo.png" alt="Logo de 'La Fabrique'" /></a>-->
 					<?php
-					echo '<div id="userWrap">';
-					$return = false;
-					// Tester si un usagé est authentifié et s'il est possible de charger ses informations
-					if(isset($_SESSION['user'])){
-						$return = chargerUsager($usagertest, $_SESSION['user']);
-					}
-
-					if($return !== false){
-						#$client_ID = key($usagertest);
-						#$userFullName = ucwords($usagertest[$client_ID]['prenom'] . ' ' . $usagertest[$client_ID]['nomFamille']);
-						#var_dump($_SESSION['user']);
-						#var_dump($userFullName);
-						#if(strlen($userFullName) < 3){
-							$userFullName = $_SESSION['user'];
-						#}
-						echo "<div><ul><li><p>Bonjour, $userFullName</p>";
-						spawnMonProfilMenu();
-						echo "</li></ul></div>";
-						if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
-							echo '<div><a href="gestion_panier.php">';
-							$nombreItems = count($_SESSION['panier']);
-							$pluriel = ($nombreItems> 1)?'s':'';
-							echo "$nombreItems item$pluriel au panier</a></div>";
-						}else{
-							echo'<div>&nbsp;</div>';
-						}
-						#echo '<div><a href="logout.php">Déconnexion</a></div>';
-					}else{
-						echo '<div><a href="authentify.php">Se connecter / s\'enregistrer</a></div>';
-					}
-					echo '</div>', PHP_EOL;
-					$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
-					#require "assets/inc/menus.inc.php";
-					spawnMainMenu();
+						$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
+						#require "assets/inc/menus.inc.php";
+						spawnMainMenu();
 					?>
-				</div>
 			</header>
+		<div id="container">
 
 			<div id="content" role="main">
