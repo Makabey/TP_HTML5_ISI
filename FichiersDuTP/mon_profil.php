@@ -26,7 +26,7 @@ if(false !== $retour){
 ?>
 			<h1>Mon Profil</h1>
 
-			<div class="boiteMessagesFormulaires" id="boiteMessagesFormulaires"><span>Merci, vos changements ont été enregistrés.</span></div>
+			<div class="boiteMessagesFormulaires hidden" id="boiteMessagesFormulaires"><span>Merci, vos changements ont été enregistrés.</span></div>
 			<div id="loginDiv">
 				<form id="formIdentite" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">
 					<fieldset>

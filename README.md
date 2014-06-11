@@ -25,16 +25,17 @@
 - ~~[HTML, CSS] Sous "Mon Profil"; permettre de changer son mot de passe?~~
 - ~~enlever de "authentify" le cde rendu ds le fichier XHR~~
 - ~~réviser le code qui recoit et analyse les donnés du formulaire inscription/authentification et les query string (en passer au mode POST s'il le faut) <<--- seul "gestion_produits.php" (et les requêtes XHR) utilisent GET~~
-- [AJAX] valider en temps réel le nom d'usager (inscription) + ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
 - ~~[HTML] Ajouter les éléments SEO (meta keywords/author/description/...), pour une version "porte-folio"~~
 - mettre page catalogue (avec "tout bois", etc) en media query
 - ~~[HTML, CSS] visionneuse d'image  (demande du TP, point 2) pourrais simplement être (une copie du) catalogue réarrangé + media query~~
+- [AJAX] valider en temps réel le nom d'usager (inscription) + ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
 - cleanup code PHP et JS
 - réviser HTML5
 - [HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue
 - [VIDEO] conversion en tout les formats supportés
 - http://www.webmproject.org/tools/
 - http://monochrome.sutic.nu/2010/06/14/video-editing-with-blender.html#section.10.4
+- TOUCH :: http://www.html5rocks.com/fr/mobile/touch/
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~
