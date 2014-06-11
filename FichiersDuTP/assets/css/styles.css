@@ -74,44 +74,43 @@ body ::-webkit-scrollbar-thumb {
 
 /* Header------------->
 */
-#container>header{
-	width: auto;
+header{
+	width: 100%;
 	margin:0 auto;
-	height: 120px;
 	padding:0 20px 0 20px;
 	z-index: 10;
-	position: relative;
-	background-image: url("../images/header.jpg");
-	background-color:green;
-	border-bottom: 3px solid gray;
+	position: absolute;
+	top: 0;
 	width: 100%;
-}
-
-#container header #center_menu > a > img{
-	margin-top: 10px;
-	width: 140px
 }
 
 /* ======= NAV ====== */
 header nav{
 	display: inline-block;
 	position: absolute;
-	top: 91px;
-	margin-left: 40px;
+	top: 0;
+	left:0;
 	text-transform:uppercase;
 	font-size:10px;
-	width: 500px;
-	margin: auto;
+	width: 100%;
+	background: black;
 }
 header nav *{
 	box-sizing: border-box;
+}
+header nav .centrerMenu{
+	margin: auto;
+	width: 100%;
+	max-width: 1024px;
+	min-width: 500px;
+	position: relative;
 }
 header nav a{
 	display: inline-block;
 	padding: 5px 20px 6px 20px;
 	vertical-align: middle;
 }
-header nav ul{
+header nav .centrerMenu ul{
 	padding-left: 0;
 	margin: 0;
 }
@@ -125,42 +124,49 @@ header nav ul li{
 	-ms-transition:color 0.3s ease-out;
 	transition:color 0.3s ease-out;
 }
-header nav > ul > li:nth-child(2){
+header nav .centrerMenu > ul > li:nth-child(2){
 	padding: 5px 20px 6px 20px;
 }
 header nav ul li:hover{
 	color: #fff;
 }
-header nav > ul > li > a{
+header nav .centrerMenu > ul > li > a{
 	color:rgba(255,255,255,0.6);
 }
-header nav > ul > li:hover > a{
+header nav .centrerMenu > ul > li:hover > a{
 	/*color: black;*/
 	color: #fff;
 }
-header nav > ul > li > ul > li > a{
+header nav .centrerMenu > ul > li > ul > li > a{
 	color:rgba(255,255,255,0.6);
 }
-header nav > ul > li > ul > li:hover > a{
+header nav .centrerMenu > ul > li > ul > li:hover > a{
 	/*color: black;*/
 	color: #fff;
 }
-header nav > ul{
+header nav .centrerMenu > ul{
 	display: flex;
-	margin-left: 40px;
 	flex-direction: row;
 
 }
-header nav > ul > li{
+header nav .centrerMenu > ul > li{
 	/*display: inline-block;*/
 	vertical-align: top;
 	position:relative;
 	list-style: none;
 }
-header nav > ul > li:not(:first-child){
+header nav .centrerMenu > ul > li:last-child{
+	position: absolute;
+	right: 0;
+}
+header nav .centrerMenu > ul > li:not(:first-child){
 	border-left: 1px solid rgba(255,255,255,0.6);
 }
-header nav > ul > li > ul{
+header nav .centrerMenu > ul > li:last-child{
+	border-left: 0!important;
+	padding: 5px 20px 6px 20px;
+}
+header nav .centrerMenu > ul > li > ul{
 	position: absolute;
 	left: 0;
 	top: 26px;
@@ -168,7 +174,7 @@ header nav > ul > li > ul{
 	padding: 0 0 0 0;
 	box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.5);
 }
-header nav > ul > li > ul > li{
+header nav .centrerMenu > ul > li > ul > li{
 	display: inline-block;
 	width: 130px;
 	border-left: 1px solid rgba(255,255,255,0.6);
@@ -177,7 +183,7 @@ header nav > ul > li > ul > li{
 	background: black;
 	border-color: rgba(255,255,255,0.6);
 }
-header nav > ul > li > ul > li:hover{
+header nav .centrerMenu > ul > li > ul > li:hover{
 	background: #222;
 	border-color: #fff;
 
@@ -187,17 +193,17 @@ header nav > ul > li > ul > li:hover{
 	-ms-transition:background 0.3s ease-out,border 0.3s ease-out;
 	transition:background 0.3s ease-out,border 0.3s ease-out;
 }
-header nav > ul > li > ul > li:last-child{
+header nav .centrerMenu > ul > li > ul > li:last-child{
 	border-bottom: 1px solid rgba(255,255,255,0.6);
 }
-header nav > ul > li > ul > li > ul > li > a{
+header nav .centrerMenu > ul > li > ul > li > ul > li > a{
 	color:rgba(255,255,255,0.6);
 }
-header nav > ul > li > ul > li > ul > li:hover > a{
+header nav .centrerMenu > ul > li > ul > li > ul > li:hover > a{
 	/*color: black;*/
 	color: #fff;
 }
-header nav > ul > li:nth-child(2) img{
+header nav .centrerMenu > ul > li:nth-child(2) img, header nav .centrerMenu > ul > li:last-child img{
 	display: inline-block;
 	position: absolute;
 	margin-left: 3px;
@@ -211,7 +217,7 @@ header nav > ul > li:nth-child(2) img{
 	-o-transform:rotate(180deg);
 	transform:rotate(180deg);
 }
-header nav > ul > li:hover img{
+header nav .centrerMenu > ul > li:hover img{
 	opacity: 1;
 	max-width: 10px;
 
@@ -224,7 +230,7 @@ header nav > ul > li:hover img{
 
 
 /* GALERIE - Sous-sous-menu */
-header nav > ul > li >ul > li > ul{
+header nav .centrerMenu > ul > li >ul > li > ul{
 	list-style: none;
 	margin: 0;
 	position: absolute;
@@ -243,7 +249,7 @@ header nav > ul > li >ul > li > ul{
 	-o-transition:all 0.4s 0.3s ease-out;
 	transition:all 0.4s 0.3s ease-out;
 }
-header nav > ul > li >ul > li:hover > ul{
+header nav .centrerMenu > ul > li >ul > li:hover > ul{
 	width: 100%;
 	left: 127px;
 	opacity: 1;
@@ -252,7 +258,7 @@ header nav > ul > li >ul > li:hover > ul{
 
 
 }
-header nav > ul > li >ul > li > ul > li{
+header nav .centrerMenu > ul > li >ul > li > ul > li{
 	margin-left: 0;
 	border-left: 1px solid rgba(255,255,255,0.6);
 	border-right: 1px solid rgba(255,255,255,0.6);
@@ -265,17 +271,17 @@ header nav > ul > li >ul > li > ul > li{
 	-ms-transition:all 0.3s ease-out;
 	transition:all 0.3s ease-out;
 }
-header nav > ul > li >ul > li > ul > li:hover{
+header nav .centrerMenu > ul > li >ul > li > ul > li:hover{
 	background: #222;
 	border-color: white;
 }
-header nav > ul > li >ul > li > ul > li:last-child{
+header nav .centrerMenu > ul > li >ul > li > ul > li:last-child{
 	border-bottom: 1px solid rgba(255,255,255,0.6);
 }
-header nav > ul > li >ul > li:last-child{
+header nav .centrerMenu > ul > li >ul > li:last-child{
 	position: relative;
 }
-header nav > ul > li >ul > li:last-child > img{
+header nav .centrerMenu > ul > li >ul > li:last-child > img{
 	position: absolute;
 	top: 5px;
 	right: 5px;
@@ -292,7 +298,7 @@ header nav > ul > li >ul > li:last-child > img{
 	-ms-transition:all 0.4s 0.4s ease-out;
 	transition:all 0.4s 0.4s ease-out;
 }
-header nav > ul > li > ul > li:hover > img{
+header nav .centrerMenu > ul > li > ul > li:hover > img{
 	position: absolute;
 	z-index: 10;
 	right: -120px;
@@ -316,7 +322,7 @@ header nav a{
 header nav ul li:hover{
 
 }
-header nav > ul > li:nth-child(2) img{
+header nav .centrerMenu > ul > li:nth-child(2) img, header nav .centrerMenu > ul > li:last-child img{
 	-moz-transition:all 0.3s ease-out;
 	-webkit-transition:all 0.3s ease-out;
 	-o-transition:all 0.3s ease-out;
@@ -324,7 +330,7 @@ header nav > ul > li:nth-child(2) img{
 	transition:all 0.3s ease-out;
 }
 /* transition du background des <li> */
-header nav > ul > li{
+header nav .centrerMenu > ul > li{
 	background: black;
 
 	-moz-transition:background 0.3s ease-out;
@@ -333,12 +339,12 @@ header nav > ul > li{
 	-ms-transition:background 0.3s ease-out;
 	transition:background 0.3s ease-out;
 }
-header nav > ul > li:hover{
+header nav .centrerMenu > ul > li:hover{
 	background: #222;
 }
 
 /* Transition d'opacité de 0 à 1 du <ul> */
-header nav > ul > li > ul{
+header nav .centrerMenu > ul > li > ul{
 	opacity: 0;
 	visibility: hidden;
 	background: #000;
@@ -350,13 +356,13 @@ header nav > ul > li > ul{
 	-ms-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 }
-header nav > ul > li:hover > ul{
+header nav .centrerMenu > ul > li:hover > ul{
 	opacity: 1;
 	visibility: visible;
 }
 
 /* Transition de déplacement de haut vers le bas des <li> */
-header nav > ul > li > ul > li{
+header nav .centrerMenu > ul > li > ul > li{
 	margin-top:-15px;
 	opacity: 0;
 	visibility: hidden;
@@ -368,7 +374,7 @@ header nav > ul > li > ul > li{
 	-o-transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 	transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 }
-header nav > ul > li:hover > ul > li{
+header nav .centrerMenu > ul > li:hover > ul > li{
 	opacity: 1;
 	visibility: visible;
 	margin-top:0px;
@@ -378,13 +384,13 @@ header nav > ul > li:hover > ul > li{
 
 /* ======= FIN NAV ====== */
 
-#container>header h1{
+header h1{
 	color: white;
 	margin: 20px 0 0 0;
 	display: inline-block;
 }
 
-#container>header h1:hover{
+header h1:hover{
 	color: #D0D0D0;
 }
 
