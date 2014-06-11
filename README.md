@@ -12,6 +12,7 @@
 - styles.css vers ligne 1390, première instance de règles indiquant "#container header" alors que maintenant la structure est "header ~ #container", ce qui invalide 13 règles! (théorie : tu as déjà corigé mais je n'ais pas cettre copie, à voir demain le 12/06)
 - [CSS, JS] Changer le code pour appliquer un filtre (CSS::class ou JS::style?) sur les images du catalogue pour simuler les couleurs?
 - [CSS] authentify.php et mon_profil.php, j'ai utilisé des dl/dt/dd au lieu des ul/li, je crois que tu arrivera à comprendre la structure alors si tu le préfère, tu peux changer pour ul/li.
+- Ne pas oublier de refaire le CSS du footer
 
 
 #Eric :
