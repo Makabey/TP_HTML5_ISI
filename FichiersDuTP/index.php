@@ -3,15 +3,14 @@ $sPageTitle = "Acceuil | ";
 
 require_once "assets/inc/header.inc.php";
 ?>
-				<!--<div id="sliderWrap">-->
-					<!--<div id="sliderJQ">-->
-						<div id="sliderJQ_img">
+						<div class="sliderCSS3">
 							<ul>
-								<li><img src="<?php echo $sImages_PathSlider; ?>menuiserie1.jpg" title="" alt="menuiserie1" /></li>
+								<li><img src="assets/images/slider/menuiserie1.jpg" title="" alt="menuiserie1" /></li>
+								<li><img src="assets/images/slider/menuiserie2.jpg" title="" alt="menuiserie1" /></li>
+								<li><img src="assets/images/slider/menuiserie3.jpg" title="" alt="menuiserie1" /></li>
+								<li><img src="assets/images/slider/menuiserie4.jpg" title="" alt="menuiserie1" /></li>
 							</ul>
 						</div>
-					<!--</div>-->
-				<!--</div>-->
 				<div id="descriptionSite">
 					<h2>Qui sommes-nous?</h2>
 					<details>

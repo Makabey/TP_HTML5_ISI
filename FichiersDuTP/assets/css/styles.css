@@ -119,10 +119,11 @@ header nav ul li{
 	cursor: pointer;
 	color:rgba(255,255,255,0.6);
 
-	transition:color 0.3s ease-out;
 	-moz-transition:color 0.3s ease-out;
 	-webkit-transition:color 0.3s ease-out;
 	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	transition:color 0.3s ease-out;
 }
 header nav > ul > li:nth-child(2){
 	padding: 5px 20px 6px 20px;
@@ -180,10 +181,11 @@ header nav > ul > li > ul > li:hover{
 	background: #222;
 	border-color: #fff;
 
-	transition:background 0.3s ease-out,border 0.3s ease-out;
 	-moz-transition:background 0.3s ease-out,border 0.3s ease-out;
 	-webkit-transition:background 0.3s ease-out,border 0.3s ease-out;
 	-o-transition:background 0.3s ease-out,border 0.3s ease-out;
+	-ms-transition:background 0.3s ease-out,border 0.3s ease-out;
+	transition:background 0.3s ease-out,border 0.3s ease-out;
 }
 header nav > ul > li > ul > li:last-child{
 	border-bottom: 1px solid rgba(255,255,255,0.6);
@@ -202,18 +204,22 @@ header nav > ul > li:nth-child(2) img{
 	margin-top: 3px;
 	max-width: 0px;
 	opacity: 0.6;
-
-	transform:rotate(180deg);
+	
 	-ms-transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
 }
 header nav > ul > li:hover img{
 	opacity: 1;
 	max-width: 10px;
 
-	transform:rotate(0deg);
 	-ms-transform:rotate(0deg);
 	-webkit-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-o-transform:rotate(0deg);
+	transform:rotate(0deg);
 }
 
 
@@ -232,6 +238,7 @@ header nav > ul > li >ul > li > ul{
 
 
 	-moz-transition:all 0.4s 0.3s ease-out;
+	-ms-transition:all 0.4s 0.3s ease-out;
 	-webkit-transition:all 0.4s 0.3s ease-out;
 	-o-transition:all 0.4s 0.3s ease-out;
 	transition:all 0.4s 0.3s ease-out;
@@ -252,10 +259,11 @@ header nav > ul > li >ul > li > ul > li{
 	border-top: 1px solid rgba(255,255,255,0.6);
 	background: black;
 
-	transition:all 0.3s ease-out;
 	-moz-transition:all 0.3s ease-out;
 	-webkit-transition:all 0.3s ease-out;
 	-o-transition:all 0.3s ease-out;
+	-ms-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out;
 }
 header nav > ul > li >ul > li > ul > li:hover{
 	background: #222;
@@ -272,13 +280,16 @@ header nav > ul > li >ul > li:last-child > img{
 	top: 5px;
 	right: 5px;
 	z-index: 10;
-	transform:rotate(-90deg);
 	-ms-transform:rotate(-90deg);
 	-webkit-transform:rotate(-90deg);
-
+	-moz-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	transform:rotate(-90deg);
+	
 	-moz-transition:all 0.4s 0.4s ease-out;
 	-webkit-transition:all 0.4s 0.4s ease-out;
 	-o-transition:all 0.4s 0.4s ease-out;
+	-ms-transition:all 0.4s 0.4s ease-out;
 	transition:all 0.4s 0.4s ease-out;
 }
 header nav > ul > li > ul > li:hover > img{
@@ -286,36 +297,41 @@ header nav > ul > li > ul > li:hover > img{
 	z-index: 10;
 	right: -120px;
 
-	transform:rotate(90deg);
 	-ms-transform:rotate(90deg);
 	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	transform:rotate(90deg);
 }
 
 /* NAV TRANSITION */
 /* transition de color du texte */
 header nav a{
-	transition:color 0.3s ease-out;
 	-moz-transition:color 0.3s ease-out;
 	-webkit-transition:color 0.3s ease-out;
 	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	transition:color 0.3s ease-out;
 }
 header nav ul li:hover{
 
 }
 header nav > ul > li:nth-child(2) img{
-	transition:all 0.3s ease-out;
 	-moz-transition:all 0.3s ease-out;
 	-webkit-transition:all 0.3s ease-out;
 	-o-transition:all 0.3s ease-out;
+	-ms-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out;
 }
 /* transition du background des <li> */
 header nav > ul > li{
 	background: black;
 
-	transition:background 0.3s ease-out;
 	-moz-transition:background 0.3s ease-out;
 	-webkit-transition:background 0.3s ease-out;
 	-o-transition:background 0.3s ease-out;
+	-ms-transition:background 0.3s ease-out;
+	transition:background 0.3s ease-out;
 }
 header nav > ul > li:hover{
 	background: #222;
@@ -328,10 +344,11 @@ header nav > ul > li > ul{
 	background: #000;
 
 	/* transition en opacité et visibilité de 0 à 1 */
-	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 	-moz-transition:opacity 0.2s 0.1s ease-out, visibility 0.1s 0.1s linear;
 	-webkit-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 	-o-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+	-ms-transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
+	transition:opacity 0.3s ease-out, visibility 0.1s 0.1s linear;
 }
 header nav > ul > li:hover > ul{
 	opacity: 1;
@@ -345,10 +362,11 @@ header nav > ul > li > ul > li{
 	visibility: hidden;
 
 	/* transition en opacité et margin-top -15 vers margin-top 0 */
-	transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 	-moz-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 	-webkit-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+	-ms-transition:opacity 0.1s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 	-o-transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
+	transition:opacity 0.15s 0.15s ease-out, margin 0.3s 0.1s ease-out;
 }
 header nav > ul > li:hover > ul > li{
 	opacity: 1;
@@ -414,13 +432,8 @@ header nav > ul > li:hover > ul > li{
 	width: 1024px;
 	margin:0 auto;
 	min-height: 400px;
-	padding: 40px 0;
+	padding: 0;
 }
-
-/*#loginDiv form #userTaken{
-	color: red;
-	font-size: 9pt;
-}*/
 
 #loginDiv{
 	width:830px;
@@ -448,27 +461,11 @@ header nav > ul > li:hover > ul > li{
 	text-align:left;
 }
 
-/*.fieldForm{
-	margin-top: 0px!important;
-	background-color: #D0D0D0;
-	-moz-border-radius-topleft: 5px;
-	-webkit-border-top-left-radius: 5px;
-	border-top-left-radius: 5px;
-	-moz-border-radius-bottomright: 5px;
-	-webkit-border-top-right-radius: 5px;
-	border-top-right-radius: 5px;
-}*/
-
 #loginDiv form h3{
 	margin: 0;
 	font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
 	text-align:center;
 }
-
-/*#loginDiv form h5{
-	margin: 20px 0 5px 0;
-	font: 16px "Trebuchet MS", Arial, Helvetica, sans-serif;
-}*/
 
 #loginDiv form input{
 	width: 250px;
@@ -490,43 +487,6 @@ header nav > ul > li:hover > ul > li{
 #loginDiv form input:focus {
  border: 1px solid #6DB536;
 }
-
-/* formatage des composantes */
-/* Select 1 ---->
-*/
-/*.selection select{
-	width: 120px;
-	margin-left: 230px;
-}
-
-.selection select.rounded{
-	border: 1px solid #D0D0D0;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	padding: 2px 4px;
-	outline: 0;
-	font-size: 12px;
-}
-
-.selection select.rounded:focus{
-	border: 1px solid #6DB536;
-}
-
-.selection label{
-	position: absolute;
-	left: 50px;
-}*/
-
-/*#send{
-	margin-top:10px;
-}*/
-
-/*#loginDiv form textarea{
-	width: 350px;
-	height: 150px;
-	resize: none;
-}*/
 
 #loginDiv form > p{
 	font-size: 12px;
@@ -598,35 +558,90 @@ span.spanValid{
 	padding:0;
 	margin:0;
 }
-/**---------------------------------- slider ------------------------------**/
-
-#sliderJQ_img{
-	height:500px;
-	overflow:hidden;
-	margin-bottom: 20px;
-	margin-top:-40px; /* pour contrer le 40px de #content qui est utile dans -toutes- les autres pages */
+/**---------------------------------- SLIDER ------------------------------**/
+.sliderCSS3{
+	width: 100%;
+	height: 500px;
 }
-
-#sliderJQ_img>ul{
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	width:14000px;
+.sliderCSS3 ul{
+	position: relative;
+	width: 100%;
+	list-style: none;
+	padding: 0;
 }
-
-#sliderJQ_img>ul>li{
-	float:left;
-	display:inline-block;
-	max-width:1024px;
-	width:1024px;
-	height:500px;
-	margin:0 auto;
+.sliderCSS3 ul img{
+	max-width: 100%;
 }
-#sliderJQ_img>ul>li>img{
-	margin:0 auto;
-	display:block;
+/* ---- SLIDER TRANSITION ----- */
+/* keyframes */
+@-webkit-keyframes sliderImg{
+	0% { opacity: 0;}
+	5% { opacity: 1; }
+	25% { opacity: 1; }
+	30% { opacity: 0; }
+	100% { opacity: 0; }
 }
-
+@-moz-keyframes sliderImg{
+	0% { opacity: 0;}
+	8% { opacity: 1; }
+	17% { opacity: 1 }
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@-ms-keyframes sliderImg{
+	0% { opacity: 0;}
+	8% { opacity: 1; }
+	17% { opacity: 1 }
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@-o-keyframes sliderImg{
+	0% { opacity: 0;}
+	8% { opacity: 1; }
+	17% { opacity: 1 }
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+@keyframes sliderImg{
+	0% { opacity: 0;}
+	8% { opacity: 1; }
+	17% { opacity: 1 }
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
+.sliderCSS3 ul li:nth-child(2){
+	-webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+.sliderCSS3 ul li:nth-child(3){
+	-webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s; 
+}
+.sliderCSS3 ul li:nth-child(4){
+	-webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s; 
+}
+.sliderCSS3 ul li{
+	position: absolute;
+	opacity: 0;
+	color: transparent;
+	
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: sliderImg 24s linear infinite 0s;
+    -moz-animation: sliderImg 24s linear infinite 0s;
+    -o-animation: sliderImg 24s linear infinite 0s;
+    -ms-animation: sliderImg 24s linear infinite 0s;
+    animation: sliderImg 24s linear infinite 0s;
+}
 /** PRODUITS **/
 #produits_categories{
 	width:100%;
