@@ -6,9 +6,9 @@ require_once "assets/inc/header.inc.php";
 						<div class="sliderCSS3">
 							<ul>
 								<li><img src="assets/images/slider/menuiserie1.jpg" title="" alt="menuiserie1" /></li>
-								<li><img src="assets/images/slider/menuiserie2.jpg" title="" alt="menuiserie1" /></li>
-								<li><img src="assets/images/slider/menuiserie3.jpg" title="" alt="menuiserie1" /></li>
-								<li><img src="assets/images/slider/menuiserie4.jpg" title="" alt="menuiserie1" /></li>
+								<li><img src="assets/images/slider/menuiserie2.jpg" title="" alt="menuiserie2" /></li>
+								<li><img src="assets/images/slider/menuiserie3.jpg" title="" alt="menuiserie3" /></li>
+								<li><img src="assets/images/slider/menuiserie4.jpg" title="" alt="menuiserie4" /></li>
 							</ul>
 						</div>
 				<div id="descriptionSite">
