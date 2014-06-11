@@ -9,6 +9,10 @@
 - ~~Incorporer au moins une animation CSS3. (slider? -> demande du TP, point 5)~~
 - pour authentify.js/php >> classes CSS passwordValid / passwordInvalid, serviront à indiquer que le mot de passe as bien été REtapé.
 - ~~[CSS] Remplacer le code jQuery (qui ne fonctionne pas vraiment) pour animer l'apparition des sous-menu par une/des transitions sous une règle "li:hover>ul" ? Les IDs ne servent que pour jQuery donc si on suit "header nav>ul>li:nth-child(2)>ul",  "header nav>ul>li:nth-child(4)>ul" et "header nav>ul>li:nth-child(5)>ul" on devrais pouvoir éliminer les "<?php echo $MenusID; ?>menuNiv1_Item1_submenuX"~~
+- styles.css vers ligne 1390, première instance de règles indiquant "#container header" alors que maintenant la structure est "header ~ #container", ce qui invalide 13 règles! (théorie : tu as déjà corigé mais je n'ais pas cettre copie, à voir demain le 12/06)
+- [CSS, JS] Changer le code pour appliquer un filtre (CSS::class ou JS::style?) sur les images du catalogue pour simuler les couleurs?
+- [CSS] authentify.php et mon_profil.php, j'ai utilisé des dl/dt/dd au lieu des ul/li, je crois que tu arrivera à comprendre la structure alors si tu le préfère, tu peux changer pour ul/li.
+
 
 #Eric :
 - ~~[TOUT] Tout copier (la version du cours de PHP) sur GitHub (à partir de l'application Windows)~~
@@ -31,11 +35,15 @@
 - [AJAX] valider en temps réel le nom d'usager (inscription) + ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??
 - cleanup code PHP et JS
 - réviser HTML5
-- [HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue
-- [VIDEO] conversion en tout les formats supportés
+- ~~[HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue~~
+- ~~[VIDEO] conversion en tout les formats supportés~~
 - http://www.webmproject.org/tools/
 - http://monochrome.sutic.nu/2010/06/14/video-editing-with-blender.html#section.10.4
 - TOUCH :: http://www.html5rocks.com/fr/mobile/touch/
+- [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
+- ~~à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même?~~
+13. [3D, HTML, video] Représentation 3D d'un des jouets (l'un des monstres devrait être simple) qui tourne en turntable, et donc compter comme un media video
+
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~
@@ -60,16 +68,8 @@
 - Galaxy Tab3 1024*600 (paysage)
 - iPhone4 640*960 (portrait)
 
-##Reserve
-8. [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
-
-
-à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même?
-
 ##"Stretch goals"
-13. [3D, HTML, video] Représentation 3D d'un des jouets (l'un des monstres devrait être simple) qui tourne en turntable, et donc compter comme un media video
 14. [HTML] Utiliser le "local storage" pour garder une copie du panier ?
-15. [CSS, JS] Changer le code pour appliquer un filtre (CSS::class ou JS::style?) sur les images du catalogue pour simuler les couleurs?
 16. [DB, AJAX] Passer en tout ou en partie les lectures en AJAX, ex: dans le catalogue, quand on clique une section {tout, puzzle, etc}, on remplace le contenu du array que PHP charge avec AJAX mais on ne fait rien (de différent) quand on clique les boutons prev/next jouet
 17. [DB] Passer de CSV à MySQLi
 18. [DB, AJAX] Passer la page d'ajouts des produits à AJAX pour lecture/écriture, l'exeption initiale est le chargement par PHP de la liste des items connus
@@ -79,3 +79,5 @@
 23. [WEB] Acheter un domaine et créer une page simple mais intéressante visuellement pour mener à chacun des projets (avec entre parenthèses si c'était un sujet imposé ou non et peut-être faits dans quels cours)
 24. [TOUT] Site supplémentaire de 1-2 pages avec [média son] d'un concurrent qui vend des jouets électronique en plastique et qui se moque des ébéniste en faisant rouler un camion téléguidé sur une copie de la page d'accueil de la Fabrique en laissant des traces de pneus. "Le bois c'est pour les cure-dents!"
 25. empêcher l'usager de retourner au panier quand on as cliqué "Payer" (et "vider panier" ?), voir :: https://developer.mozilla.org/en-US/docs/Web/API/Location.replace
+
+== EOF ==
