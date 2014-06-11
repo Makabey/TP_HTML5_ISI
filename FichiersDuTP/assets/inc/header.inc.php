@@ -50,12 +50,14 @@ require_once "assets/inc/menus.inc.php";
 					$("#header_menuNiv1_Item1_submenu6").slideUp(50);
 				}
 			});*/
+
+			var li_fix_padding = $('header nav .centrerMenu > ul > li:last-child > a').text();
+			if(li_fix_padding == "Se connecter / s'enregistrer"){
+				//alert ('allo');
+				$('header nav .centrerMenu > ul > li:last-child').css('padding','0');
+			}
 		});
-		var li_fix_padding = $('header nav .centrerMenu > ul > li:last-child > a').text();
-		if(li_fix_padding == "Se connecter / s'enregistrer"){
-			alert ('allo');
-			$('header nav .centrerMenu > ul > li:last-child').css('padding','0');
-		}
+
 		/* Variables nécessaires pour le fichier JS qui suit, si applicable */
 		<?php
 		echo tabs(3),"var sImages_PathProduits = '$sImages_PathProduits';", PHP_EOL;

@@ -34,15 +34,16 @@ if(!empty($arr_Medias)){
 #var_dump($arr_MediasClasses);
 ?>
 			<h1>Galerie vidéos</h1>
-			<div>
+			<!--<div>-->
 			<?php
 				if(!empty($arr_MediasClasses)){
 					#$iCmpt=1;
 					$vFallback=null;
 					# Code ci-dessous à réécrire une fois que j'aurais de vrai données!
 					foreach($arr_MediasClasses as $videoName => $videoFormats){
-						echo '<div>';
-						echo '<video id="movie" width="', $videoWidth, '" height="', $videoHeight, '" controls="controls">', PHP_EOL;
+						#echo '<div>';
+						#echo '<video id="movie" width="', $videoWidth, '" height="', $videoHeight, '" controls="controls">', PHP_EOL;
+						echo '<video id="movie" controls="controls">', PHP_EOL;
 						foreach($videoFormats as $vFormat => $nomFichier){
 							if($vFormat != 'flv'){
 								echo '<source src="', $path_Media, $nomFichier, '" type="video/';
@@ -57,7 +58,7 @@ if(!empty($arr_Medias)){
 						}
 						echo $vFallback;
 						echo '</video>', PHP_EOL;
-						echo '</div>';
+						#echo '</div>';
 						echo PHP_EOL;
 
 						/*$iCmpt++;
@@ -69,7 +70,7 @@ if(!empty($arr_Medias)){
 					echo '<div class="boiteErreursFormulaires" id="boiteErreursFormulaires_Login"><span>Erreur! Aucune vidéo trouvée!</span></div>';
 				}
 			?>
-			</div>
+			<!--</div>-->
 			
 <?php
 require_once "assets/inc/footer.inc.php";

@@ -13,7 +13,7 @@ body{
 
 #container{
 	background-color: white!important;
-	margin:0 auto;
+	margin:auto;
 	max-width: 1024px;
 	width: 100%;
 }
@@ -71,91 +71,6 @@ body ::-webkit-scrollbar-thumb {
 	cursor:pointer;
 	/*cursor:hand;*/ /* IE 5.0, 5.5 */
 }
-
-@media only screen and (max-width:640px){
-	#content{
-		width:100%;
-	}
-
-	/*#galerie_photos #content>div>div>img:nth-child(2){
-		right:0;
-		left:auto;
-	}*/
-	
-	#produits_categories a.rounded,
-	#produits_categories span.rounded{
-		width:150px;
-	}
-	
-	/*
-	
-	#produits_infos{
-	margin:5px;
-	width:100%;
-}
-
-#produits_infos_img{ / * Le ID est nécessaire pour JS * /
-	vertical-align:top;
-	width:300px;
-}
-
-#produits_infos dl{
-	width:695px;
-	height:210px;
-	display:inline-block;
-	margin-left:10px;
-	color:black;
-	margin:0;
-}
-
-#produits_infos dt{
-	font-weight:bold;
-	width:185px;
-	float:left;
-}
-
-#produits_infos dd{
-	width:470px;
-	float:right;
-	padding:0;
-	margin:0;
-}
-
-#produits_description{
-	margin-bottom:10px;
-	height:150px;
-	width:99%;
-}
-
-#produits_infos_btns{
-	text-align:right;
-	padding-right:10px;
-	width:100%;
-}
-
-#produits_infos_ajouterpanier{
-	text-align:right;
-	color:black;
-	padding-right:20px;
-	margin-top:10px;
-}
-
-#produits_infos_ajouterpanier *{
-	vertical-align:middle;
-}
-
-#produits_infos_ajouterpanier input[type="number"]{
-	width:3em;
-	margin-right:3px;
-}
-	
-	
-	
-	*/
-	
-	
-}
-
 
 /* Header------------->
 */
@@ -523,7 +438,11 @@ header h1:hover{
 	width: 1024px;
 	margin:0 auto;
 	min-height: 400px;
-	padding: 0;
+	padding-top:25px;
+}
+
+#index #content{
+	padding-top:10px;
 }
 
 #loginDiv{
@@ -793,7 +712,8 @@ span.spanValid{
 }
 
 #produits_infos{
-	margin:5px;
+	margin:0;
+	padding:15px;
 	width:100%;
 }
 
@@ -803,7 +723,7 @@ span.spanValid{
 }
 
 #produits_infos dl{
-	width:695px;
+	width:685px;
 	height:210px;
 	display:inline-block;
 	margin-left:10px;
@@ -1361,17 +1281,133 @@ footer nav>ul>li>ul>li>a{
 	margin:0 auto;
 	/ *border:1px dashed green;* /
 }*/
-#galerie_videos #container #content div div{
+/*#galerie_videos #container #content div div{*/
+#galerie_videos #container #content video{
 	border:1px solid #ddd;
-	height:302px;
+	width:500px;
+	/*height:281px;*/
+	/*height:302px;
 	width:520px;
-	padding:10px;
-	margin-left:50%;
-	left:-260px;
+	padding:10px;*/
+	/*margin-left:50%;
+	left:-260px;*/
 	position:relative;
 }
 /*#galerie_videos #container #content div div video#movie*/
+
 /* \galerie_video */
+
+@media only screen and (max-width:960px){
+	#galerie_videos #container #content video{
+		width:auto;
+	}
+}
+
+@media only screen and (max-width:640px){
+	#galerie_videos #container #content video{
+		width:600px;
+	}
+}
+
+@media only screen and (max-width:600px){
+	#galerie_videos #container #content video{
+		width:580px;
+	}
+}
+
+@media only screen and (max-width:960px),
+@media only screen and (max-width:640px){
+	#content{
+		width:100%;
+	}
+
+	/*#galerie_photos #content>div>div>img:nth-child(2){
+		right:0;
+		left:auto;
+	}*/
+	
+	#galerie_photos #content{
+		text-align:center;
+	}
+
+	#galerie_photos #content>div>div{
+		margin:5px;
+	}
+	
+	#produits_categories a.rounded,
+	#produits_categories span.rounded{
+		width:150px;
+	}
+	
+	/*
+	
+#produits_infos{
+	margin:0;
+	padding:15px;
+	width:100%;
+}
+
+#produits_infos_img{ / * Le ID est nécessaire pour JS * /
+	vertical-align:top;
+	width:300px;
+}
+
+#produits_infos dl{
+	width:685px;
+	height:210px;
+	display:inline-block;
+	margin-left:10px;
+	color:black;
+	margin:0;
+}
+
+#produits_infos dt{
+	font-weight:bold;
+	width:185px;
+	float:left;
+}
+
+#produits_infos dd{
+	width:470px;
+	float:right;
+	padding:0;
+	margin:0;
+}
+
+#produits_description{
+	margin-bottom:10px;
+	height:150px;
+	width:99%;
+}
+
+#produits_infos_btns{
+	text-align:right;
+	padding-right:10px;
+	width:100%;
+}
+
+#produits_infos_ajouterpanier{
+	text-align:right;
+	color:black;
+	padding-right:20px;
+	margin-top:10px;
+}
+
+#produits_infos_ajouterpanier *{
+	vertical-align:middle;
+}
+
+#produits_infos_ajouterpanier input[type="number"]{
+	width:3em;
+	margin-right:3px;
+}
+	
+	
+	
+	*/
+	
+	
+}
 
 /* \Ajouts Eric */
 
