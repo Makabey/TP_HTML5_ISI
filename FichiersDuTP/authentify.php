@@ -46,7 +46,7 @@ if(isset($_POST['nomReg'])){
 	}
 }#elseif(isset($_POST['login'])){}
 ?>
-			<div class="boiteErreursFormulaires" id="boiteErreursFormulaires_Login"><span></span></div>
+			<div class="boiteErreursFormulaires hidden" id="boiteErreursFormulaires_Login"><span></span></div>
 			<div id="loginDiv">
 				<!-- DÉBUT formulaire login -->
 				<form id="formLogin" method="POST" action="<?php echo $_SERVER['SCRIPT_NAME'];?>">

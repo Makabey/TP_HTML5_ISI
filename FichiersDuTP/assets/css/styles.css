@@ -72,6 +72,91 @@ body ::-webkit-scrollbar-thumb {
 	/*cursor:hand;*/ /* IE 5.0, 5.5 */
 }
 
+@media only screen and (max-width:640px){
+	#content{
+		width:100%;
+	}
+
+	/*#galerie_photos #content>div>div>img:nth-child(2){
+		right:0;
+		left:auto;
+	}*/
+	
+	#produits_categories a.rounded,
+	#produits_categories span.rounded{
+		width:150px;
+	}
+	
+	/*
+	
+	#produits_infos{
+	margin:5px;
+	width:100%;
+}
+
+#produits_infos_img{ / * Le ID est nécessaire pour JS * /
+	vertical-align:top;
+	width:300px;
+}
+
+#produits_infos dl{
+	width:695px;
+	height:210px;
+	display:inline-block;
+	margin-left:10px;
+	color:black;
+	margin:0;
+}
+
+#produits_infos dt{
+	font-weight:bold;
+	width:185px;
+	float:left;
+}
+
+#produits_infos dd{
+	width:470px;
+	float:right;
+	padding:0;
+	margin:0;
+}
+
+#produits_description{
+	margin-bottom:10px;
+	height:150px;
+	width:99%;
+}
+
+#produits_infos_btns{
+	text-align:right;
+	padding-right:10px;
+	width:100%;
+}
+
+#produits_infos_ajouterpanier{
+	text-align:right;
+	color:black;
+	padding-right:20px;
+	margin-top:10px;
+}
+
+#produits_infos_ajouterpanier *{
+	vertical-align:middle;
+}
+
+#produits_infos_ajouterpanier input[type="number"]{
+	width:3em;
+	margin-right:3px;
+}
+	
+	
+	
+	*/
+	
+	
+}
+
+
 /* Header------------->
 */
 #container>header{
@@ -594,9 +679,10 @@ span.spanValid{
 #index #descriptionSite{
 	padding:0 10px 10px 10px;
 }
-#index #descriptionSite h3{
-	padding:0;
-	margin:0;
+#index #descriptionSite span{
+	/*padding:0;
+	margin:0;*/
+	font-size:1.2em;
 }
 /**---------------------------------- slider ------------------------------**/
 
@@ -648,7 +734,7 @@ span.spanValid{
 
 #produits_categories a.rounded,
 #produits_categories span.rounded{
-	padding: 3px 20px;
+	padding: 3px 7px;
 	outline: 0;
 	font-size: 16px;
 	border:1px solid gray;
@@ -657,8 +743,8 @@ span.spanValid{
 	border-radius: 5px;
 	font-weight:bold;
 	color: gray;
-	width: auto;
-	height: 30px;
+	/*width: auto;*/
+	min-height: 30px;
 	display: block;
 }
 
@@ -1108,6 +1194,10 @@ footer nav>ul>li>ul>li>a{
 	width:700px;
 	text-align:center;
 	font-weight:bold;
+	/*display:none;*/
+}
+.boiteErreursFormulaires.hidden,
+.boiteMessagesFormulaires.hidden{
 	display:none;
 }
 .boiteErreursFormulaires{
@@ -1151,19 +1241,8 @@ footer nav>ul>li>ul>li>a{
 	left:50%;
 	margin-left:-50%;
 	/*right:0;*/
-	box-shadow: 3px 3px 2px 2px #333;
+	box-shadow: 2px 2px 1px 1px #333;
 	border:1px solid #ccc;
-}
-
-@media only screen and (max-width:600px){
-	#content{
-		width:100%;
-	}
-
-	/*#galerie_photos #content>div>div>img:nth-child(2){
-		right:0;
-		left:auto;
-	}*/
 }
 
 #galerie_photos #content>div>div>img:hover{
@@ -1250,6 +1329,28 @@ footer nav>ul>li>ul>li>a{
 	background: #222;
 }
 /* \header.inc */
+
+/* galerie_video */
+#galerie_videos #container #content {
+	text-align:center;
+	padding:30px 0;
+}
+/*#galerie_videos #container #content div{
+	width:90%;
+	margin:0 auto;
+	/ *border:1px dashed green;* /
+}*/
+#galerie_videos #container #content div div{
+	border:1px solid #ddd;
+	height:302px;
+	width:520px;
+	padding:10px;
+	margin-left:50%;
+	left:-260px;
+	position:relative;
+}
+/*#galerie_videos #container #content div div video#movie*/
+/* \galerie_video */
 
 /* \Ajouts Eric */
 
