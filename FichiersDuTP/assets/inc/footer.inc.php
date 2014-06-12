@@ -1,25 +1,12 @@
+			</div>
 
-			</div><!-- END of div::content -->
-		
 			<footer>
-				<!--<div id="footer_content">--><?php
-					$MenusID="footer_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
-					#require "assets/inc/menus.inc.php";
-					spawnMainMenu();
-					?>
-
-					<!-- non fonctionnel DÉCORATIF-->
-					<!--<div id="langues_regions">
-						<a href="index.php">
-							<img src="assets/images/drapeau.png" alt="région et langue" class="drapeau" />Français ( Canada )
-						</a>
-						<a href="index.php">
-							<img src="assets/images/arrowregion.png" alt="region et langue" class="arrowregion" /> English ( USA )
-						</a>
-					</div>-->
-				<!--</div>-->
+				<?php
+				$MenusID="footer_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
+				spawnMainMenu();
+				?>
 				<p>&copy; 2014 - Conception <mark>Olivier Berthier</mark> et <mark>Eric Robert</mark></p>
 			</footer>
-		</div><!-- END of div :: container -->
+		</div>
 	</body>
 </html>

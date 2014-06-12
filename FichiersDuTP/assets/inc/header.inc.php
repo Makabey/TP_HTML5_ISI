@@ -7,8 +7,6 @@ if(strlen(session_id()) == 0){
 	session_start();
 }
 
-#$_SESSION['user']='admin';
-
 $sImages_PathProduits = "assets/images/produits/"; # le path doit finir par un '/'
 $sImages_PathSlider = "assets/images/slider/"; # le path doit finir par un '/',
 $sNomDeCettePage = substr($_SERVER['SCRIPT_NAME'], (strrpos($_SERVER['SCRIPT_NAME'],'/')+1));
@@ -35,21 +33,6 @@ require_once "assets/inc/menus.inc.php";
 
 		window.addEventListener("load", function(){ // J'utilise un listener pour éviter de marcher sur les platebandes de jQuery
 			// Support pour les sous-menus
-			/*$("#header_produits").hover(function () {
-				if ($("#header_menuNiv1_Item1_submenu2").is(":hidden")) {
-					$("#header_menuNiv1_Item1_submenu2").slideDown(100);
-				} else {
-					$("#header_menuNiv1_Item1_submenu2").slideUp(100);
-				}
-			});
-
-			$("#header_gestion_produits").hover(function () {
-				if ($("#header_menuNiv1_Item1_submenu6").is(":hidden")) {
-					$("#header_menuNiv1_Item1_submenu6").slideDown(50);
-				} else {
-					$("#header_menuNiv1_Item1_submenu6").slideUp(50);
-				}
-			});*/
 			var li_fix_padding = $('header nav .centrerMenu > ul > li:last-child > a').text();
 			if(li_fix_padding == "Se connecter / s'enregistrer"){
 				$('header nav .centrerMenu > ul > li:last-child').css('padding','0');
@@ -96,16 +79,12 @@ require_once "assets/inc/menus.inc.php";
 				}
 				echo tabs(3),'var arrPanierPrix = {',$panierPrix,'};',PHP_EOL;
 				break;
-
-			/*case 'authentify':
-				echo '<script src="assets/xhr/xhrFunctions.js"></script>',PHP_EOL;
-				break;*/
 		}
 		?>
 		</script>
 		<!-- Fichier JS spécifique à la page -->
 		<?php
-			// NE PAS modifier $sNomDeCettePage parce qu'elle est utilisée aussi dans "menu.inc.php"
+			// NE PAS modifier $sNomDeCettePage parce qu'elle est utilisée aussi dans "menus.inc.php"
 			if(file_exists('assets/js/'.$sNomDeCettePage.'.js')){
 				echo '<script src="assets/js/',$sNomDeCettePage,'.js"></script>',PHP_EOL;
 			}
@@ -116,10 +95,8 @@ require_once "assets/inc/menus.inc.php";
 	</head>
 	<body id="<?php echo $sNomDeCettePage; ?>">
 		<header role="banner">
-					<!--<a href="index.php"><img src="assets/images/logo.png" alt="Logo de 'La Fabrique'" /></a>-->
 					<?php
 						$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
-						#require "assets/inc/menus.inc.php";
 						spawnMainMenu();
 					?>
 			</header>

@@ -7,19 +7,6 @@ $(function(){
 	/*
 		Mise en place des événements pour gestion_panier.php
 	*/
-
-	// S'assurer que l'usager ne peux entrer que des nombres
-	/*$('.panier_qte_input').keydown(function(e){
-		e = e || window.event;
-		var key = e.keycode || e.which;
-
-		if(!(key == 8 || key == 9 || key == 37 || key ==39)){
-			if(!e.key.match(/^[0-9]$/)){
-				return false;
-			}
-		}
-	});*/
-
 	$('.panier_qte_input').change(function(){
 		var iSousTotal = 0;
 		var iIndexPrix = 0;
@@ -56,7 +43,7 @@ $(function(){
 			$("#frmPanier").submit();
 		}
 	});
-	
+
 	$('.panier_retirer').click(function(){
 		$("#oper").val("retirer");
 		$("#pid").val($(this).data("pid"));
