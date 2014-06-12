@@ -5,7 +5,7 @@ $sPageTitle = "Facture client | ";
 require_once "assets/inc/csvFunctions.inc.php";
 require_once "assets/inc/header.inc.php";
 
-if(isset($_GET)){
+if(isset($_GET['nrof'])){
 	// On recoit deux code d' "OPER" mais en fin de compte un seul ou pas du tout ferais l'affaire
 	$nrof = $_GET['nrof'];
 	$retour = chargerFacture($arrItems, $nrof);
