@@ -35,7 +35,7 @@ function spawnMainMenu(){
 												if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
 														echo '<div><a href="gestion_panier.php">';
 														$nombreItems = count($_SESSION['panier']);
-														echo "$nombreItems</a></div>";
+														echo "<img src=","../images/cart.png","/>$nombreItems</a></div>";
 													}
 											?>
 										</li>
