@@ -654,29 +654,29 @@ span.spanValid{
     animation: sliderImg 24s linear infinite 0s;
 }
 /** PRODUITS **/
-#produits_categories{
+#produits #container #content nav{
 	width:100%;
 	text-align:center;
 	padding:1px;
 }
 
-#produits_categories ul{
+#produits #container #content nav ul{
 	list-style-type:none;
 	margin:10px auto;
 	padding:0;
 }
 
-#produits_categories li{
+#produits #container #content nav li{
 	display:inline-block;
 	margin:0;
 	padding:0;
 }
 
-#produits_categories a.rounded,
-#produits_categories span.rounded{
+#produits #container #content nav a.rounded,
+#produits #container #content nav span.rounded{
 	padding: 3px 7px;
-	outline: 0;
-	font-size: 16px;
+	/*outline: 0;*/
+	/*font-size: 16px;*/
 	border:1px solid gray;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -684,13 +684,13 @@ span.spanValid{
 	font-weight:bold;
 	color: gray;
 	/*width: auto;*/
-	min-height: 30px;
+	/*min-height: 30px;*/
 	display: block;
 }
 
-#produits_categories a.rounded:hover,
-#produits_categories a.selected,
-#produits_categories span.selected{
+#produits #container #content nav a.rounded:hover,
+#produits #container #content nav a.selected,
+#produits #container #content nav span.selected{
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -699,7 +699,7 @@ span.spanValid{
 	color:black;
 }
 
-#produits_categories a.rounded:active{
+#produits #container #content nav a.rounded:active{
 	border: 1px solid #D6B68B;
 	background: rgb(211,211,211);
 	background: -moz-linear-gradient(top, rgba(211,211,211,1) 0%, rgba(255,255,255,1) 100%);
@@ -711,50 +711,51 @@ span.spanValid{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#ffffff',GradientType=0 );
 }
 
-#produits_infos{
+/*#produits #container #content>div {
 	margin:0;
 	padding:15px;
 	width:100%;
-}
+}*/
 
-#produits_infos img:nth-child(1){ /* Le ID est nécessaire pour JS */
+#produits #container #content>img{ /* Le ID est nécessaire pour JS */
 	vertical-align:top;
 	width:300px;
+	margin-left:15px;
 }
 
-#produits_infos dl{
+#produits #container #content>dl{
 	width:685px;
 	height:210px;
 	display:inline-block;
 	margin-left:10px;
 	color:black;
-	margin:0;
+	/*margin:0;*/
 }
 
-#produits_infos dt{
+#produits #container #content>dl>dt{
 	font-weight:bold;
 	width:185px;
 	float:left;
 }
 
-#produits_infos dd{
+#produits #container #content>dl>dd{
 	width:470px;
 	float:right;
 	padding:0;
 	margin:0;
 }
 
-#produits_description{
+/*#produits_description{
 	margin-bottom:10px;
 	height:150px;
 	width:99%;
-}
+}*/
 
-#produits_infos_btns{
+#produits_infos_btns,/*{
 	text-align:right;
 	padding-right:10px;
-	width:100%;
-}
+	/ *width:100%;* /
+}*/
 
 #produits_infos_ajouterpanier{
 	text-align:right;
@@ -763,7 +764,9 @@ span.spanValid{
 	margin-top:10px;
 }
 
-#produits_infos_ajouterpanier *{
+#produits_infos_ajouterpanier>label,
+#produits_infos_ajouterpanier>label>input,
+#produits_infos_ajouterpanier>img{
 	vertical-align:middle;
 }
 
@@ -1301,12 +1304,124 @@ footer nav>ul>li>ul>li>a{
 	#galerie_videos #container #content video{
 		width:auto;
 	}
+	
+	#produits #container #content>dl{
+		width:600px;
+	}
+
+	#produits #container #content>dl>dt{
+		width:175px;
+	}
+
+	#produits #container #content>dl>dd{
+		width:420px;
+	}
 }
 
 @media only screen and (max-width:640px){
 	#galerie_videos #container #content video{
 		width:600px;
 	}
+	
+	#produits #container #content nav{
+		width:170px;
+	/*}
+	
+	#produits #container #content nav{*/
+		/*width:100%;
+		text-align:center;*/
+		padding:0;
+		display:inline-block;
+	}
+
+	#produits #container #content nav ul{
+		/*list-style-type:none;
+		margin:10px auto;
+		padding:0;*/
+		/*width:160px;*/
+		margin:10px 5px 0px;
+	}
+
+	#produits #container #content nav li{
+		display:block;
+		margin:5px;
+		/*padding:0;*/
+	}
+	
+	#produits #container #content nav a.rounded,
+	#produits #container #content nav span.rounded{
+		width:150px;
+		/*display:inline;*/
+	}
+	
+	/*#produits #container #content>div:first-of-type {
+		/*margin:0;
+		padding:15px;* /
+		width:100%;
+		display:inline-block;
+	}*/
+
+	#produits #container #content>img{ /* Le ID est nécessaire pour JS */
+		/*vertical-align:top;
+		width:300px;*/
+		/*display:inline-block;
+		margin:0 auto;*/
+		/*margin-left:33%;
+		left:-25%;*/
+		margin-left:50px;
+	}
+
+	/*#produits_infos dl{*/
+	#produits #container #content>dl{
+		width:570px;
+		/*height:210px;*/
+		/*display:inline;*/
+		/*margin-left:10px;*/
+		/*color:black;*/
+		/*margin:0;*/
+		/*vertical-align:top;*/
+	}
+
+	#produits #container #content>dl>dt{
+		/*font-weight:bold;*/
+		width:175px;
+		/*float:left;*/
+	}
+
+	#produits #container #content>dl>dd{
+		width:390px;
+		/*float:right;
+		padding:0;
+		margin:0;*/
+	}
+
+	/*#produits_description{
+		margin-bottom:10px;
+		height:150px;
+		width:99%;
+	}*/
+
+	/*#produits_infos_btns{
+		text-align:right;
+		padding-right:10px;
+		width:100%;
+	}*/
+
+	/*#produits_infos_ajouterpanier{
+		text-align:right;
+		color:black;
+		padding-right:20px;
+		margin-top:10px;
+	}*/
+
+	/*#produits_infos_ajouterpanier *{
+		vertical-align:middle;
+	}*/
+
+	/*#produits_infos_ajouterpanier input[type="number"]{
+		width:3em;
+		margin-right:3px;
+	}*/
 }
 
 @media only screen and (max-width:600px){
@@ -1333,95 +1448,6 @@ footer nav>ul>li>ul>li>a{
 	#galerie_photos #content>div>div{
 		margin:5px;
 	}
-	
-	
-	/*#produits_categories{
-		width:100%;
-		text-align:center;
-		padding:1px;
-	}*/
-
-	/*#produits_categories ul{
-		list-style-type:none;
-		margin:10px auto;
-		padding:0;
-	}*/
-
-	#produits_categories li{
-		display:block;
-		margin:5px;
-		/*padding:0;*/
-	}
-	
-	#produits_categories a.rounded,
-	#produits_categories span.rounded{
-		width:150px;
-	}
-	
-	/*#produits_infos{
-		margin:0;
-		padding:15px;
-		width:100%;
-	}*/
-
-	/*#produits_infos img{ /* Le ID est nécessaire pour JS * /
-		vertical-align:top;
-		width:300px;
-	}*/
-
-	#produits_infos dl{
-		width:685px;
-		height:210px;
-		display:inline-block;
-		margin-left:10px;
-		color:black;
-		margin:0;
-	}
-
-	#produits_infos dt{
-		font-weight:bold;
-		width:185px;
-		float:left;
-	}
-
-	#produits_infos dd{
-		width:470px;
-		float:right;
-		padding:0;
-		margin:0;
-	}
-
-	#produits_description{
-		margin-bottom:10px;
-		height:150px;
-		width:99%;
-	}
-
-	#produits_infos_btns{
-		text-align:right;
-		padding-right:10px;
-		width:100%;
-	}
-
-	#produits_infos_ajouterpanier{
-		text-align:right;
-		color:black;
-		padding-right:20px;
-		margin-top:10px;
-	}
-
-	#produits_infos_ajouterpanier *{
-		vertical-align:middle;
-	}
-
-	#produits_infos_ajouterpanier input[type="number"]{
-		width:3em;
-		margin-right:3px;
-	}
-	
-	
-	
-	*/
 	
 	
 }
