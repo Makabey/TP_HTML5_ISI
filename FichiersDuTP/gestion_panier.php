@@ -106,7 +106,7 @@ if(isset($_SESSION['user'])){
 	<form id="frmPanier" method="post" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>">
 		<input id="oper" name="oper" value="" type="hidden" />
 		<input id="pid" name="pid" value="" type="hidden" />
-		<table id="itemsDuClient">
+		<table>
 			<caption>Votre panier</caption>
 			<tr>
 				<th>ID</th>

@@ -33,7 +33,7 @@ if(isset($_GET)){
 			<tr><td>Achats faits le</td><td><?php echo $arrFacture['dateAchat'] ?></td></tr>
 			<tr><td>Par</td><td><?php echo ucwords($usager['prenom'].' '.$usager['nomFamille']) ,' / ', $usager['adresse'] ,' / ', $usager['email']; ?></td></tr>
 		</table>
-		<table id="itemsDuClient">
+		<table>
 			<tr>
 				<th>ID</th>
 				<th>Produit</th>

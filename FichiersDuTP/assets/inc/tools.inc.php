@@ -101,35 +101,4 @@ function walkDirectory($pathToSearch, $seekedExtensions){
 	return $retour;
 }
 
-
-/*function findFilenamesAkinTo($substringInName, $pathToSearch, $seekedExtensions){
-	/ *
-		But :	trouver dans un répertoire donné une liste de fichiers dont le nom
-				contient une sous-chaine spécifique
-
-		$substringInName : une partie des noms de fichier à trouver
-		$pathToSearch : Le répertoire à sonder
-		$seekedExtensions : Les extensions à rechercher, séparées par des pipes '|'
-
-		Retourne:
-			false = le répertoire n'existe pas
-			<rien> = le répertoire ne contient aucun fichier recherché
-			chaine = liste des fichiers séparés par des pipes '|'
-	* /
-	$retour = walkDirectory($pathToSearch, $seekedExtensions);
-
-	if($retour !== false){
-		$arrFichiers = explode('|', $retour);
-
-		foreach($arrFichiers as $key=>$val){
-			if(substr_count($val, $substringInName) == 0){
-				unset($arrFichiers[$key]);
-			}
-		}
-		$retour=implode('|', $arrFichiers);
-	}
-
-	return $retour;
-}*/
-
 /* == EOF == */

@@ -3,7 +3,7 @@
 	Fonctions pour produits.php seulement
 */
 
-const cstPID = 7; // Index de 'product_ID' dans "arrProduits"
+var cstPID = 7; // Index de 'product_ID' dans "arrProduits"
 
 $(function(){
 	/*
@@ -40,9 +40,6 @@ $(function(){
 		}
 
 		$("#produits_infos_prodid").click(function(){
-			//if($("#produits_infos_prodqte").val().length==0) $("#produits_infos_prodqte").val('1');
-			//if($("#produits_infos_ajouterpanier>input[type=number]").val().length==0) $("#produits_infos_ajouterpanier>input[type=number]").val('1');
-			//sLienPanier = "gestion_panier.php?oper=ajout&pid="+arrProduitsDetails[iIndexFiche][cstPID]+"&qte="+$("#produits_infos_prodqte").val()+"&clr="+$("#produits_infos_clrdispo").data("couleur");
 			sLienPanier = "gestion_panier.php?oper=ajout&pid="+arrProduitsDetails[iIndexFiche][cstPID]+"&qte="+$("#produits_infos_ajouterpanier>label>input[type=number]").val()+"&clr="+$("#produits_infos_clrdispo").data("couleur");
 			document.location.href=sLienPanier;
 		});

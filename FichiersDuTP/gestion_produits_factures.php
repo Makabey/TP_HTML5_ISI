@@ -23,6 +23,7 @@ if($retour === false){
 		echo 'Une erreur est survenue lors du chargement des factures; impossible de continuer.',PHP_EOL;
 	}else{
 ?>
+					<h1><?php echo ($client_ID == -1)?"Factures des clients":"Mes Factures"; ?></h1>
 					<table>
 						<tr>
 							<th>No Facture</th>
@@ -40,9 +41,8 @@ if($retour === false){
 								echo '<tr><td colspan="5">Une erreur est survenue lors du chargement du client #',$client_ID,'</td></tr>',PHP_EOL;
 							}else{
 								if(!empty($client)){
-									
+
 									foreach($facture as $facture_ID => $produits){
-										#$class_fctr = ($nroLigne % 2 == 0)?'odd':'even';
 										$total = 0;
 										foreach($produits['produits'] as $product_ID => $details){
 											if(isset($arrProduits[$product_ID])){ # c'est pas a cette page de dire si ou non un item de la facture est valide!
@@ -50,8 +50,7 @@ if($retour === false){
 											}
 										}
 										$total = ajouterTaxes($total, 2);
-										
-										#echo '<tr class="',$class_fctr,'">',PHP_EOL;
+
 										echo '<tr>',PHP_EOL;
 										echo '<td>',str_pad($facture_ID, 6, '0', STR_PAD_LEFT),'</td>';
 										$dateAchatRemixed = explode(' ',$produits['dateAchat']);
@@ -74,8 +73,6 @@ if($retour === false){
 <?php
 	}
 }
-
-#echo tabs(4),'</div>',PHP_EOL;
 
 require_once "assets/inc/footer.inc.php";
 ?>

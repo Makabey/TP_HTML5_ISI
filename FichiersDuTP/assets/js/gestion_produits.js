@@ -68,23 +68,13 @@ $(function(){
 		}
 	});
 
-
 	$("#fichierImage_browse").change(function(){
 		var fullPath = sImages_PathProduits+$(this).val();
 		$("#imageProduit").attr("src", fullPath);
 		$("#fichierImage").val($(this).val());
 	});
 
-
-	/*$("#btnEnregistrer").click(function(){
-		$("#actionAFaire").val('enregistrer');
-		$("#formGestionProduits").submit();
-	});*/
-
-
 	$("#btnEffacer").click(function(){
-		//$("#actionAFaire").val('effacer');
-		//$("#formGestionProduits").submit();
 		alert("Ce bouton ne fait rien...");
 	});
 });

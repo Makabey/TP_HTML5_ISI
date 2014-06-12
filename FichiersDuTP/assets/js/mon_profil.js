@@ -58,7 +58,7 @@ $(function(){
 
 		return false;
 	});
-	
+
 	$("#formCommentaires").submit(function(){
 		$("#boiteMessagesFormulaires").addClass("boiteMessagesFormulaires");
 		$("#boiteMessagesFormulaires").removeClass("boiteErreursFormulaires");
