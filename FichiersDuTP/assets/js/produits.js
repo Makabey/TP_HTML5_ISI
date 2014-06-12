@@ -3,7 +3,7 @@
 	Fonctions pour produits.php seulement
 */
 
-const cstPID = 7; // Index de 'product_ID' dans "arrProduits"
+var cstPID = 7; // Index de 'product_ID' dans "arrProduits"
 
 $(function(){
 	/*

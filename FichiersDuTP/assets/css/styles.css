@@ -1,10 +1,24 @@
+@keyframes onLoad{
+	0% { opacity: 0;}
+	100% { opacity: 1; }
+}
+@-webkit-keyframes onLoad{
+	0% { opacity: 0;}
+	100% { opacity: 1; }
+}
 *{
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: onLoad 0.1s linear;
+    -moz-animation: onLoad 0.1s linear;
+    -o-animation: onLoad 0.1s linear;
+    -ms-animation: onLoad 0.1s linear;
+    animation: onLoad 0.1s linear;
 }
-
 html{
 	min-width:100%;
 	min-height:100%;
@@ -20,9 +34,8 @@ body{
 }
 
 #container{
-	background-color: white!important;
+	background: rgba(255,255,255,0.8);
 	margin:0 auto;
-	max-width: 1024px;
 	width: 100%;
 	min-height:100%;
 	/*height:100%;*/
@@ -448,13 +461,15 @@ header h1:hover{
 /* Content ----------->
 */
 #content{
-	width: 1024px;
+	max-width: 1024px;
+	width: 100%;
 	margin:0 auto;
 	min-height: 400px;
 	padding-top:25px;
 	padding-bottom:15px;
 	position:relative;
-	/*height:100%;*/
+	background: white;
+	min-width: 600px;
 }
 
 #index #content{
@@ -553,8 +568,6 @@ header h1:hover{
 .spanError{
 	font-size:10pt;
 	color: red;
-	/*float:right;*/
-	/*margin-right: 30px;*/
 }
 
 span.spanValid{
@@ -581,8 +594,6 @@ span.spanValid{
 	padding:0 10px 10px 10px;
 }
 #index #descriptionSite span{
-	/*padding:0;
-	margin:0;*/
 	font-size:1.2em;
 }
 /**---------------------------------- SLIDER ------------------------------**/
@@ -691,16 +702,12 @@ span.spanValid{
 #produits #container #content nav a.rounded,
 #produits #container #content nav span.rounded{
 	padding: 3px 7px;
-	/*outline: 0;*/
-	/*font-size: 16px;*/
 	border:1px solid gray;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	font-weight:bold;
 	color: gray;
-	/*width: auto;*/
-	/*min-height: 30px;*/
 	display: block;
 }
 
@@ -726,13 +733,6 @@ span.spanValid{
 	background: linear-gradient(to bottom, rgba(211,211,211,1) 0%,rgba(255,255,255,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d3', endColorstr='#ffffff',GradientType=0 );
 }
-
-/*#produits #container #content>div {
-	margin:0;
-	padding:15px;
-	width:100%;
-}*/
-
 #produits #container #content>img{ /* Le ID est nécessaire pour JS */
 	vertical-align:top;
 	width:300px;
@@ -745,7 +745,6 @@ span.spanValid{
 	display:inline-block;
 	margin-left:10px;
 	color:black;
-	/*margin:0;*/
 }
 
 #produits #container #content>dl>dt{
@@ -760,30 +759,9 @@ span.spanValid{
 	padding:0;
 	margin:0;
 }
-
-/*#produits_description{
-	margin-bottom:10px;
-	height:150px;
-	width:99%;
-}*/
-
-/*#produits_infos_btns,/ *{
-	text-align:right;
-	padding-right:10px;
-	/ *width:100%;* /
-}* /
-
-#produits_infos_ajouterpanier{
-	text-align:right;
-	color:black;
-	padding-right:20px;
-	margin-top:10px;
-}*/
-
 #produits #container #content>div{
 	text-align:right;
 	color:black;
-	/*padding-right:20px;*/
 	margin-top:10px;
 	position:absolute;
 	bottom:10px;
@@ -811,11 +789,6 @@ span.spanValid{
 #gestion_fiche img{
 	width:300px;
 }
-
-/*#inventory_box_parent{
-	margin-top:20px;
-}*/
-
 /*.inventory_box{*/
 #inventory_box_parent>div{
 	padding:20px;
@@ -954,9 +927,6 @@ span.spanValid{
 /* ======= NAV ====== */
 footer{
 	position: relative;
-	/*display: inline-block;*/
-	/*padding:0;*/
-	/*margin:0;*/
 	bottom: 0;
 	left:0;
 	width: 100%;
@@ -1101,70 +1071,6 @@ footer>p>mark{
 }
 
 
-
-
-
-/*footer{
-	height: 200px;
-	border-top: 1px solid #5C3E18;
-	position:relative;
-}
-
-footer>nav{
-	vertical-align:top;
-}
-
-footer nav a{
-	text-decoration:none;
-	color: black;
-}
-
-footer nav a:hover{
-	color: #3c7a0b;
-}
-
-footer>p{
-	position:absolute;
-	bottom:0;
-	right:10px;
-}
-
-footer>p>mark{
-	background-color:transparent;
-	color:grey;
-}
-
-footer nav ul{
-	list-style-type:none;
-	padding:0;
-}
-
-footer nav>ul{
-	min-width:600px;
-}
-
-footer nav>ul>li{
-	display:inline-block;
-	padding:5px;
-	float:left;
-	font-size: 12pt;
-	color: #919191;
-}
-
-footer nav>ul>li>ul>li{
-	margin-left: 15px;
-}
-
-footer nav>ul>li>ul>li:hover:before{
-	content: "- ";
-	font-weight: bold;
-	margin-left: -11px;
-}
-
-footer nav>ul>li>ul>li>a{
-	font-size: 10pt;
-}*/
-
 /** A PROPOS **/
 #apropos #content article{
 	margin-bottom:30px;
@@ -1204,15 +1110,8 @@ footer nav>ul>li>ul>li>a{
 
 /* GESTION PRODUITS */
 #gestion_produits #content{
-	/*margin:0;*/
 	padding:40px 10px;
 }
-
-/*#gestion_produits #content form legend{
-	font-weight:bold;
-	font-size:2em;
-}*/
-
 #gestion_produits #content form fieldset:last-child{
 	border:none;
 }
@@ -1315,12 +1214,10 @@ footer nav>ul>li>ul>li>a{
 .boiteErreursFormulaires,
 .boiteMessagesFormulaires{
 	padding:20px 0;
-	/*margin-bottom:20px;*/
 	margin:0 auto 10px;
 	width:700px;
 	text-align:center;
 	font-weight:bold;
-	/*display:none;*/
 }
 .boiteErreursFormulaires.hidden,
 .boiteMessagesFormulaires.hidden{
@@ -1344,13 +1241,11 @@ footer nav>ul>li>ul>li>a{
 }
 
 #galerie_photos #content>div{
-	/*border:1px dashed green;*/
 	margin:0 auto;
 	width:90%;
 }
 
 #galerie_photos #content>div>div{
-	/*border:1px dotted blue;*/
 	display:inline-block;
 	position:relative;
 	width:200px;
@@ -1359,123 +1254,29 @@ footer nav>ul>li>ul>li>a{
 }
 #galerie_photos #content>div>div>img{
 	width:200px;
-	/*padding:20px;*/
 	transition:0.5s all;
-	/*border:1px dotted green;*/
-	/*max-height:200px;*/
 	position:absolute;
 	left:50%;
 	margin-left:-50%;
-	/*right:0;*/
 	box-shadow: 2px 2px 1px 1px #333;
 	border:1px solid #ccc;
 }
 
 #galerie_photos #content>div>div>img:hover{
-	/*padding:0;*/
 	width:300px;
 	z-index:10;
 	left:25%;
-	/*margin-left:0;*/
 	box-shadow:10px 10px 6px #555;
 }
 /* \galerie photo tiles */
-
-/* header.inc */
-#container header div div div:first-child ul{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-	text-transform:uppercase;
-	font-size:10px;
-}
-#container header div div div:first-child > ul > li{
-	border-left: 1px solid rgba(255,255,255,0.6);
-	border-right: 1px solid rgba(255,255,255,0.6);
-	border-bottom: 1px solid rgba(255,255,255,0.6);
-}
-#container header div div div:first-child ul li{
-	height: 26px;
-	background: black;
-
-	transition:background 0.3s ease-out;
-	-moz-transition:background 0.3s ease-out;
-	-webkit-transition:background 0.3s ease-out;
-	-o-transition:background 0.3s ease-out;
-}
-#container header div div div:first-child > ul > li{
-	cursor: pointer;
-	background: #000;
-	width: 130px;
-	text-align: left;
-}
-#container header div div div:first-child > ul > li > p{
-	margin: 0 0 0 0;
-	color:rgba(255,255,255,0.6);
-	display: inline-block;
-	padding: 5px 20px 6px 20px;
-	vertical-align: middle;
-}
-#container header div div div:first-child ul li a{
-	color:rgba(255,255,255,0.6);
-	display: inline-block;
-	padding: 5px 20px 6px 20px;
-}
-#container header div div div:first-child ul li:hover a{
-	color:rgba(255,255,255,0.6);
-	display: inline-block;
-	padding: 5px 20px 6px 20px;
-}
-#container header div div div:first-child>ul>li{
-	vertical-align: top;
-	position:relative;
-}
-
-#container header div div div:first-child>ul>li>ul{
-	opacity: 0;
-	visibility: hidden;
-	position:absolute;
-}
-#container header div div div:first-child>ul>li:hover>ul{
-	visibility: visible;
-	opacity: 1;
-}
-
-#container header div div div:first-child > ul > li > ul > li{
-	width: 155px;
-	border-left: 1px solid rgba(255,255,255,0.6);
-	border-right: 1px solid rgba(255,255,255,0.6);
-	border-top: 1px solid rgba(255,255,255,0.6);
-	background: black;
-}
-#container header div div div:first-child > ul > li > ul > li:last-child{
-	border-bottom: 1px solid rgba(255,255,255,0.6);
-}
-#container header div div div:first-child ul li:hover{
-	background: #222;
-}
-/* \header.inc */
-
 /* galerie_video */
 #galerie_videos #container #content {
 	text-align:center;
 	padding:30px 0;
 }
-/*#galerie_videos #container #content div{
-	width:90%;
-	margin:0 auto;
-	/ *border:1px dashed green;* /
-}*/
-/*#galerie_videos #container #content div div{*/
 #galerie_videos #container #content video{
 	border:1px solid #ddd;
 	width:500px;
-	/*height:281px;*/
-	/*height:302px;
-	width:520px;
-	padding:10px;*/
-	/*margin-left:50%;
-	left:-260px;*/
 	position:relative;
 }
 /*#galerie_videos #container #content div div video#movie*/
@@ -1507,104 +1308,39 @@ footer nav>ul>li>ul>li>a{
 	
 	#produits #container #content nav{
 		width:170px;
-	/*}
-	
-	#produits #container #content nav{*/
-		/*width:100%;
-		text-align:center;*/
 		padding:0;
 		display:inline-block;
 	}
 
 	#produits #container #content nav ul{
-		/*list-style-type:none;
-		margin:10px auto;
-		padding:0;*/
-		/*width:160px;*/
 		margin:10px 5px 0px;
 	}
 
 	#produits #container #content nav li{
 		display:block;
 		margin:5px;
-		/*padding:0;*/
 	}
 	
 	#produits #container #content nav a.rounded,
 	#produits #container #content nav span.rounded{
 		width:150px;
-		/*display:inline;*/
 	}
-	
-	/*#produits #container #content>div:first-of-type {
-		/*margin:0;
-		padding:15px;* /
-		width:100%;
-		display:inline-block;
-	}*/
-
 	#produits #container #content>img{ /* Le ID est nécessaire pour JS */
-		/*vertical-align:top;
-		width:300px;*/
-		/*display:inline-block;
-		margin:0 auto;*/
-		/*margin-left:33%;
-		left:-25%;*/
 		margin-left:50px;
 	}
 
 	/*#produits_infos dl{*/
 	#produits #container #content>dl{
 		width:570px;
-		/*height:210px;*/
-		/*display:inline;*/
-		/*margin-left:10px;*/
-		/*color:black;*/
-		/*margin:0;*/
-		/*vertical-align:top;*/
 	}
 
 	#produits #container #content>dl>dt{
-		/*font-weight:bold;*/
 		width:175px;
-		/*float:left;*/
 	}
 
 	#produits #container #content>dl>dd{
 		width:390px;
-		/*float:right;
-		padding:0;
-		margin:0;*/
 	}
-
-	/*#produits_description{
-		margin-bottom:10px;
-		height:150px;
-		width:99%;
-	}*/
-
-	/*#produits_infos_btns{
-		text-align:right;
-		padding-right:10px;
-		width:100%;
-	}*/
-
-	/*#produits_infos_ajouterpanier{
-		text-align:right;
-		color:black;
-		padding-right:20px;
-		margin-top:10px;
-	}*/
-
-	/*#produits_infos_ajouterpanier *{
-		vertical-align:middle;
-	}*/
-
-	/*#produits_infos_ajouterpanier input[type="number"]{
-		width:3em;
-		margin-right:3px;
-	}*/
-}
 
 @media only screen and (max-width:600px){
 	#galerie_videos #container #content video{
@@ -1617,12 +1353,6 @@ footer nav>ul>li>ul>li>a{
 	#content{
 		width:100%;
 	}
-
-	/*#galerie_photos #content>div>div>img:nth-child(2){
-		right:0;
-		left:auto;
-	}*/
-	
 	#galerie_photos #content{
 		text-align:center;
 	}
@@ -1630,11 +1360,6 @@ footer nav>ul>li>ul>li>a{
 	#galerie_photos #content>div>div{
 		margin:5px;
 	}
-	
-	/*footer{
-		position:absolute;
-	}*/
-	
 	footer nav .centrerMenu{
 		width:100%;
 	}
