@@ -5,17 +5,27 @@
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
+html{
+	min-width:100%;
+	min-height:100%;
+	height:100%;
+}
+
 body{
 	padding: 0;
 	margin: 0;
 	background-color: gray;
+	min-height:100%;
+	height:100%;
 }
 
 #container{
 	background-color: white!important;
-	margin:auto;
+	margin:0 auto;
 	max-width: 1024px;
 	width: 100%;
+	min-height:100%;
+	/*height:100%;*/
 }
 
 .clearBoth{
@@ -442,6 +452,9 @@ header h1:hover{
 	margin:0 auto;
 	min-height: 400px;
 	padding-top:25px;
+	padding-bottom:15px;
+	position:relative;
+	/*height:100%;*/
 }
 
 #index #content{
@@ -754,17 +767,32 @@ span.spanValid{
 	width:99%;
 }*/
 
-#produits_infos_btns,/*{
+/*#produits_infos_btns,/ *{
 	text-align:right;
 	padding-right:10px;
 	/ *width:100%;* /
-}*/
+}* /
 
 #produits_infos_ajouterpanier{
 	text-align:right;
 	color:black;
 	padding-right:20px;
 	margin-top:10px;
+}*/
+
+#produits #container #content>div{
+	text-align:right;
+	color:black;
+	/*padding-right:20px;*/
+	margin-top:10px;
+	position:absolute;
+	bottom:10px;
+	right:20px;
+}
+
+#produits #container #content>div>div{
+	display:inline-block;
+	padding-left:10px;
 }
 
 #produits_infos_ajouterpanier>label,
@@ -925,8 +953,10 @@ span.spanValid{
 /** FOOTER **/
 /* ======= NAV ====== */
 footer{
-	position: absolute;
-	display: inline-block;
+	position: relative;
+	/*display: inline-block;*/
+	/*padding:0;*/
+	/*margin:0;*/
 	bottom: 0;
 	left:0;
 	width: 100%;
@@ -1601,7 +1631,13 @@ footer nav>ul>li>ul>li>a{
 		margin:5px;
 	}
 	
+	/*footer{
+		position:absolute;
+	}*/
 	
+	footer nav .centrerMenu{
+		width:100%;
+	}
 }
 
 /* \Ajouts Eric */
