@@ -466,7 +466,7 @@ header h1:hover{
 	width: 100%;
 	margin:0 auto;
 	min-height: 400px;
-	padding-top:25px;
+	padding-top:35px;
 	padding-bottom:15px;
 	position:relative;
 	background: white;
@@ -478,7 +478,7 @@ header h1:hover{
 }
 
 #loginDiv{
-	width:830px;
+	/*width:830px;*/
 	margin:0 auto;
 	text-align:center;
 }
@@ -486,9 +486,6 @@ header h1:hover{
 /* formatage du formulaire ---> */
 #loginDiv form{
 	vertical-align:top;
-/*}
-
-.formulaire{*/
 	position: relative;
 	display: inline-block;
 	border:1px solid #D0D0D0;
@@ -499,7 +496,7 @@ header h1:hover{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	margin: 20px 0 0 20px;
+	margin:0 10px 20px;
 	text-align:left;
 }
 
@@ -1238,11 +1235,17 @@ footer>p>mark{
 
 /* Ajouts Eric */
 /* Formulaires */
+#authentify #content{
+	padding-left:20px;
+	padding-right:20px;
+}
+
 .boiteErreursFormulaires,
 .boiteMessagesFormulaires{
 	padding:20px 0;
 	margin:0 auto 10px;
-	width:700px;
+	max-width:700px;
+	min-width:500px;
 	text-align:center;
 	font-weight:bold;
 }
@@ -1260,6 +1263,65 @@ footer>p>mark{
 	color:#0c0;
 	background-color:#cfc;
 }
+
+#mon_profil  #container #content h1{
+	text-align:center;
+}
+
+#mon_profil #container #content form input[type="radio"]{
+	width:auto;
+}
+#mon_profil #container #content form input:not([type="radio"]){
+	margin:0;
+}
+#mon_profil #container #content form input:disabled{
+	background-color:transparent;
+	border:none;
+	color:black;
+}
+
+#mon_profil #container #content form dl{
+	width:530px;
+	height:210px;
+	display:inline-block;
+	margin-left:10px;
+	color:black;
+	/*display:table;*/
+	border:1px dashed red;
+	padding:0;
+}
+
+#mon_profil #container #content form dl>dt{
+	font-weight:bold;
+	width:200px;
+	float:left;
+	/*display:table-cell;
+	width:200px;*/
+	border:1px dashed blue;
+	padding:0;
+	margin:0;
+}
+
+#mon_profil #container #content form dl>dd{
+	width:270px;
+	float:right;
+	padding:0;
+	margin:0;
+	/*display:table-cell;
+	width:200px;*/
+	border:1px dashed green;
+}
+
+/*#mon_profil #container #content form dl input,
+#mon_profil #container #content form dl label{
+	display:inline;
+}*/
+#mon_profil #container #content form dl>dt>label,
+#mon_profil #container #content form dl>dt>span,
+#mon_profil #container #content form dl>dd>label{
+	display:block;
+	padding: 6px;
+}
 /* \Formulaires */
 
 /* galerie photo tiles */
@@ -1269,6 +1331,7 @@ footer>p>mark{
 
 #galerie_photos #content>div{
 	margin:0 auto;
+	padding-top:20px;
 	width:90%;
 }
 
@@ -1287,12 +1350,15 @@ footer>p>mark{
 	margin-left:-50%;
 	box-shadow: 2px 2px 1px 1px #333;
 	border:1px solid #ccc;
+	top:50%;
+	margin-top:-50%;
 }
 
 #galerie_photos #content>div>div>img:hover{
 	width:300px;
 	z-index:10;
 	left:25%;
+	top:25%;
 	box-shadow:10px 10px 6px #555;
 }
 /* \galerie photo tiles */
