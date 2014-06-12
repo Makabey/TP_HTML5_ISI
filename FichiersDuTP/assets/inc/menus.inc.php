@@ -6,10 +6,11 @@ require_once "assets/inc/csvFunctions.inc.php";
 
 #if(false === function_exists('spawnMainMenu')){
 	function spawnMainMenu(){
+		global $MenusID;
 		global $sNomDeCettePage;
 		$retour = chargerCategories($arrCategories);
-	?>
-						<nav role="navigation">
+?>
+						<nav<?php if($MenusID == 'header_') echo ' role="navigation"'; ?>>
 							<div class="centrerMenu">
 								<ul>
 									<?php echo genererMenuTopItem('index'); ?>

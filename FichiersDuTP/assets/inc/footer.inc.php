@@ -1,6 +1,6 @@
 
 			</div><!-- END of div::content -->
-
+		
 			<footer>
 				<!--<div id="footer_content">--><?php
 					$MenusID="footer_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
@@ -20,6 +20,6 @@
 				<!--</div>-->
 				<p>&copy; 2014 - Conception <mark>Olivier Berthier</mark> et <mark>Eric Robert</mark></p>
 			</footer>
-		</div>
+		</div><!-- END of div :: container -->
 	</body>
 </html>
