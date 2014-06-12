@@ -30,42 +30,39 @@ function spawnMainMenu(){
 												<li><a href="galerie_videos.php">Vidéos</a></li>
 											</ul>
 										</li>
-									</ul>
-								</li>
-								<?php echo genererMenuTopItem('apropos'); ?>
-									<a href="apropos.php"<?php if($sNomDeCettePage == 'apropos') echo ' class="aActiveFix"'; ?>>À Propos</a>
-								</li>
-								<li>
-									<?php
-										$return = false;
-										// Tester si un usagé est authentifié et s'il est possible de charger ses informations
-										if(isset($_SESSION['user'])){
-											$return = chargerUsager($usagertest, $_SESSION['user']);
-										}
-
-										if($return !== false){
-											$userFullName = $_SESSION['user'];
-											echo '<span>Bonjour, ',$userFullName,'</span><img src="assets/images/arrow_down_menu.png" alt=">"/>';
-											spawnMonProfilMenu();
-											if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
-												echo '<div><a href="gestion_panier.php">';
-												$nombreItems = count($_SESSION['panier']);
-												$pluriel = ($nombreItems> 1)?'s':'';
-												echo "$nombreItems item$pluriel au panier</a></div>";
-											}else{
+										<li>
+											<?php
+												if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
+														echo '<div><a href="gestion_panier.php">';
+														$nombreItems = count($_SESSION['panier']);
+														echo "$nombreItems</a></div>";
+													}
+											?>
+										</li>
+										<li>
+											<?php
+												$return = false;
+												// Tester si un usagé est authentifié et s'il est possible de charger ses informations
+												if(isset($_SESSION['user'])){
+													$return = chargerUsager($usagertest, $_SESSION['user']);
 												}
-											}
-											else{
-												echo '<a href="authentify.php">Se connecter / s\'enregistrer</a>';
-											}
-										echo PHP_EOL;
-									?>
-								</li>
-							</ul>
-						</div>
-					</nav>
-<?php
-} # fin de "spawnMainMenu"
+
+												if($return !== false){
+													$userFullName = $_SESSION['user'];
+													echo '<span>Bonjour, ',$userFullName,'</span><img src="assets/images/arrow_down_menu.png" alt=">"/>';
+													spawnMonProfilMenu();
+												}else{
+													echo '<a href="authentify.php">Se connecter / s\'enregistrer</a>';
+												}
+												echo PHP_EOL;
+											?>
+										</li>
+								</ul>
+							</div>
+						</nav>
+	<?php
+	} # fin de "spawnMainMenu"
+
 
 function spawnMonProfilMenu(){
 ?>
