@@ -51,6 +51,15 @@ require_once "assets/inc/csvFunctions.inc.php";
 										</li>
 										<li>
 											<?php
+												if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
+														echo '<div><a href="gestion_panier.php">';
+														$nombreItems = count($_SESSION['panier']);
+														echo "$nombreItems</a></div>";
+													}
+											?>
+										</li>
+										<li>
+											<?php
 												$return = false;
 												// Tester si un usagé est authentifié et s'il est possible de charger ses informations
 												if(isset($_SESSION['user'])){
@@ -67,12 +76,7 @@ require_once "assets/inc/csvFunctions.inc.php";
 													#}
 													echo '<span>Bonjour, ',$userFullName,'</span><img src="assets/images/arrow_down_menu.png" alt=">"/>';
 													spawnMonProfilMenu();
-													if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
-														echo '<div><a href="gestion_panier.php">';
-														$nombreItems = count($_SESSION['panier']);
-														$pluriel = ($nombreItems> 1)?'s':'';
-														echo "$nombreItems item$pluriel au panier</a></div>";
-													}else{
+													else{
 															/*echo'<div>&nbsp;</div>';*/
 														}
 														#echo '<div><a href="logout.php">Déconnexion</a></div>';
