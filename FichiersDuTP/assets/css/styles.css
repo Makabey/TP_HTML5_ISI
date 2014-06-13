@@ -11,13 +11,13 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	
+
 	-webkit-backface-visibility: hidden;
-    -webkit-animation: onLoad 0.1s linear;
-    -moz-animation: onLoad 0.1s linear;
-    -o-animation: onLoad 0.1s linear;
-    -ms-animation: onLoad 0.1s linear;
-    animation: onLoad 0.1s linear;
+ -webkit-animation: onLoad 0.1s linear;
+ -moz-animation: onLoad 0.1s linear;
+ -o-animation: onLoad 0.1s linear;
+ -ms-animation: onLoad 0.1s linear;
+ animation: onLoad 0.1s linear;
 }
 html{
 	min-width:100%;
@@ -233,7 +233,7 @@ header nav .centrerMenu > ul > li:nth-child(2) img, header nav .centrerMenu > ul
 	margin-top: 3px;
 	max-width: 0px;
 	opacity: 0.6;
-	
+
 	-ms-transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);
 	-moz-transform:rotate(180deg);
@@ -315,7 +315,7 @@ header nav .centrerMenu > ul > li >ul > li:last-child > img{
 	-moz-transform:rotate(-90deg);
 	-o-transform:rotate(-90deg);
 	transform:rotate(-90deg);
-	
+
 	-moz-transition:all 0.4s 0.4s ease-out;
 	-webkit-transition:all 0.4s 0.4s ease-out;
 	-o-transition:all 0.4s 0.4s ease-out;
@@ -405,7 +405,7 @@ header nav .centrerMenu > ul > li:hover > ul > li{
 
 }
 header nav .active{
-	
+
 }
 
 
@@ -650,27 +650,27 @@ span.spanValid{
  -moz-animation-delay: 6s;
  -o-animation-delay: 6s;
  -ms-animation-delay: 6s;
- animation-delay: 6s; 
+ animation-delay: 6s;
 }
 .sliderCSS3 ul li:nth-child(3){
 	-webkit-animation-delay: 12s;
  -moz-animation-delay: 12s;
  -o-animation-delay: 12s;
  -ms-animation-delay: 12s;
- animation-delay: 12s; 
+ animation-delay: 12s;
 }
 .sliderCSS3 ul li:nth-child(4){
 	-webkit-animation-delay: 18s;
  -moz-animation-delay: 18s;
  -o-animation-delay: 18s;
  -ms-animation-delay: 18s;
- animation-delay: 18s; 
+ animation-delay: 18s;
 }
 .sliderCSS3 ul li{
 	position: absolute;
 	opacity: 0;
 	color: transparent;
-	
+
 	-webkit-backface-visibility: hidden;
  -webkit-animation: sliderImg 24s linear infinite 0s;
  -moz-animation: sliderImg 24s linear infinite 0s;
@@ -1264,63 +1264,112 @@ footer>p>mark{
 	background-color:#cfc;
 }
 
-#mon_profil  #container #content h1{
+#mon_profil #container #content #loginDiv{
+	max-width:750px;
+}
+
+#mon_profil #container #content h1{
 	text-align:center;
 }
 
+#mon_profil #container #content form fieldset{
+	text-align:center;
+}
+
+#mon_profil #container #content form fieldset ul{
+	text-align:left;
+}
+
+#mon_profil #container #content form button{
+	margin-top:15px;
+}
+
+#mon_profil #container #content form input[type="checkbox"],
 #mon_profil #container #content form input[type="radio"]{
 	width:auto;
 }
-#mon_profil #container #content form input:not([type="radio"]){
-	margin:0;
-}
+
 #mon_profil #container #content form input:disabled{
 	background-color:transparent;
 	border:none;
 	color:black;
 }
 
-#mon_profil #container #content form dl{
-	width:530px;
-	height:210px;
-	display:inline-block;
-	margin-left:10px;
+#mon_profil #container #content form ul{
+	margin:0;
 	color:black;
-	/*display:table;*/
-	border:1px dashed red;
 	padding:0;
+	list-style-type:none;
+	/*border:1px dashed red;*/
 }
 
-#mon_profil #container #content form dl>dt{
+#mon_profil #container #content form ul ul{
+	display:inline-block;
+}
+
+#mon_profil #container #content form ul span,
+#mon_profil #container #content form ul label{
 	font-weight:bold;
 	width:200px;
-	float:left;
-	/*display:table-cell;
-	width:200px;*/
-	border:1px dashed blue;
-	padding:0;
-	margin:0;
+	display:inline-block;
+	/*border:1px dashed blue;*/
 }
 
-#mon_profil #container #content form dl>dd{
-	width:270px;
-	float:right;
-	padding:0;
-	margin:0;
-	/*display:table-cell;
-	width:200px;*/
-	border:1px dashed green;
+#mon_profil #container #content form ul span,
+#mon_profil #container #content form ul label{
+	vertical-align:middle;
 }
 
-/*#mon_profil #container #content form dl input,
-#mon_profil #container #content form dl label{
+#mon_profil #container #content form ul span + ul,
+#mon_profil #container #content form ul label + ul{
+	vertical-align:top;
+}
+
+#mon_profil #container #content form:nth-of-type(2) ul li+li ul{
+	width:220px;
+}
+
+#mon_profil #container #content form:nth-of-type(2) ul li+li ul li{
 	display:inline;
-}*/
-#mon_profil #container #content form dl>dt>label,
-#mon_profil #container #content form dl>dt>span,
-#mon_profil #container #content form dl>dd>label{
-	display:block;
-	padding: 6px;
+}
+
+#mon_profil #container #content form:nth-of-type(2) ul li+li ul li label{
+	width:80px;
+}
+
+#mon_profil #container #content form:nth-of-type(2) fieldset>ul>li:last-of-type input:nth-last-of-type(2){
+	width:8em;
+}
+
+#mon_profil #container #content form:nth-of-type(2) fieldset>ul>li:last-of-type input:last-of-type{
+	width:3em;
+}
+
+#mon_profil #container #content form:nth-of-type(4) ul{
+	width:270px;
+}
+
+#mon_profil #container #content form:nth-of-type(4) ul li{
+	display:inline;
+}
+
+#mon_profil #container #content form:nth-of-type(4) ul li label{
+	width:110px;
+}
+
+#mon_profil #container #content form:nth-of-type(5) label{
+	width:300px;
+	vertical-align:top;
+}
+
+#mon_profil #container #content form:nth-of-type(5) li:first-of-type>label{
+	margin-bottom:10px;
+}
+
+#mon_profil #container #content form:nth-of-type(5) textarea{
+	width:100%;
+	height:10em;
+	resize:none;
 }
 /* \Formulaires */
 
@@ -1380,7 +1429,7 @@ footer>p>mark{
 	#galerie_videos #container #content video{
 		width:auto;
 	}
-	
+
 	#produits #container #content>dl{
 		width:600px;
 	}
@@ -1398,7 +1447,7 @@ footer>p>mark{
 	#galerie_videos #container #content video{
 		width:600px;
 	}
-	
+
 	#produits #container #content nav{
 		width:170px;
 		padding:0;
@@ -1413,7 +1462,7 @@ footer>p>mark{
 		display:block;
 		margin:5px;
 	}
-	
+
 	#produits #container #content nav a.rounded,
 	#produits #container #content nav span.rounded{
 		width:150px;
