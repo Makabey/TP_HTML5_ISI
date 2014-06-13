@@ -10,12 +10,17 @@ $(function(){
 		var xhr = getXhr();
 		var urlAuthentify="assets/xhr/authentify.xhr.php";
 		var queryString;
+		var xhrAnswer;
 
 		// On défini ce qu'on va faire quand on aura la réponse
 		xhr.onreadystatechange = function(){
 			// On ne fait quelque chose que si on a tout reçu et que le serveur est ok
 			if(xhr.readyState == 4 && xhr.status == 200){
-				if(xhr.responseText == true){
+				xhrAnswer = xhr.responseText;
+				xhrAnswer = xhrAnswer.split("\r\n");
+				xhrAnswer = parseInt(xhrAnswer[0]);
+
+				if(xhrAnswer == true){
 					window.location.href="index.php";
 				}else{
 					$("#boiteErreursFormulaires_Login>span").text("[Authentification] Le nom d'usager ou le mot de passe est invalide!");
