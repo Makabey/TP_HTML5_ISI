@@ -95,11 +95,10 @@ require_once "assets/inc/menus.inc.php";
 	</head>
 	<body id="<?php echo $sNomDeCettePage; ?>">
 		<header role="banner">
-					<?php
-						$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
-						spawnMainMenu();
-					?>
-			</header>
+		<?php
+			$MenusID="header_"; # chaines à ajouter aux noms de classes dans "menu.php" pour distinguer entre l'utilisation dans le header et dans le footer
+			spawnMainMenu();
+		?>
+		</header>
 		<div id="container">
-
 			<div id="content" role="main">
