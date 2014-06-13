@@ -46,7 +46,6 @@ require_once "assets/inc/header.inc.php";
 
 echo $sErreurEcriture;
 ?>
-				<!--<div id="GestionProduits">-->
 					<form id="formGestionProduits" method="get" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" autocomplete="off">
 						<h2>Gestion des produits</h2>
 						<input type="hidden" id="actionAFaire" name="actionAFaire" value="enregistrer" />
@@ -166,7 +165,6 @@ echo $sErreurEcriture;
 							<input type="button" class="frmGP_Btns" id="btnEffacer" value="Effacer" />
 						</fieldset>
 					</form>
-				<!--</div>-->
 <?php
 require_once "assets/inc/footer.inc.php";
 ?>

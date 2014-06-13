@@ -60,7 +60,7 @@ if(isset($_SESSION['user'])){
 					if(isset($produits)){
 						unset($_SESSION['panier'][$produits]);
 					}
-					
+
 					if(empty($_SESSION['panier'])){
 						header("Location:produits.php");
 						exit();
@@ -118,19 +118,7 @@ if(isset($_SESSION['user'])){
 			</tr>
 			<?php
 					// boucle d'affichage du panier
-					#$odd_even_row = 'odd';
 					foreach($_SESSION['panier'] as $pid => $details){
-						#echo '<tr class="',$odd_even_row,'">
-						/*echo '
-							<tr class="rangeeItem">
-								<td class="listePanier_ID">',$pid,'</td>
-								<td class="listePanier_PROD">',$produits_charger[$pid]['nom'],'</td>
-								<td class="listePanier_CLR">',couleursTokensVersNoms($details['couleur']),'</td>
-								<td class="listePanier_PRIX">',number_format($produits_charger[$pid]['prix'], 2),'$CDN</td>
-								<td class="listePanier_QTE"><input type="text" class="panier_qte_input" name="panierQte_',$pid,'" value="',$details['quantite'],'" maxlength="4" /></td>
-								<td class="listePanier_BTN"><img src="assets/images/cross.png" class="panier_retirer cursor_hand" alt="Retirer cet item" title="Retirer cet item" data-pid="',$pid,'" /></td>
-							</tr>
-						';*/
 						echo '
 							<tr class="rangeeItem">
 								<td>',$pid,'</td>
@@ -141,10 +129,8 @@ if(isset($_SESSION['user'])){
 								<td><img src="assets/images/cross.png" class="panier_retirer cursor_hand" alt="Retirer cet item" title="Retirer cet item" data-pid="',$pid,'" /></td>
 							</tr>
 						';
-						#$odd_even_row	= ($odd_even_row == 'odd')?'even':'odd';
 					}
 			?>
-			<!--<tr><td colspan="7">&nbsp;</td></tr>-->
 			<tr><td class="textright" colspan="3">Sous-total : </td><td class="textright"><output class="textright" id="listePanierSousTotal"><?php echo number_format($panierSousTotal, 2),'$CDN'; ?></output></td><td colspan="2">&nbsp;</td></tr>
 			<tr>
 				<td colspan="3"><span id="listePanier_Magasiner" class="cursor_hand">&lt;-- Continuer de magasiner.</span></td>
