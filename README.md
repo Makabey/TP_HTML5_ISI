@@ -14,10 +14,7 @@
 - http://www.webmproject.org/tools/
 - http://monochrome.sutic.nu/2010/06/14/video-editing-with-blender.html#section.10.4
 - TOUCH :: http://www.html5rocks.com/fr/mobile/touch/
-- [HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe
 - [3D, HTML, video] Représentation 3D d'un des jouets (l'un des monstres devrait être simple) qui tourne en turntable, et donc compter comme un media video
-- Web Storage
-- [HTML] Utiliser le "local storage" pour garder une copie du panier ?
 
 -------------------------
 
@@ -57,6 +54,9 @@
 - ~~[HTML, VIDEO] Trouver un vidéo démo de jouet et ajouter ce jouet en image statique au catalogue~~
 - ~~[VIDEO] conversion en tout les formats supportés~~
 - ~~à propos question : le choix du fichier css se fait par PHP, JS, le navigateur en sachant à quel média chaque feuille est destinée? on cherche la réponse nous-même?~~
+- ~~Web Storage~~
+- ~~[HTML] Utiliser le "local storage" pour garder une copie du panier ?~~
+- ~~[HTML, CSS] Nécessairement explorer bootstrap ou au minimum intégrer les principes de responsives qui seront vu en classe~~
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~

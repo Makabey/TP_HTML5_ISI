@@ -76,7 +76,7 @@ function spawnMonProfilMenu(){
 		<li><a href="mon_profil.php">Mon Profil</a></li>
 		<?php
 		$retour = chargerUsager($arrUsager, $_SESSION['user']);
-		if((false !== $retour) &&  ($_SESSION['user'] != 'admin')){
+		if((false !== $retour) && ($_SESSION['user'] != 'admin')){
 			echo '<li><a href="gestion_produits_factures.php?nroc=', $arrUsager[key($arrUsager)]['client_ID'], '">Mes factures</a></li>', PHP_EOL;
 		}
 		?>

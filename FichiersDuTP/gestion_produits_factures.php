@@ -15,7 +15,7 @@ if($retour === false){
 		question sécuritée, c'est de la bouette parce que cette même page est utilisée par les admins,
 		sinon pour illustration, ça va!
 	*/
-	$client_ID  = (isset($_GET['nroc']))?strval($_GET['nroc']):-1;
+	$client_ID = (isset($_GET['nroc']))?strval($_GET['nroc']):-1;
 
 	$retour = chargerFacture($arrFactures, $client_ID);
 
