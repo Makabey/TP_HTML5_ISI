@@ -4,8 +4,6 @@ $sPageTitle = "Gestion des factures | ";
 require_once "assets/inc/csvFunctions.inc.php";
 require_once "assets/inc/header.inc.php";
 
-#echo tabs(4),'<div>',PHP_EOL;
-
 $retour = chargerProduits($arrProduits);
 if($retour === false){
 	echo 'Une erreur est survenue lors du chargement des produits; impossible de continuer.',PHP_EOL;

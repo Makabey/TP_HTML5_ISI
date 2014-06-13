@@ -69,7 +69,6 @@ $sDetailsProduits = formaterProduitsPourJS($arrProduits, $iProdCat);
 
 require_once "assets/inc/header.inc.php";
 ?>
-			<!--<div id="produits">-->
 				<nav>
 					<ul><?php
 						echo "\n";
@@ -87,36 +86,32 @@ require_once "assets/inc/header.inc.php";
 					?>
 					</ul>
 				</nav>
-				<!--<div>-->
-					<!--<div>-->
-						<img id="produits_infos_img" src="assets/images/produits/broken_toy.jpg" alt="Catégorie vide" title="Catégorie vide" />
-						<dl>
-							<dt>Nom : </dt>
-							<dd id="produits_infos_nom"></dd>
-							<dt>Matériaux : </dt>
-							<dd id="produits_infos_mats"></dd>
-							<dt>Couleurs disponibles : </dt>
-							<dd id="produits_infos_clrdispo"></dd>
-							<dt>Disponibilitée : </dt>
-							<dd id="produits_infos_nbrdispo"></dd>
-							<dt>Prix unitaire : </dt>
-							<dd id="produits_infos_prix"></dd>
-							<dt>Description : </dt>
-							<dd id="produits_infos_desc"></dd>
-						</dl>
-					<!--</div>-->
-					<div>
-						<?php if(isset($_SESSION['user'])){ ?>
-						<div id="produits_infos_ajouterpanier">
-							<label>Quantitée : <input type="number" value="<?php echo $iProduit_QTE; ?>" min="1" max="99" required="required" /></label><img class="cursor_hand icons_basket" id="produits_infos_prodid" src="assets/images/shopping-cart-add1.png" alt="Ajouter au panier" title="Ajouter au panier" />
-						</div>
-						<?php } ?>
-						<div id="produits_infos_btns">
-							<button type="button" id="prod_btnPrev" class="rounded">&lt; Précédent</button>
-							<button type="button" id="prod_btnNext" class="rounded">Suivant &gt;</button>
-						</div>
+				<img id="produits_infos_img" src="assets/images/produits/broken_toy.jpg" alt="Catégorie vide" title="Catégorie vide" />
+				<dl>
+					<dt>Nom : </dt>
+					<dd id="produits_infos_nom"></dd>
+					<dt>Matériaux : </dt>
+					<dd id="produits_infos_mats"></dd>
+					<dt>Couleurs disponibles : </dt>
+					<dd id="produits_infos_clrdispo"></dd>
+					<dt>Disponibilitée : </dt>
+					<dd id="produits_infos_nbrdispo"></dd>
+					<dt>Prix unitaire : </dt>
+					<dd id="produits_infos_prix"></dd>
+					<dt>Description : </dt>
+					<dd id="produits_infos_desc"></dd>
+				</dl>
+				<div>
+					<?php if(isset($_SESSION['user'])){ ?>
+					<div id="produits_infos_ajouterpanier">
+						<label>Quantitée : <input type="number" value="<?php echo $iProduit_QTE; ?>" min="1" max="99" required="required" /></label><img class="cursor_hand icons_basket" id="produits_infos_prodid" src="assets/images/shopping-cart-add1.png" alt="Ajouter au panier" title="Ajouter au panier" />
 					</div>
-				<!--</div>-->
+					<?php } ?>
+					<div id="produits_infos_btns">
+						<button type="button" id="prod_btnPrev">&lt; Précédent</button>
+						<button type="button" id="prod_btnNext">Suivant &gt;</button>
+					</div>
+				</div>
 <?php
 require_once "assets/inc/footer.inc.php";
 ?>

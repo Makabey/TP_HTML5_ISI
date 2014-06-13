@@ -2,7 +2,6 @@
 session_start();
 if(!isset($_SESSION['user'])){
 	header("Location:index.php");
-	#header("Location:".$_SERVER['REFERER']);
 	exit();
 }
 
@@ -43,7 +42,7 @@ if(false !== $retour){
 									<li><input id="genreF" name="genre" type="radio" value="femme" /><label for="genreF">Une femme</label></li>
 									<li><input id="genreH" name="genre" type="radio" value="homme" /><label for="genreH">Un homme</label></li>
 									<li><input id="genreA" name="genre" type="radio" value="secret" checked="checked" /><label for="genreA">Secret</label></li>
-								</ul>	
+								</ul>
 							</li>
 						</ul>
 						<button type="submit">Enregistrer</button>

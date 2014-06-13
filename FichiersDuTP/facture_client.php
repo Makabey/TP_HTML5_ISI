@@ -47,7 +47,6 @@ if(isset($_GET['nrof'])){
 					$total = 0;
 					$taxes = 0;
 					// boucle d'affichage du panier
-					#$odd_even_row = 'odd';
 					foreach($arrFacture['produits'] as $pid => $details){
 						$sommeItem=$details['quantite'] * $produits_charger[$pid]['prix'];
 						$sousTotal += $sommeItem;
@@ -61,7 +60,6 @@ if(isset($_GET['nrof'])){
 								<td>',number_format($sommeItem, 2),'$CDN</td>
 							</tr>
 						';
-						#$odd_even_row	= ($odd_even_row == 'odd')?'even':'odd';
 					}
 					$taxes = calculerTaxes($sousTotal);
 					$total = round($sousTotal + $taxes, 2);
