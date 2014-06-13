@@ -80,10 +80,7 @@ function formaterProduitsPourJS(&$arrProduits, $iCategorie=-1){
 	if((isset($arrProduits)) && (!empty($arrProduits))){
 		$retour = chargerCouleurs($arrCouleurs);
 		if($retour !== false){
-			//$retour = chargerMateriaux($arrMateriaux);
-			//if($retour !== false){
-				$retour = chargerCategories($arrCategories);
-			//}
+			$retour = chargerCategories($arrCategories);
 		}
 
 		if($retour !== false){
