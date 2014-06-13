@@ -1,3 +1,6 @@
+Version online (dernière MàJ: 12 juin 2014 @ 8h02am) :: http://olirick-tp.site40.net/
+
+
 #Olivier :
 - [CSS] Passer au travers du CSS pour rassembler les règles qui se chevauchent ou s'annulent (en admettant qu'il y ais X+1 règles pour une seule entitée)
 - [CSS, HTML] Passer le HTML au peigne fin pour voir ce qui pourrait se passer de classe ou ID et éliminer ou réécrire les règles concernées
