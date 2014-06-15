@@ -1205,7 +1205,7 @@ footer>p>mark{
 #apropos #content section>div>div:first-child>div>div{
 	text-align:center;
 	/*padding:15px 0;*/
-	border:1px dashed blue;
+	/*border:1px dashed blue;*/
 	margin:15px auto;
 	/*width:80px;*/
 	cursor:pointer;
@@ -1218,7 +1218,7 @@ footer>p>mark{
 /* epingle de carte */
 #apropos #content section>div>div:first-child>div>div>div:first-child{
 	position:relative;
-	border:1px dashed green;
+	/*border:1px dashed green;*/
 	width:55px;
 	margin:0 auto;
 }
