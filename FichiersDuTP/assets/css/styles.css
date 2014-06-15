@@ -250,7 +250,69 @@ header nav .centrerMenu > ul > li:hover img{
 	-o-transform:rotate(0deg);
 	transform:rotate(0deg);
 }
-
+header nav .centrerMenu > ul > li:nth-child(4){
+	position: absolute;
+	top:0;
+	right: 200px;
+	border: 0!important;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	height: 26px;
+	
+	-moz-transition:all 0.3s 0.2s ease-out;
+	-ms-transition:all 0.3s 0.2s ease-out;
+	-webkit-transition:all 0.2s 0.3s ease-out;
+	-o-transition:all 0.3s 0.2s ease-out;
+	transition:all 0.3s 0.2s ease-out;
+}
+header nav .centrerMenu > ul > li:nth-child(4):hover{
+	height: 35px;
+	right: 195px;
+}
+header nav .centrerMenu > ul > li:nth-child(4) a{
+	padding:3px 15px 0 10px;
+	color: white;
+}
+header nav .centrerMenu > ul > li:nth-child(4) span{
+	position: absolute;
+	left: 60%;
+	top: 2%;
+	width: 12px;
+	height: 12px;
+	text-align: center;
+	line-height: 100%;
+	background: red;
+	border-radius: 50%;
+	border: 1px solid white;
+	
+	-moz-transition:all 0.3s 0.2s ease-out;
+	-ms-transition:all 0.3s 0.2s ease-out;
+	-webkit-transition:all 0.2s 0.3s ease-out;
+	-o-transition:all 0.3s 0.2s ease-out;
+	transition:all 0.3s 0.2s ease-out;
+}
+header nav .centrerMenu > ul > li:nth-child(4):hover span{
+	position: absolute;
+	left: 60%;
+	top: 2%;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	line-height: 100%;
+	font-size: 11pt;
+}
+header nav .centrerMenu > ul > li:nth-child(4) img{
+	max-width: 20px;
+	
+	-moz-transition:all 0.3s 0.2s ease-out;
+	-ms-transition:all 0.3s 0.2s ease-out;
+	-webkit-transition:all 0.2s 0.3s ease-out;
+	-o-transition:all 0.3s 0.2s ease-out;
+	transition:all 0.3s 0.2s ease-out;
+}
+header nav .centrerMenu > ul > li:nth-child(4):hover img{
+	max-width: 30px;
+}
 
 /* GALERIE - Sous-sous-menu */
 header nav .centrerMenu > ul > li >ul > li > ul{
@@ -1107,6 +1169,9 @@ footer nav .centrerMenu > ul > li >ul > li > ul{
 }
 footer nav .centrerMenu > ul > li >ul > li:last-child{
 	position: relative;
+}
+footer nav .centrerMenu > ul > li:nth-child(4){
+	display: none;
 }
 /* NAV TRANSITION */
 /* transition de color du texte */
