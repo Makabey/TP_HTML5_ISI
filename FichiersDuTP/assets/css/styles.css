@@ -1170,6 +1170,9 @@ footer nav .centrerMenu > ul > li >ul > li > ul{
 footer nav .centrerMenu > ul > li >ul > li:last-child{
 	position: relative;
 }
+footer nav .centrerMenu > ul > li:nth-child(4){
+	display: none;
+}
 /* NAV TRANSITION */
 /* transition de color du texte */
 footer nav a{
