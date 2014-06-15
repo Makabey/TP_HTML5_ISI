@@ -1,6 +1,6 @@
 {
-   "destination_addresses" : [ "138 Rue du Collège, Saint-Adolphe-d'Howard, QC J0T 2B0, Canada" ],
-   "origin_addresses" : [ "255 Boulevard Crémazie Est, Montréal, QC H2M, Canada" ],
+   "destination_addresses" : [ "138 Rue du CollÃ¨ge, Saint-Adolphe-d'Howard, QC J0T 2B0, Canada" ],
+   "origin_addresses" : [ "255 Boulevard CrÃ©mazie Est, MontrÃ©al, QC H2M, Canada" ],
    "rows" : [
       {
          "elements" : [

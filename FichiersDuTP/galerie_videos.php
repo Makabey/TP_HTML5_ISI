@@ -31,7 +31,8 @@ if(!empty($arrMedias)){
 						echo '<div>', PHP_EOL, '<video id="movie',$numeroVideo,'" controls="controls">', PHP_EOL;
 						foreach($videoFormats as $vFormat => $nomFichier){
 							if($vFormat != 'flv'){
-								echo '<source src="', $path_Media, $nomFichier, '" type="video/';
+								$path_complet = str_replace(chr(32), "%20", $path_Media . $nomFichier);
+								echo '<source src="', $path_complet, '" type="video/';
 								echo (substr($vFormat, 0, 2) == "og")?'ogg':$vFormat;
 								echo '">', PHP_EOL;
 							}
@@ -40,7 +41,8 @@ if(!empty($arrMedias)){
 								#$vFallback .= '<object data="' . $path_Media . $videoFormats['mp4'] . '" width="' . $videoWidth . '" height="' . $videoHeight . '">'. PHP_EOL;
 								#$vFallback .= '<embed src="' . $path_Media . $videoName . '.flv" width="'. $videoWidth. '" height="'. $videoHeight. '">'. PHP_EOL;
 								#$vFallback .= '</object>';
-								$vFallback .= '<embed src="' . $path_Media . $videoFormats['mp4'] . '" type="application/x-shockwave-flash" width="'. $videoWidth . '" height="'. $videoHeight . '" allowscriptaccess="always" allowfullscreen="true" autoplay="false"></embed>'. PHP_EOL;
+								$path_complet = str_replace(chr(32), "%20", $path_Media . $videoFormats['mp4']);
+								$vFallback .= '<embed src="' . $path_complet . '" type="application/x-shockwave-flash" width="'. $videoWidth . '" height="'. $videoHeight . '" allowscriptaccess="always" allowfullscreen="true" autoplay="false"></embed>'. PHP_EOL;
 							}
 						}
 						echo $vFallback, '</video>', PHP_EOL;
