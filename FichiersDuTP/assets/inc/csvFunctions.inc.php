@@ -16,6 +16,11 @@ if(!defined('CSV_BASE_DIR')){
 
 ########################################
 
+function chargerNomsVideos(&$refArrDonnees, $sIndexMode='fichier'){
+	/* Wrapper */
+	return lireCSV_VersTblIdx($refArrDonnees, 'assets/videos/titres.txt', $sIndexMode);
+}
+
 function chargerCategories(&$refArrDonnees, $sIndexMode='fichier'){
 	/* Wrapper */
 	return lireCSV_VersTblIdx($refArrDonnees, CSV_BASE_DIR.'table_categories.csv', $sIndexMode);
