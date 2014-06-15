@@ -1168,6 +1168,43 @@ footer>p>mark{
 	margin:0 0 1em 0;
 }
 
+#apropos #content #map-canvas{
+	width:600px;
+	height:600px;
+}
+
+/*#apropos #content section>div{
+	border:1px dashed blue;
+}*/
+
+#apropos #content section>div>div{
+	/*min-width:47%;*/
+	display:inline-block;
+	/*border:1px dashed green;*/
+	vertical-align:top;
+}
+
+#apropos #content section>div>div>div{
+	margin:0 auto;
+	/*border:1px dashed red;*/
+	width:230px;
+}
+
+#apropos #content section>div>div:first-child{
+	width:380px;
+	margin-bottom:15px;
+}
+
+#apropos #content section>div>div>div>h4,
+#apropos #content section>div>div>div>p:not(:last-of-type){
+	margin:0;
+}
+
+#apropos #content section>div>div>div>div{
+	text-align:center;
+	padding:15px 0;
+}
+
 /* GESTION PRODUITS */
 #gestion_produits #content{
 	padding:40px 10px;

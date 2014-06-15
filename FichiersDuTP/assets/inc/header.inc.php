@@ -26,6 +26,9 @@ require_once "assets/inc/menus.inc.php";
 		<meta name="keywords" content="jouets, bois, jouets en bois, jouets sur mesure, naturel, durable, enfant" />
 		<link rel="stylesheet" href="assets/css/styles.css" media="only screen" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<?php if($sNomDeCettePage == 'apropos'){
+			echo '<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>', PHP_EOL;
+		} ?>
 		<!--<script src="assets/js/functions.js"></script>-->
 		<script>
 		"use strict";

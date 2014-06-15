@@ -36,6 +36,37 @@ require_once "assets/inc/header.inc.php";
 						<p>Pellentesque dolor sem, varius non aliquam eu, non sem. Maecenas ac odio et augue ultrices malesuada. Mauris feugiat tellus sed eleifend condimentum. Morbi mattis bibendum tempor. Ut dui quam, pretium ut elementum a, pretium varius risus. Praesent eros dui, facilisis eget nisi eget, placerat aliquam dui. Aenean vel iaculis risus, non gravida turpis. Sed accumsan tortor in lorem condimentum pharetra. Donec ornare massa sit amet est malesuada cursus. Sed quis posuere elit. Quisque malesuada sapien enim, quis porta tellus consectetur eget. Aenean tincidunt varius lectus ac pharetra. Maecenas euismod, enim ac adipiscing accumsan, arcu nibh sollicitudin nibh, consectetur adipiscing enim eros ultricies erat. Nullam auctor lectus ut diam fringilla tempus eu a nunc. Phasellus malesuada nunc nec tortor faucibus congue. Donec elit sapien, accumsan vitae lacus blandit, posuere suscipit libero.</p>
 					</div>
 				</article>
+
+				<section>
+					<h3>Contactez-nous</h3>
+					<div>
+						<div>
+							<div>
+								<h4>Notre boutique est située au:</h4>
+								<p>138 Rue du Collège</p>
+								<p>Saint-Adolphe-d'Howard, QC</p>
+								<p>J0T 2B0</p>
+								<p>tél: 819-289-9415</p>
+								<table>
+									<tr><th colspan="2">Heures d'ouverture:</th></tr>
+									<tr><td>Lundi au Mercredi: </td><td>10h - 18h</td></tr>
+									<tr><td>Jeudi et Vendredi:</td><td>10h - 20h</td></tr>
+									<tr><td>Samedi:</td><td>10h - 17h</td></tr>
+									<tr><td>Dimanche:</td><td>12h - 17h</td></tr>
+								</table>
+								<div>
+									<img src="assets/images/button type=" alt="epingle de carte" />
+									<h4>Itinéraire</h4>
+									<!--
+									http://maps.googleapis.com/maps/api/distancematrix/json?origins=45.5440916,-73.6402476&destinations=45.970071,-74.337835&language=fr-FR
+									http://maps.googleapis.com/maps/api/directions/json?origin=45.5440916,-73.6402476&destination=45.970071,-74.337835&language=fr-FR
+									-->
+								</div>
+							</div>
+						</div>
+						<div id="map-canvas"></div>
+					</div>
+				</section>
 <?php
 require_once "assets/inc/footer.inc.php";
 ?>
