@@ -55,8 +55,13 @@ require_once "assets/inc/header.inc.php";
 									<tr><td>Dimanche:</td><td>12h - 17h</td></tr>
 								</table>
 								<div>
-									<img src="assets/images/button type=" alt="epingle de carte" />
+									<!--<img src="assets/images/button type=" alt="epingle de carte" /> -->
+									<div>
+										<div></div>
+										<div></div>
+									</div>
 									<h4>Itinéraire</h4>
+									<div></div>
 									<!--
 									http://maps.googleapis.com/maps/api/distancematrix/json?origins=45.5440916,-73.6402476&destinations=45.970071,-74.337835&language=fr-FR
 									http://maps.googleapis.com/maps/api/directions/json?origin=45.5440916,-73.6402476&destination=45.970071,-74.337835&language=fr-FR

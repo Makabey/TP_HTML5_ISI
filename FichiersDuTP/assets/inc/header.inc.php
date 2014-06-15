@@ -91,7 +91,8 @@ require_once "assets/inc/menus.inc.php";
 			if(file_exists('assets/js/'.$sNomDeCettePage.'.js')){
 				echo '<script src="assets/js/',$sNomDeCettePage,'.js"></script>',PHP_EOL;
 			}
-			if($sNomDeCettePage == 'authentify'){
+			if(($sNomDeCettePage == 'authentify') ||
+				($sNomDeCettePage == 'apropos')){
 				echo '<script src="assets/xhr/xhrFunctions.js"></script>',PHP_EOL;
 			}
 		?>

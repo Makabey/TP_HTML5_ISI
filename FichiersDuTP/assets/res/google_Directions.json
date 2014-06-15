@@ -11,7 +11,7 @@
                "lng" : -74.337835
             }
          },
-         "copyrights" : "DonnÈes cartographiques ©2014 Google",
+         "copyrights" : "Donn√©es cartographiques ¬©2014 Google",
          "legs" : [
             {
                "distance" : {
@@ -22,12 +22,12 @@
                   "text" : "59 minutes",
                   "value" : 3533
                },
-               "end_address" : "138 Rue du CollËge, Saint-Adolphe-d'Howard, QC J0T 2B0, Canada",
+               "end_address" : "138 Rue du Coll√®ge, Saint-Adolphe-d'Howard, QC J0T 2B0, Canada",
                "end_location" : {
                   "lat" : 45.9700711,
                   "lng" : -74.337835
                },
-               "start_address" : "255 Boulevard CrÈmazie Est, MontrÈal, QC H2M, Canada",
+               "start_address" : "255 Boulevard Cr√©mazie Est, Montr√©al, QC H2M, Canada",
                "start_location" : {
                   "lat" : 45.5440838,
                   "lng" : -73.6402269
@@ -46,7 +46,7 @@
                         "lat" : 45.5424035,
                         "lng" : -73.641395
                      },
-                     "html_instructions" : "Prendre la direction \u003cb\u003esud-ouest\u003c/b\u003e sur \u003cb\u003eBoul CrÈmazie E\u003c/b\u003e vers \u003cb\u003eAv de GaspÈ\u003c/b\u003e",
+                     "html_instructions" : "Prendre la direction \u003cb\u003esud-ouest\u003c/b\u003e sur \u003cb\u003eBoul Cr√©mazie E\u003c/b\u003e vers \u003cb\u003eAv de Gasp√©\u003c/b\u003e",
                      "polyline" : {
                         "points" : "oi~tGlzm`M`Ar@LHXRtAv@NHvAz@f@X"
                      },
@@ -69,7 +69,7 @@
                         "lat" : 45.5328793,
                         "lng" : -73.64765389999999
                      },
-                     "html_instructions" : "Continuer sur \u003cb\u003eBoulevard CrÈmazie O\u003c/b\u003e",
+                     "html_instructions" : "Continuer sur \u003cb\u003eBoulevard Cr√©mazie O\u003c/b\u003e",
                      "polyline" : {
                         "points" : "__~tGvan`MXNPH`DjBTLVNz@d@lBhAhAv@`@VpBfA~BrAr@^x@^lBdA|@Xt@VTJZNjF|CNHHDh@ZTNJHxCdBd@VZTZRJHPNZV\\Vz@n@JF"
                      },
@@ -92,7 +92,7 @@
                         "lat" : 45.5318882,
                         "lng" : -73.6482936
                      },
-                     "html_instructions" : "Tourner lÈgËrement ‡ \u003cb\u003egauche\u003c/b\u003e pour rester sur \u003cb\u003eBoulevard CrÈmazie O\u003c/b\u003e",
+                     "html_instructions" : "Tourner l√©g√®rement √† \u003cb\u003egauche\u003c/b\u003e pour rester sur \u003cb\u003eBoulevard Cr√©mazie O\u003c/b\u003e",
                      "maneuver" : "turn-slight-left",
                      "polyline" : {
                         "points" : "oc|tGxho`Mx@`@p@`@`@TPJd@X"
@@ -116,7 +116,7 @@
                         "lat" : 45.5290185,
                         "lng" : -73.65069489999999
                      },
-                     "html_instructions" : "Prendre la bretelle ‡ \u003cb\u003egauche\u003c/b\u003e vers \u003cb\u003eAutoroute 40 O/Autoroute 15 S\u003c/b\u003e",
+                     "html_instructions" : "Prendre la bretelle √† \u003cb\u003egauche\u003c/b\u003e vers \u003cb\u003eAutoroute 40 O/Autoroute 15 S\u003c/b\u003e",
                      "polyline" : {
                         "points" : "i}{tGxlo`Mh@TNHRJb@TNHB@`@Rb@VNHLHv@f@LJNJf@b@VTTRLRJPPPbAjAv@~@"
                      },
@@ -139,7 +139,7 @@
                         "lat" : 45.888682,
                         "lng" : -74.13860679999999
                      },
-                     "html_instructions" : "Rester ‡ \u003cb\u003egauche\u003c/b\u003e ‡ l'embranchement, puis suivre \u003cb\u003eAutoroute 15 N/Laval/Saint JÈrÙme\u003c/b\u003e pour rejoindre \u003cb\u003eAutoroute 15 N/Route Transcanadienne\u003c/b\u003e",
+                     "html_instructions" : "Rester √† \u003cb\u003egauche\u003c/b\u003e √† l'embranchement, puis suivre \u003cb\u003eAutoroute 15 N/Laval/Saint J√©r√¥me\u003c/b\u003e pour rejoindre \u003cb\u003eAutoroute 15 N/Route Transcanadienne\u003c/b\u003e",
                      "maneuver" : "fork-left",
                      "polyline" : {
                         "points" : "kk{tGx{o`MBBFHzAvBRXNTFJHLJVN^NlAB`@Bb@?X?z@ChACfAEbACf@GhAGr@Gr@c@`Da@dCkDhR]nBc@zBWtAuBjK_AvEmDvQMn@i@nCi@rCYxAO`AMx@Kx@Kz@Iz@Gr@Gp@GtAGvACdACt@?dA?dA@d@BfBD~A@b@Bl@Dj@Dl@Df@Df@D\\D`@nAbJLv@tAnJxAzJxA~JXxBRrBL|AHrA@\\FlADrA@~A?bBCxA?@GhBGpAI`AIlASfBQrAQfAUlAUlA[pA]lAc@xAi@xAo@|AkA`CiAtBqBrDeAnBsBxDc@v@}@`B{@~AqFvJUh@GL?B]r@O^MZO`@IZKZKXGTQx@WfAe@dCu@lG[hCIl@MdAMv@Mp@S|@St@Y|@e@tAUl@MXO^OZOXMXGJWd@{CbG}C|FiArBc@t@W\\i@t@WZST[ZONk@j@yCpCsChCEFIFMLmBfBoGfG_C|BGFe@f@}D|Dy@x@wB|BsDxDwCfDuG~HqDtEMNIJGHKLUXeI`KuBrCaFlGwDnEyDhEe@j@{GnH_ChCeBlB}BbCaCbCo@p@sBzBa@`@a@b@mBtB_BbBg@f@eBdBwB|BiApAiFpFg@j@aBhBqC|CcCjCeCnCeBfBsGbHgHxIeH`IqFzF_GrGaGtGqBvBaApAcA|As@pAs@~Ao@bBq@tB]pAg@~BUzAOjAYfCMrBClAGrB@~ADxABhAFzALdBR|Ah@nDTxADVNv@Lr@Lx@Hd@XlBNtANxAPlBHdBFzB@zBAjBCvAGbBKdBUjC]jC]xB]dBc@jBeApDqC`J{@rC{AtEqCbJu@~BmAtDu@|BwAlEcA|C{@nCs@|BYx@IXGTs@|BsBlGiBxFaBfF_@lAyArEqAbEGPaA~CmBbGwCpJy@lCY|@_@dAe@fAg@bAg@~@i@z@[d@c@h@m@t@c@d@a@^cAz@{@j@aAj@k@V]NaA\\WHYHmAViCd@eBZaCd@oCf@oF|@aFx@gARaBXeBZmCf@aARo@JiARmB^_AT_AX{@\\m@Tq@^a@V_@Tc@\\WV[Vi@f@]\\YZa@f@e@l@_@j@g@x@i@~@k@~@e@v@]l@Wb@q@hAkB~CwA`C{EdIkC|DoDzF{C|EcDnF{CbFcAfBuA~BiAnBiChEe@x@q@lAw@|Ao@rAeA~BkBpEcB~DiBpEsD~IaDzHmArCe@|@_AjB_AdBi@`Ac@r@_@l@g@v@Yf@uA`CuBlDuBfDwA`C_@l@{BrD_GjJg@r@uBtDOVEHmB`D}@xAyCbFeEfHaA~AeFjIaN`U}ApCy@vAy@pA]l@u@lA{HbMyH|LqAtB}AjCuErH}BtDgEzGU^yMjTeBtCkFbJe@v@gHxLsHbM}EbI_ErG}BvDyBpDiDxFiCfEkD|FoOjX]n@_@n@qDnGaBtCiApBYf@c@l@aCfEe@x@m@dAe@z@eAhBuItOmBfDYh@mAxBiKzQgCpE_DtFsCbF}DbH{B~DaDzFu@pAc@t@e@t@S\\a@p@{A~ByBhDcBdCs@fAqBxCmBpCgCtDa@p@iAbBcCpDwElH[f@_AxAyC~E{AhCyBzDkDdG_A`BsA|Bq@lAYd@kB`DwAhC{@vA{@zAkArBoCtEGHsA~BwBvDaGhKiBbD}B|DyBzD{@xAuCbFgAjBkBdDoBjDiCrE_A~AaA`BeL`SyH`NuQh[_P|XyIlOgBzCWb@u@nA}PdZu@tAoAtBiBbDw@tAo@fAs@lA_A`B_BrCiAlBy@~A_@n@m@dAs@nAm@dAU`@SZc@r@a@j@e@n@Y\\UV[\\SRQPa@^a@^u@j@g@^k@^_@RYP]Nc@RYL_@N]LWHa@La@Jk@L]F_@Hi@Fc@Fo@DW@W@_@@]@_@?W?WAWAWAa@AaAKmAMoCY}AO_AK_BOi@Ge@Cm@Cc@AW?W?[?S?a@B[@S@[BS@_@F_@Dm@Ha@HUFYF_@Jk@Nm@T]LQH]NYL[PUJULUN]RWPYR]V[VURSPc@`@[Zg@h@e@j@Y\\W\\W\\c@n@S\\S^y@tAu@pAiArBcAdB{@~Aq@`AcCnEuCfFmDjGQ\\aBvC}@dBy@`Bs@xAk@nAq@~Ak@tAk@tAgBtE_EbKsBhFc@hAkAzCaLlYc@dAo@~Aq@zAg@`AmAbCcAhBeBzCeAlBeAlBsBxD_BvCgBbD_@t@aAbBy@xAc@v@c@t@Yf@Wf@_@l@]l@kH`M_EfHc@r@}GxLoDjGwD~GuCbFqBlDqC|E_C~DoAvBu@hAo@z@g@j@m@n@]`@eA~@sAdAa@X_@TiAn@w@\\_A^OD}@XQDOBm@N_CZSBk@Do@@wFB{CAuT?mD?{I?}YCyF?gE?_E?}NEyEKmHHqSByDC}MBoA?s@A[@iPBWJaA?m@Bc@B_AHm@La@Hg@Le@No@Ve@TSJ_@R}@n@]V]Zw@v@k@n@k@x@c@p@Yf@m@lAmDxHsAtCwA|Cu@zA_@r@]n@W^W^a@j@c@l@q@~@y@dAaAnAm@v@gAzAuAdB_AlAeBxBkBbC_GrHoVf[WZo@z@aAnAo@|@o@|@Y^g@t@c@n@W`@a@l@]f@W`@_@n@c@r@a@l@]n@c@r@o@dAcCdEiKhQu@jAo@|@aApAaBrBe@l@c@h@i@n@g@h@c@d@YZ[ZYVYXi@d@w@p@sAhAoBbB{ApAu@n@yAnAwCdCcCrBi@f@o@h@yBjB{BjBw@r@gAz@wAdAcAp@w@b@{@b@aAb@y@Zm@Ro@Ro@Rq@Nk@Lq@Jo@LoBZ_Dh@}AXcAR{@PcAX}@X]J[Lm@V}@`@u@`@gAl@k@^g@\\YRSNSNo@h@}@x@e@b@iG|FwArAcBzAcA`A{AvAyDnDiCbCmAhAgAdAuAlAu@p@SNm@b@q@d@i@^iAn@q@^cCpA_D|A{@d@]PoNdHwIjEwBfAo@^E@gAl@uBdAw@`@eAj@_Ad@sBbA_Ad@_Bx@_Ad@gB|@kAl@{Av@aAh@}@f@k@\\o@`@}AbAy@h@iBnAgAt@kBnAiAt@yAbAcAr@wBxAcAn@{AdAkAv@aEpCwCnB_DvByBxAgCdB_DrBgBjA{CpB_EnCsBtA[Ra@Va@TYPULa@RUL]NYNs@Xu@Xu@TGBmAZa@J_@H[FWDUDUB]FWBQBU@SBe@BeAF[BS@aADgETu@D{@Fo@H]Du@JUDc@Jc@JUFSH[Ju@Vg@T[N]NMHSLi@\\e@Za@Zi@`@OLSRc@`@WVWXWXKLMN]b@U\\q@`A_@n@QXU`@MVUb@q@zA]x@]v@uAlDaAbCmA`DiE~KyGzPeFjMy@pBoA~CaAbCcAhCmA|CYv@eAnC[x@Wr@Ob@K\\Wx@i@lBa@jBKh@WrAKp@Kn@M`AKx@Gj@CXE`@Ed@AL_@dFCVC\\Cb@C^UlE_@rFe@nG?Ls@tJe@dHOzCC~@A~@?bB?j@@`ADjAFnBHdCFpCFlCD`BFrBFbD@rCA|@ClBAb@Ad@IbBEl@KfAC^Gj@Gj@EXOnAIj@Mp@W~Ao@hDg@nCu@`Eu@bE}@xE_ApFe@dC]jB"
@@ -187,7 +187,7 @@
                         "lat" : 45.8908595,
                         "lng" : -74.14757609999999
                      },
-                     "html_instructions" : "Prendre \u003cb\u003e‡ gauche\u003c/b\u003e sur \u003cb\u003eRue Robert\u003c/b\u003e",
+                     "html_instructions" : "Prendre \u003cb\u003e√† gauche\u003c/b\u003e sur \u003cb\u003eRue Robert\u003c/b\u003e",
                      "maneuver" : "turn-left",
                      "polyline" : {
                         "points" : "mgbwGlqpcM^x@DHDHJTJVHRNZ@BJTb@x@Zt@Pb@Rb@"
@@ -211,7 +211,7 @@
                         "lat" : 45.8990927,
                         "lng" : -74.2133008
                      },
-                     "html_instructions" : "Prendre \u003cb\u003e‡ droite\u003c/b\u003e sur \u003cb\u003eChemin Jean Adam\u003c/b\u003e",
+                     "html_instructions" : "Prendre \u003cb\u003e√† droite\u003c/b\u003e sur \u003cb\u003eChemin Jean Adam\u003c/b\u003e",
                      "maneuver" : "turn-right",
                      "polyline" : {
                         "points" : "{`bwGj}pcMLx@DV@L?L?J?J?HAPEVe@rAy@jC}AtEUr@e@|AOp@Qz@QpAIt@Gt@EfACd@?r@Ar@@h@DvABXDf@Fn@Db@D^Hf@P~@b@rBBPh@fCNr@Hj@`@xBJZVp@Lb@BNl@`Dj@tCXtAVnAJh@tAxGRfAFXTbBFXDTHh@Hj@F\\B\\D`@BZDh@DdAB~@?d@@|@?~@BrA@\\Bb@?DDf@Fr@Jt@F\\BJJj@Jb@H^HZLXN`@Th@HNJNdAvBnBbEfA|Bz@fBhAxBTf@Xn@BDXt@Vp@ZjAXjADPFVLl@Jl@Jt@LdAHv@Dp@Fz@Dn@DbABt@@b@@`@@f@@f@Ad@?`@Cl@Cj@Gx@Gl@K~@Gj@OnAMbAQjAU~AQvA_@vCi@xD_@pCMz@Kf@Qz@Op@W|@Ut@Ob@Qd@Wn@Sb@[n@Wd@e@v@a@r@a@r@_@n@[f@a@p@u@pAw@tA_A`BaBxCmBhDwBxDKRKTKRKPe@z@q@hAkB~CuAbCy@rAYj@]r@[j@Sf@a@`AQd@Sh@[z@a@tAu@nCuAxF}@nDU|@oA`FYfAWdAy@pDk@`C_@vA{FfVOp@cB~Ga@lBAD_@jBo@nD"
@@ -258,7 +258,7 @@
                         "lat" : 45.9703969,
                         "lng" : -74.3362276
                      },
-                     "html_instructions" : "Prendre \u003cb\u003e‡ droite\u003c/b\u003e sur \u003cb\u003eChemin de Saint Adolphe/QC-329 N\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinuer de suivre QC-329 N\u003c/div\u003e",
+                     "html_instructions" : "Prendre \u003cb\u003e√† droite\u003c/b\u003e sur \u003cb\u003eChemin de Saint Adolphe/QC-329 N\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eContinuer de suivre QC-329 N\u003c/div\u003e",
                      "maneuver" : "turn-right",
                      "polyline" : {
                         "points" : "}pewGl}fdMi@c@]U{@i@gKsFiCsA_KiFmAq@oAk@g@U_@IaAM{@G_AD}@HsAd@o@\\m@\\IDiAx@_CjBaHdF_HhFoAnAw@`AoAjBm@`A[l@m@vAaA`De@nB_@fB[vBUhCg@tGc@fE_@nD_@dCm@zCeAxEaAnEYrBMxAC~@?d@@v@FdBNlB`@xDj@xEZbDLlBFrAHnBBrB?rBEbFCfE@dEBtAFhBLrCXzEXzEDvA@~@?r@Ch@Ex@OxAEb@Gb@Kj@Qp@]hAKXWl@q@lAqEhHu@lAwFtIiEtGk@bAc@v@c@bA[|@YfAWdAAFKd@G^Iv@MfAE|@ExBAfABvBP~HH~E?tBCx@IjAUzAWzAe@~Ao@xAi@dAg@r@g@l@cA|@{Ap@cBd@m@Pg@Ps@\\k@b@q@x@aAnAuB|Cy@`Ay@l@u@Zk@Tc@Dq@Dq@Ce@Eo@Ko@UsC}A_Ac@SI]Mc@Mq@O{@C_A@Q@o@H}@RcAb@eAp@YTYZUX{@xAg@`AUj@Wz@[rAW|AIv@Cj@CbAE|C?bEI~K?fCC~A?t@GfAEp@KdAKn@CPMj@Qp@[`AUp@c@x@_@f@w@~@}@t@e@Xk@Xw@Xw@N[B[D_@@k@Ce@C_@Ga@KYKm@U[O]UyBuAgC}Ay@c@cA[q@M}@GgA?w@Bm@Jw@RiMjB}FfAi@Ja@J}Aj@qAp@gKpFiCtAs@ZaBj@q@LmATkANoEf@c@Do@Ne@Ny@XcAl@u@n@{H~Iw@x@oAjAkA`A{GzEcAn@wAr@a@Pm@PYNYT]^o@bAy@lAgA~AsBlCu@jAOTKPKTEFGVSz@g@dCQz@I^Kl@"
@@ -282,7 +282,7 @@
                         "lat" : 45.9697354,
                         "lng" : -74.33672179999999
                      },
-                     "html_instructions" : "Prendre \u003cb\u003e‡ gauche\u003c/b\u003e sur \u003cb\u003eAv A. Bertrand\u003c/b\u003e",
+                     "html_instructions" : "Prendre \u003cb\u003e√† gauche\u003c/b\u003e sur \u003cb\u003eAv A. Bertrand\u003c/b\u003e",
                      "maneuver" : "turn-left",
                      "polyline" : {
                         "points" : "_rqwGlxudMbC`B"
@@ -306,7 +306,7 @@
                         "lat" : 45.9700711,
                         "lng" : -74.337835
                      },
-                     "html_instructions" : "Tourner ‡ la 1re \u003cb\u003e‡ droite\u003c/b\u003e et continuer sur \u003cb\u003eRue du CollËge\u003c/b\u003e",
+                     "html_instructions" : "Tourner √† la 1re \u003cb\u003e√† droite\u003c/b\u003e et continuer sur \u003cb\u003eRue du Coll√®ge\u003c/b\u003e",
                      "polyline" : {
                         "points" : "{mqwGn{udMaA~E"
                      },
