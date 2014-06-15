@@ -35,16 +35,14 @@ function spawnMainMenu(){
 						<?php echo genererMenuTopItem('apropos'); ?>
 							<a href="apropos.php"<?php if($sNomDeCettePage == 'apropos') echo ' class="aActiveFix"'; ?>>À Propos</a>
 						</li>
-						<li>
 							<?php
 								if((isset($_SESSION['panier'])) && (!empty($_SESSION['panier']))){
-										echo '<div><a href="gestion_panier.php">';
+										echo '<li><div><a href="gestion_panier.php">';
 										$nombreItems = count($_SESSION['panier']);
-										#echo '<img src="assets/images/cart.png" alt="panier" />',$nombreItems;
-										echo '</a></div>';
+										echo '<img src="assets/images/cart.png" alt="panier" /><span>',$nombreItems,'</span>';
+										echo '</a></div></li>';
 									}
 							?>
-						</li>
 						<li>
 							<?php
 								$return = false;
