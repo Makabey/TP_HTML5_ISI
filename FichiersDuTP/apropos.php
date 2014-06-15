@@ -43,7 +43,7 @@ require_once "assets/inc/header.inc.php";
 						<div>
 							<div>
 								<h4>Notre boutique est située au:</h4>
-								<p>101 Rue du Collège</p>
+								<p>138 Rue du Collège</p>
 								<p>Saint-Adolphe-d'Howard, QC</p>
 								<p>J0T 2B0</p>
 								<p>tél: 819-289-9415</p>
@@ -54,9 +54,17 @@ require_once "assets/inc/header.inc.php";
 									<tr><td>Samedi:</td><td>10h - 17h</td></tr>
 									<tr><td>Dimanche:</td><td>12h - 17h</td></tr>
 								</table>
+								<div>
+									<img src="assets/images/button type=" alt="epingle de carte" />
+									<h4>Itinéraire</h4>
+									<!--
+									http://maps.googleapis.com/maps/api/distancematrix/json?origins=45.5440916,-73.6402476&destinations=45.970071,-74.337835&language=fr-FR
+									http://maps.googleapis.com/maps/api/directions/json?origin=45.5440916,-73.6402476&destination=45.970071,-74.337835&language=fr-FR
+									-->
+								</div>
 							</div>
 						</div>
-						<div id="screenBlocker"><div id="map-canvas"><div id="mapClose"></div></div></div>
+						<div id="map-canvas"></div>
 					</div>
 				</section>
 <?php

@@ -1202,6 +1202,11 @@ footer>p>mark{
 	margin:0;
 }
 
+#apropos #content section>div>div>div>div{
+	text-align:center;
+	padding:15px 0;
+}
+
 /* GESTION PRODUITS */
 #gestion_produits #content{
 	padding:40px 10px;
