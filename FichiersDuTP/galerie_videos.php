@@ -42,7 +42,7 @@ if(!empty($arrMedias)){
 								#$vFallback .= '<embed src="' . $path_Media . $videoName . '.flv" width="'. $videoWidth. '" height="'. $videoHeight. '">'. PHP_EOL;
 								#$vFallback .= '</object>';
 								$path_complet = str_replace(chr(32), "%20", $path_Media . $videoFormats['mp4']);
-								$vFallback .= '<embed src="' . $path_complet . '" type="application/x-shockwave-flash" width="'. $videoWidth . '" height="'. $videoHeight . '" allowscriptaccess="always" allowfullscreen="true" autoplay="false"></embed>'. PHP_EOL;
+								$vFallback .= '<embed src="' . $path_complet . '" type="application/x-shockwave-flash" width="'. $videoWidth . '" height="'. $videoHeight . '" allowscriptaccess="always" allowfullscreen="true" autoplay="false">'. PHP_EOL;
 							}
 						}
 						echo $vFallback, '</video>', PHP_EOL;

@@ -55,7 +55,6 @@ require_once "assets/inc/header.inc.php";
 									<tr><td>Dimanche:</td><td>12h - 17h</td></tr>
 								</table>
 								<div>
-									<!--<img src="assets/images/button type=" alt="epingle de carte" /> -->
 									<div>
 										<div></div>
 										<div></div>
