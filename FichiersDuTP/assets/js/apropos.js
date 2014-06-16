@@ -108,10 +108,10 @@ window.addEventListener("load", function(){
 
 		mapOptions = {
 			zoom: 9,
-			center: myLatLng,
+			center: myLatLng/*,
 			disableDefaultUI: true,
 			scrollwheel: false,
-			draggable: false
+			draggable: false*/
 		};
 
 		map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
