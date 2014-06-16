@@ -1,4 +1,4 @@
-Version online (dernière MàJ: 12 juin 2014 @ 8h02am) :: http://olirick-tp.site40.net/
+Version online (dernière MàJ: 16 juin 2014 @ 8h49am) :: http://olirick-tp.site40.net/
 
 
 #Olivier :
@@ -6,12 +6,10 @@ Version online (dernière MàJ: 12 juin 2014 @ 8h02am) :: http://olirick-tp.site
 - [CSS, JS] Changer le code pour appliquer un filtre (CSS::class ou JS::style?) sur les images du catalogue pour simuler les couleurs?
 
 #Eric :
-- réviser HTML5
+
 - http://www.webmproject.org/tools/
 - http://monochrome.sutic.nu/2010/06/14/video-editing-with-blender.html#section.10.4
 - TOUCH :: http://www.html5rocks.com/fr/mobile/touch/
-- [3D, HTML, video] Représentation 3D d'un des jouets (l'un des monstres devrait être simple) qui tourne en turntable, et donc compter comme un media video
-- Page vidéo, mettre titre sous vidéos
 - Page Mes Factures / Factures, prévoir qu'il y en as 0? càd dire que vide?
 
 -------------------------
@@ -62,6 +60,9 @@ Version online (dernière MàJ: 12 juin 2014 @ 8h02am) :: http://olirick-tp.site
 - ~~[AJAX] valider en temps réel le nom d'usager (inscription) ~~
 - ~~[AJAX] ajouter à "suggestionsIdent"(datalist) des suggestions de noms, le message d'erreur (ID déjà pris/AJAX) dois apparaitre au-dessus du nom dans un espace réservé pour éviter un déplacement vertical des autres balises ??~~
 - ~~cleanup code PHP et JS~~
+- ~~[3D, HTML, video] Représentation 3D d'un des jouets (l'un des monstres devrait être simple) qui tourne en turntable, et donc compter comme un media video~~
+- ~~Page vidéo, mettre titre sous vidéos~~
+- ~~réviser HTML5~~
 
 ###changements fait au HTML influencant le CSS:
 * ~~(div) #header => header~~
