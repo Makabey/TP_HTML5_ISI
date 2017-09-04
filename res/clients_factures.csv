@@ -1,0 +1,6 @@
+client_ID;facture_ID;dateAchat;product_ID;couleurs;quantite
+2;1;"04/09/2017 09:49:08";8;red;3
+2;1;"04/09/2017 09:49:08";14;bisque;5
+2;2;"04/09/2017 09:57:13";13;red;1
+2;2;"04/09/2017 09:57:13";12;darkorange;3
+2;2;"04/09/2017 09:57:13";10;white;6
