@@ -35,7 +35,7 @@ if(false !== $retour){
 							<li><span>Votre identifiant :</span><input type="text" disabled="disabled" value="<?=$_SESSION['user']?>" /></li>
 							<li><label for="prenom">Votre prénom :</label><input id="prenom" name="prenom" type="text" placeholder="3 à 24 caractères" pattern="[A-Z][a-zA-Z]{2,25}" title="Majuscule suivie d'au plus 25 charactères" /></li>
 							<li><label for="nomFamille">Votre nom :</label><input id="nomFamille" name="nomFamille" type="text" placeholder="2 à 24 caractères" pattern="[A-Z][a-zA-Z]{1,25}" title="Majuscule suivie d'au plus 25 charactères" /></li>
-							<li><label for="adresse">Votre adresse civique :</label><input id="adresse" name="adresse" type="text" placeholder="#civique, rue, #1A" pattern="[0-9]{1,6},?\ ?[a-zA-Z\.\ ]{3,30},?\ ?#?[0-9A-Z]{1,5}" title="Numéro civique, rue et appartement; au plus 40 charactères" /></li>
+							<li><label for="adresse">Votre adresse civique :</label><input id="adresse" name="adresse" type="text" placeholder="#civique, rue, #1A" pattern="[0-9]{1,6},?[ ]?[a-zA-Z\. ]{3,30},?[ ]?#?[0-9A-Z]{1,5}" title="Numéro civique, rue et appartement; au plus 40 charactères" /></li>
 							<li><label for="courriel">Votre courriel :</label><input id="courriel" name="courriel" type="email" required="required" placeholder="utilisateur@domaine.com" value="<?=$arrUsager['email']?>" /></li>
 							<li><span>Vous êtes : </span>
 								<ul>
@@ -56,7 +56,7 @@ if(false !== $retour){
 							<li><span>Adresse de livraison : </span>
 								<ul>
 									<li><input id="choixAdresseLivraison1" name="choixAdresseLivraison" type="radio" value="principale" checked="checked" /><label for="choixAdresseLivraison1">Idem que principale</label></li>
-									<li><input id="choixAdresseLivraison2" name="choixAdresseLivraison" type="radio" value="autre" /><input id="adresseLivraisonAutre" name="adresseLivraisonAutre" type="text" placeholder="111111, rue du finfin, #1A" pattern="[0-9]{1,6},?\ ?[a-zA-Z\.\ ]{3,30},?\ ?#?[0-9A-Z]{1,5}" title="Numéro civique, rue et appartement; au plus 40 charactères" /></li>
+									<li><input id="choixAdresseLivraison2" name="choixAdresseLivraison" type="radio" value="autre" /><input id="adresseLivraisonAutre" name="adresseLivraisonAutre" type="text" placeholder="111111, rue du finfin, #1A" pattern="[0-9]{1,6},?[ ]?[a-zA-Z\. ]{3,30},?[ ]?#?[0-9A-Z]{1,5}" title="Numéro civique, rue et appartement; au plus 40 charactères" /></li>
 								</ul>
 							</li>
 							<li><span>Mode de paiement : </span>
@@ -67,7 +67,7 @@ if(false !== $retour){
 									<li><input id="mpITN_Paypal" name="modePaiement" type="radio" value="itn_Paypal" /><label for="mpITN_Paypal"><img src="images/paiement/paypal-curved-32px.png" alt="icone internet paypal" /></label></li>
 								</ul>
 							</li>
-							<li><label for="mpCC_INT_Nro">Numéro de carte ou de compte :</label><input id="mpCC_INT_Nro" name="mpCC_INT_Nro" type="text" required="required" placeholder="12 chiffres" pattern="[0-9]{3}\ ?[0-9]{3}\ ?[0-9]{3}\ ?[0-9]{3}" maxlength="15" title="12 chiffres avec ou sans espaces" autocomplete="off" /><input id="mpCC_INT_NroVerif" name="mpCC_INT_NroVerif" type="text" required="required" pattern="\d{3,4}" maxlength="4" placeholder="CVC" title="numéro de contrôle (CVC/CVV) ou 000 pour Paypal" autocomplete="off" /></li>
+							<li><label for="mpCC_INT_Nro">Numéro de carte ou de compte :</label><input id="mpCC_INT_Nro" name="mpCC_INT_Nro" type="text" required="required" placeholder="12 chiffres" pattern="[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}[ ]?[0-9]{3}" maxlength="15" title="12 chiffres avec ou sans espaces" autocomplete="off" /><input id="mpCC_INT_NroVerif" name="mpCC_INT_NroVerif" type="text" required="required" pattern="\d{3,4}" maxlength="4" placeholder="CVC" title="numéro de contrôle (CVC/CVV) ou 000 pour Paypal" autocomplete="off" /></li>
 						</ul>
 						<button type="submit">Enregistrer</button>
 					</fieldset>
